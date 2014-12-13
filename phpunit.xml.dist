@@ -33,6 +33,7 @@
     <!-- Continuous Integration Build logs -->
     <logging>
         <log type="coverage-clover" target="build/logs/clover.xml"/>
+        <log type="coverage-crap4j" target="build/logs/crap4j.xml"/>
         <log type="coverage-html" target="build/coverage/" title="SHESA Germany site"/>
         <log type="junit" target="build/logs/junit.xml"/>
     </logging>
