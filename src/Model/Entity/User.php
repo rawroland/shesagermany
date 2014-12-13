@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Auth\DefaultPasswordHasher;
 
 /**
  * User Entity.
@@ -21,4 +22,18 @@ class User extends Entity {
 		'surname' => true,
 	];
 
+    protected function _setPassword($password) {
+        $hasher = new DefaultPasswordHasher();
+        return $hasher->hash($password);
+    }
+
+    /**
+     * Save a new user.
+     * @param array $data
+     */
+    public function saveNew($data = array()) {
+        if(empty($data)) {
+            throw new \InvalidArgumentException("Please provide the user data");
+        }
+    }
 }

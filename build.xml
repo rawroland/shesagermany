@@ -1,0 +1,102 @@
+<project name="SHESA Germany Website" default="build">
+    <!-- Quality Assurance tools location -->
+    <property name="toolsdir" value="${basedir}/vendor/"/>
+
+    <target name="build" depends="prepare,lint,phpunit,phploc-ci,phpmd-ci" description=""/>
+
+    <target name="clean" unless="clean.done" description="Cleanup build artifacts">
+        <delete dir="${basedir}/build/api"/>
+        <delete dir="${basedir}/build/coverage"/>
+        <delete dir="${basedir}/build/logs"/>
+        <delete dir="${basedir}/build/pdepend"/>
+        <delete dir="${basedir}/build/phpdox"/>
+        <property name="clean.done" value="true"/>
+    </target>
+
+    <target name="prepare" unless="prepare.done" depends="clean" description="Prepare for build">
+        <mkdir dir="${basedir}/build/api"/>
+        <mkdir dir="${basedir}/build/coverage"/>
+        <mkdir dir="${basedir}/build/logs"/>
+        <mkdir dir="${basedir}/build/pdepend"/>
+        <mkdir dir="${basedir}/build/phpdox"/>
+        <property name="prepare.done" value="true"/>
+    </target>
+
+    <target name="lint" description="Perform syntax check of sourcecode files">
+        <apply executable="php" failonerror="true">
+            <arg value="-l"/>
+            <fileset dir="${basedir}/src">
+                <include name="**/*.php"/>
+                <modified/>
+            </fileset>
+            <fileset dir="${basedir}/tests">
+                <include name="**/*.php"/>
+                <modified/>
+            </fileset>
+        </apply>
+    </target>
+
+    <target name="phploc"
+            description="Measure project size using PHPLOC and print human readable output. Intended for usage on the command line.">
+        <exec executable="${toolsdir}phploc/phploc/phploc">
+            <arg value="--count-tests" />
+            <arg path="${basedir}/src" />
+            <arg path="${basedir}/tests" />
+        </exec>
+    </target>
+
+    <target name="phploc-ci"
+            depends="prepare"
+            description="Measure project size using PHPLOC and log result in CSV and XML format. Intended for usage within a continuous integration environment.">
+        <exec executable="${toolsdir}phploc/phploc/phploc">
+            <arg value="--count-tests" />
+            <arg value="--log-csv" />
+            <arg path="${basedir}/build/logs/phploc.csv" />
+            <arg value="--log-xml" />
+            <arg path="${basedir}/build/logs/phploc.xml" />
+            <arg path="${basedir}/src" />
+            <arg path="${basedir}/tests" />
+        </exec>
+    </target>
+
+    <target name="phpmd" description="Perform project mess detection using PHPMD and print human readable output. Intended for usage on the command line before committing.">
+        <exec executable="${toolsdir}/phpmd/phpmd/src/bin/phpmd">
+            <arg path="${basedir}/src"/>
+            <arg value="text"/>
+            <arg path="${basedir}/build/phpmd.xml"/>
+        </exec>
+    </target>
+    <target name="phpmd-ci" depends="prepare" description="Perform project mess detection using PHPMD and log result in XML format. Intended for usage within a continuous integration environment.">
+        <exec executable="${toolsdir}/phpmd/phpmd/src/bin/phpmd">
+            <arg path="${basedir}/src"/>
+            <arg value="xml"/>
+            <arg path="${basedir}/build/phpmd.xml"/>
+            <arg value="--reportfile"/>
+            <arg path="${basedir}/build/logs/pmd.xml"/>
+        </exec>
+    </target>
+
+    <target name="phpcpd" description="Find duplicate code using PHPCPD and print human readable output. Intended for usage on the command line before committing.">
+        <exec executable="${toolsdir}sebastian/phpcpd/phpcpd">
+            <arg path="${basedir}/src"/>
+        </exec>
+    </target>
+
+    <target name="phpcpd-ci" depends="prepare" description="Find duplicate code using PHPCPD and log result in XML format. Intended for usage within a continuous integration environment.">
+        <exec executable="${toolsdir}sebastian/phpcpd/phpcpd">
+            <arg value="--log-pmd"/>
+            <arg path="${basedir}/build/logs/pmd-cpd.xml"/>
+            <arg path="${basedir}/src"/>
+        </exec>
+    </target>
+
+    <target name="phpdox" depends="phploc-ci,phpmd-ci" description="Generate project documentation using phpDox">
+        <exec executable="${toolsdir}theseer/phpdox/phpdox" dir="${basedir}/build"/>
+        <arg value="--file" />
+        <arg value="${basedir}/build/phpdox.xml" />
+    </target>
+
+    <target name="phpunit" description="Run tests">
+        <exec executable="${toolsdir}phpunit/phpunit/phpunit" failonerror="true" />
+    </target>
+</project>

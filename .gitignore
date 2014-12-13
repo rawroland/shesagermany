@@ -1,0 +1,10 @@
+/vendor/*
+/config/app.php
+/tmp/*
+/logs/*
+.idea/*
+
+
+#Files
+.editorconfig
+cache.properties
