@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\View\AppView" namespace="App\View" name="AppView" abstract="false" final="false" start="22" end="35">
+  <file path="../src/View" file="AppView.php" realpath="/var/www/html/shesagermany/src/View/AppView.php" size="809" time="2014-12-08T20:18:29+01:00" unixtime="1418066309" sha1="df0a2104ac8ebbb202695a10be8831b0be84450b" relative="View/AppView.php"/>
+  <docblock>
+    <description compact="App View class"/>
+  </docblock>
+  <extends full="Cake\View\View" namespace="Cake\View" name="View"/>
+  <method name="initialize" start="32" end="33" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Initialization hook method.">For e.g. use this method to load a helper for all views:
+`$this-&gt;loadHelper('Html');`</description>
+      <return type="object">
+        <type full="App\View\void" namespace="App\View" name="void"/>
+      </return>
+    </docblock>
+  </method>
+</class>

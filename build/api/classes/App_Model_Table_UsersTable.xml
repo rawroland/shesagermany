@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Model\Table\UsersTable" namespace="App\Model\Table" name="UsersTable" abstract="false" final="false" start="11" end="51">
+  <file path="../src/Model/Table" file="UsersTable.php" realpath="/var/www/html/shesagermany/src/Model/Table/UsersTable.php" size="1164" time="2014-12-13T00:45:25+01:00" unixtime="1418427925" sha1="6519a12b13d59ca2d0cdd44e1753ab14b49556c9" relative="Model/Table/UsersTable.php"/>
+  <docblock>
+    <description compact="Users Model"/>
+  </docblock>
+  <extends full="Cake\ORM\Table" namespace="Cake\ORM" name="Table"/>
+  <method name="initialize" start="19" end="24" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Initialize method"/>
+      <param description="The configuration for the Table." type="array" variable="$config"/>
+      <return type="object">
+        <type full="App\Model\Table\void" namespace="App\Model\Table" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="config" byreference="false" type="array"/>
+  </method>
+  <method name="validationDefault" start="32" end="49" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Default validation rules."/>
+      <param description="instance" type="object" variable="$validator">
+        <type full="\Cake\Validation\Validator" namespace="\Cake\Validation" name="Validator"/>
+      </param>
+      <return type="object">
+        <type full="\Cake\Validation\Validator" namespace="\Cake\Validation" name="Validator"/>
+      </return>
+    </docblock>
+    <parameter name="validator" byreference="false" type="object">
+      <type full="Cake\Validation\Validator" namespace="Cake\Validation" name="Validator"/>
+    </parameter>
+  </method>
+</class>

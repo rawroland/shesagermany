@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpdox xmlns="http://phpdox.net/config">
-    <project name="SHESA Germany" source="src" workdir="build/phpdox">
+    <project name="SHESA Germany" source="../src" workdir="api">
         <collector publiconly="false">
             <include mask="*.php" />
         </collector>
 
         <generator output="build">
-            <enrich base="${basedir}/build/logs">
+            <enrich base="${basedir}/logs">
                 <source type="build" />
                 <source type="git">
                     <history enabled="true" limit="15" />

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/html/shesagermany/src">
+  <namespace name="App\Console">
+    <class name="Installer" src="Console/Installer.php" description="Provides installation hooks for when this application is installed via composer. Customize this class to suit your needs." xml="classes/App_Console_Installer.xml"/>
+  </namespace>
+  <namespace name="App\View">
+    <class name="AppView" src="View/AppView.php" description="App View class" xml="classes/App_View_AppView.xml"/>
+  </namespace>
+  <namespace name="App\Model\Table">
+    <class name="UsersTable" src="Model/Table/UsersTable.php" description="Users Model" xml="classes/App_Model_Table_UsersTable.xml"/>
+  </namespace>
+  <namespace name="App\Model\Entity">
+    <class name="User" src="Model/Entity/User.php" description="User Entity." xml="classes/App_Model_Entity_User.xml"/>
+  </namespace>
+  <namespace name="App\Controller">
+    <class name="PagesController" src="Controller/PagesController.php" description="Static content controller" xml="classes/App_Controller_PagesController.xml"/>
+    <class name="UsersController" src="Controller/UsersController.php" description="Users Controller" xml="classes/App_Controller_UsersController.xml"/>
+    <class name="AppController" src="Controller/AppController.php" description="Application Controller" xml="classes/App_Controller_AppController.xml"/>
+  </namespace>
+  <namespace name="App\Shell">
+    <class name="ConsoleShell" src="Shell/ConsoleShell.php" description="Simple console wrapper around Boris." xml="classes/App_Shell_ConsoleShell.xml"/>
+  </namespace>
+</index>

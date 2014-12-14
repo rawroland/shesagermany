@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Console\Installer" namespace="App\Console" name="Installer" abstract="false" final="false" start="24" end="149">
+  <file path="../src/Console" file="Installer.php" realpath="/var/www/html/shesagermany/src/Console/Installer.php" size="4497" time="2014-12-08T20:18:29+01:00" unixtime="1418066309" sha1="9d0e495eb501a2240e3102e3067de37201ebd17d" relative="Console/Installer.php"/>
+  <docblock>
+    <description compact="Provides installation hooks for when this application is installed via composer. Customize this class to suit your needs."/>
+  </docblock>
+  <method name="postInstall" start="33" end="58" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Does some routine installation tasks so people don't have to."/>
+      <param description="The composer event object." type="object" variable="$event">
+        <type full="\Composer\Script\Event" namespace="\Composer\Script" name="Event"/>
+      </param>
+      <throws description="Exception raised by validator." type="object">
+        <type full="\Exception" namespace="" name="Exception"/>
+      </throws>
+      <return type="object">
+        <type full="App\Console\void" namespace="App\Console" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="event" byreference="false" type="object">
+      <type full="Composer\Script\Event" namespace="Composer\Script" name="Event"/>
+    </parameter>
+    <inline>
+      <comment value="ask if the permissions should be changed" line="40"/>
+    </inline>
+  </method>
+  <method name="createAppConfig" start="67" end="74" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Create the config/app.php file if it does not exist."/>
+      <param description="The application's root directory." type="string" variable="$dir"/>
+      <param description="IO interface to write to console." type="object" variable="$io">
+        <type full="\Composer\IO\IOInterface" namespace="\Composer\IO" name="IOInterface"/>
+      </param>
+      <return type="object">
+        <type full="App\Console\void" namespace="App\Console" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="dir" byreference="false" type="{unknown}"/>
+    <parameter name="io" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="setFolderPermissions" start="85" end="120" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Set globally writable permissions on the &quot;tmp&quot; and &quot;logs&quot; directory.">This is not the most secure default, but it gets people up and running quickly.</description>
+      <param description="The application's root directory." type="string" variable="$dir"/>
+      <param description="IO interface to write to console." type="object" variable="$io">
+        <type full="\Composer\IO\IOInterface" namespace="\Composer\IO" name="IOInterface"/>
+      </param>
+      <return type="object">
+        <type full="App\Console\void" namespace="App\Console" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="dir" byreference="false" type="{unknown}"/>
+    <parameter name="io" byreference="false" type="{unknown}"/>
+    <inline>
+      <comment value="Change the permissions on a path and output the results." line="86"/>
+    </inline>
+  </method>
+  <method name="setSecuritySalt" start="129" end="147" abstract="false" final="false" static="true" visibility="public">
+    <docblock>
+      <description compact="Set the security.salt value in the application's config file."/>
+      <param description="The application's root directory." type="string" variable="$dir"/>
+      <param description="IO interface to write to console." type="object" variable="$io">
+        <type full="\Composer\IO\IOInterface" namespace="\Composer\IO" name="IOInterface"/>
+      </param>
+      <return type="object">
+        <type full="App\Console\void" namespace="App\Console" name="void"/>
+      </return>
+    </docblock>
+    <parameter name="dir" byreference="false" type="{unknown}"/>
+    <parameter name="io" byreference="false" type="{unknown}"/>
+  </method>
+</class>

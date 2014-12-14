@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="App\Model\Entity\User" namespace="App\Model\Entity" name="User" abstract="false" final="false" start="10" end="39">
+  <file path="../src/Model/Entity" file="User.php" realpath="/var/www/html/shesagermany/src/Model/Entity/User.php" size="759" time="2014-12-13T11:54:53+01:00" unixtime="1418468093" sha1="e630e06b689a5885e1f6a138e4af3e11796127a6" relative="Model/Entity/User.php"/>
+  <docblock>
+    <description compact="User Entity."/>
+  </docblock>
+  <extends full="Cake\ORM\Entity" namespace="Cake\ORM" name="Entity"/>
+  <member name="_accessible" type="array" visibility="protected" line="17">
+    <docblock>
+      <description compact="Fields that can be mass assigned using newEntity() or patchEntity()."/>
+      <var type="array"/>
+    </docblock>
+  </member>
+  <method name="_setPassword" start="25" end="28" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="password" byreference="false" type="{unknown}"/>
+  </method>
+  <method name="saveNew" start="34" end="38" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="Save a new user."/>
+      <param type="array" variable="$data"/>
+    </docblock>
+    <parameter name="data" byreference="false" type="array"/>
+  </method>
+</class>
