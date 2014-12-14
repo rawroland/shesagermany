@@ -2,7 +2,7 @@
     <!-- Quality Assurance tools location -->
     <property name="toolsdir" value="${basedir}/vendor/"/>
 
-    <target name="build" depends="prepare,lint,phpunit,phploc, phploc-ci,phpmd, phpmd-ci, phpcpd, phpcpd-ci, phpdox" description=""/>
+    <target name="build" depends="prepare, composer, lint, phpunit,phploc, pdepend, phploc-ci,phpmd, phpmd-ci, phpcpd, phpcpd-ci, phpdox" description=""/>
 
     <target name="clean" unless="clean.done" description="Cleanup build artifacts">
         <delete dir="${basedir}/build/api"/>
@@ -20,6 +20,12 @@
         <mkdir dir="${basedir}/build/pdepend"/>
         <mkdir dir="${basedir}/build/phpdox"/>
         <property name="prepare.done" value="true"/>
+    </target>
+
+    <target name="composer" description="Installing composer dependencies">
+        <exec executable="composer" failonerror="true">
+            <arg value="update" />
+        </exec>
     </target>
 
     <target name="lint" description="Perform syntax check of sourcecode files">
@@ -93,7 +99,18 @@
     <target name="phpdox"
             depends="phploc-ci,phpmd-ci"
             description="Generate project documentation using phpDox">
-        <exec executable="${toolsdir}theseer/phpdox/phpdox" dir="${basedir}/build"/>
+        <exec executable="${toolsdir}theseer/phpdox/phpdox.php" dir="${basedir}/build"/>
+    </target>
+
+    <target name="pdepend"
+            depends="prepare"
+            description="Calculate software metrics using PHP_Depend and log result in XML format. Intended for usage within a continuous integration environment.">
+        <exec executable="${toolsdir}pdepend/pdepend/src/bin/pdepend">
+            <arg value="--jdepend-xml=${basedir}/build/logs/jdepend.xml" />
+            <arg value="--jdepend-chart=${basedir}/build/pdepend/dependencies.svg" />
+            <arg value="--overview-pyramid=${basedir}/build/pdepend/overview-pyramid.svg" />
+            <arg path="${basedir}/src" />
+        </exec>
     </target>
 
     <target name="phpunit" description="Run tests">

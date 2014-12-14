@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PDepend>
+  <Packages>
+    <Package name="App\Console">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/shesagermany/src/Console/Installer.php">Installer</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>Composer\Script</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Controller">
+      <Stats>
+        <TotalClasses>3</TotalClasses>
+        <ConcreteClasses>3</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>4</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/shesagermany/src/Controller/AppController.php">AppController</Class>
+        <Class sourceFile="/var/www/html/shesagermany/src/Controller/PagesController.php">PagesController</Class>
+        <Class sourceFile="/var/www/html/shesagermany/src/Controller/UsersController.php">UsersController</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Cake\Controller</Package>
+        <Package>Cake\Core</Package>
+        <Package>Cake\Network\Exception</Package>
+        <Package>Cake\View\Exception</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Model\Entity">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/shesagermany/src/Model/Entity/User.php">User</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package></Package>
+        <Package>Cake\Auth</Package>
+        <Package>Cake\ORM</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Model\Table">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>2</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/shesagermany/src/Model/Table/UsersTable.php">UsersTable</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Cake\ORM</Package>
+        <Package>Cake\Validation</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\Shell">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>3</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/shesagermany/src/Shell/ConsoleShell.php">ConsoleShell</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Boris</Package>
+        <Package>Cake\Console</Package>
+        <Package>Cake\Log</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+    <Package name="App\View">
+      <Stats>
+        <TotalClasses>1</TotalClasses>
+        <ConcreteClasses>1</ConcreteClasses>
+        <AbstractClasses>0</AbstractClasses>
+        <Ca>0</Ca>
+        <Ce>1</Ce>
+        <A>0</A>
+        <I>1</I>
+        <D>0</D>
+      </Stats>
+      <ConcreteClasses>
+        <Class sourceFile="/var/www/html/shesagermany/src/View/AppView.php">AppView</Class>
+      </ConcreteClasses>
+      <AbstractClasses/>
+      <DependsUpon>
+        <Package>Cake\View</Package>
+      </DependsUpon>
+      <UsedBy/>
+    </Package>
+  </Packages>
+  <Cycles/>
+</PDepend>
