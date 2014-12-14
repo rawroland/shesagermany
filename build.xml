@@ -99,7 +99,7 @@
     <target name="phpdox"
             depends="phploc-ci,phpmd-ci"
             description="Generate project documentation using phpDox">
-        <exec executable="${toolsdir}theseer/phpdox/phpdox.php" dir="${basedir}/build"/>
+        <exec executable="${toolsdir}theseer/phpdox/composer/bin/phpdox" dir="${basedir}/build"/>
     </target>
 
     <target name="pdepend"
