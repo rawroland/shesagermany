@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1418485968">
-  <project timestamp="1418485968">
+<coverage generated="1418558256">
+  <project timestamp="1418558256">
     <package name="App\Model\Table">
       <file name="/var/www/html/shesagermany/src/Model/Table/UsersTable.php">
         <class name="UsersTable" namespace="App\Model\Table">

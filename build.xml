@@ -2,7 +2,7 @@
     <!-- Quality Assurance tools location -->
     <property name="toolsdir" value="${basedir}/vendor/"/>
 
-    <target name="build" depends="prepare,lint,phpunit,phploc-ci,phpmd-ci" description=""/>
+    <target name="build" depends="prepare,lint,phpunit,phploc, phploc-ci,phpmd, phpmd-ci, phpcpd, phpcpd-ci, phpdox" description=""/>
 
     <target name="clean" unless="clean.done" description="Cleanup build artifacts">
         <delete dir="${basedir}/build/api"/>
@@ -90,10 +90,10 @@
         </exec>
     </target>
 
-    <target name="phpdox" depends="phploc-ci,phpmd-ci" description="Generate project documentation using phpDox">
+    <target name="phpdox"
+            depends="phploc-ci,phpmd-ci"
+            description="Generate project documentation using phpDox">
         <exec executable="${toolsdir}theseer/phpdox/phpdox" dir="${basedir}/build"/>
-        <arg value="--file" />
-        <arg value="${basedir}/build/phpdox.xml" />
     </target>
 
     <target name="phpunit" description="Run tests">

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crap_result>
+  <project/>
+  <timestamp>2014-12-14 11:57:36</timestamp>
+  <stats>
+    <name>Method Crap Stats</name>
+    <methodCount>2</methodCount>
+    <crapMethodCount>0</crapMethodCount>
+    <crapLoad>0</crapLoad>
+    <totalCrap>4</totalCrap>
+    <crapMethodPercent>0</crapMethodPercent>
+  </stats>
+  <methods>
+    <method>
+      <package/>
+      <className>UsersTable</className>
+      <methodName>initialize</methodName>
+      <methodSignature>initialize(array $config)</methodSignature>
+      <fullMethod>initialize(array $config)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+    <method>
+      <package/>
+      <className>UsersTable</className>
+      <methodName>validationDefault</methodName>
+      <methodSignature>validationDefault(Validator $validator)</methodSignature>
+      <fullMethod>validationDefault(Validator $validator)</fullMethod>
+      <crap>2</crap>
+      <complexity>1</complexity>
+      <coverage>0</coverage>
+      <crapLoad>0</crapLoad>
+    </method>
+  </methods>
+</crap_result>
