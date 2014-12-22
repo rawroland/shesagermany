@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ProblemFrames="http:///schemas/ProblemFrames/_YMw88JlhEeCHXdTP_tHf1w/95" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/ProblemFrames/_YMw88JlhEeCHXdTP_tHf1w/95 pathmap://resources/ProblemFrames.profile.uml#_YMyyIJlhEeCHXdTP_tHf1w">
+  <uml:Model xmi:id="_MDMbIIlCEeSMS_IrQmEz4w" name="SG">
+    <packageImport xmi:id="_MDMbIYlCEeSMS_IrQmEz4w">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Wxo60IlCEeSMS_IrQmEz4w" name="SG_env" clientDependency="_SxBTIIlEEeSMS_IrQmEz4w _SxRx0IlEEeSMS_IrQmEz4w _SxXRYIlEEeSMS_IrQmEz4w _Sxcw8IlEEeSMS_IrQmEz4w _SyO0EIlEEeSMS_IrQmEz4w _SzCsYIlEEeSMS_IrQmEz4w _SzNEcIlEEeSMS_IrQmEz4w _SzYqoIlEEeSMS_IrQmEz4w _S0L74IlEEeSMS_IrQmEz4w _S0rrIIlEEeSMS_IrQmEz4w _S1T9QIlEEeSMS_IrQmEz4w _S19dgIlEEeSMS_IrQmEz4w _S3S6QIlEEeSMS_IrQmEz4w _S3-2wIlEEeSMS_IrQmEz4w _S4kFkIlEEeSMS_IrQmEz4w _S45cwIlEEeSMS_IrQmEz4w">
+      <packagedElement xmi:type="uml:Class" xmi:id="_Yi2ZwIlCEeSMS_IrQmEz4w" name="SG" clientDependency="_SqU1QIlEEeSMS_IrQmEz4w _Ssv3IIlEEeSMS_IrQmEz4w _SvWfMIlEEeSMS_IrQmEz4w _Sv7uAIlEEeSMS_IrQmEz4w">
+        <ownedAttribute xmi:id="_rjrw8IlDEeSMS_IrQmEz4w" name="event" type="_k2mN4IlDEeSMS_IrQmEz4w" isUnique="false" aggregation="composite" association="_rjmRYIlDEeSMS_IrQmEz4w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rjxQgIlDEeSMS_IrQmEz4w" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rjwCYIlDEeSMS_IrQmEz4w"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_neJ7cIlCEeSMS_IrQmEz4w" name="Administrator" clientDependency="_SsZR0IlEEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_nyAEgIlCEeSMS_IrQmEz4w" name="Visitor" clientDependency="_SqNggIlEEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_zTWn0IlCEeSMS_IrQmEz4w" name="V!{browseEvents,ViewEvent}" memberEnd="_zTZEEIlCEeSMS_IrQmEz4w _zTcucIlCEeSMS_IrQmEz4w">
+        <ownedEnd xmi:id="_zTcucIlCEeSMS_IrQmEz4w" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_zTWn0IlCEeSMS_IrQmEz4w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zTfKsIlCEeSMS_IrQmEz4w" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zTfxwIlCEeSMS_IrQmEz4w"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_zTZEEIlCEeSMS_IrQmEz4w" name="visitor" type="_nyAEgIlCEeSMS_IrQmEz4w" isUnique="false" association="_zTWn0IlCEeSMS_IrQmEz4w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zTcHYIlCEeSMS_IrQmEz4w" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zTbgUIlCEeSMS_IrQmEz4w"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_z9slUIlCEeSMS_IrQmEz4w" name="A!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}" memberEnd="_z9xd0IlCEeSMS_IrQmEz4w _z93kcIlCEeSMS_IrQmEz4w">
+        <ownedEnd xmi:id="_z93kcIlCEeSMS_IrQmEz4w" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_z9slUIlCEeSMS_IrQmEz4w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z99EAIlCEeSMS_IrQmEz4w" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z99EAYlCEeSMS_IrQmEz4w"/>
+        </ownedEnd>
+        <ownedEnd xmi:id="_z9xd0IlCEeSMS_IrQmEz4w" name="administrator" type="_neJ7cIlCEeSMS_IrQmEz4w" isUnique="false" association="_z9slUIlCEeSMS_IrQmEz4w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z92WUIlCEeSMS_IrQmEz4w" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z91vQIlCEeSMS_IrQmEz4w"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_k2mN4IlDEeSMS_IrQmEz4w" name="Event" clientDependency="_SviFYIlEEeSMS_IrQmEz4w _SvxV8IlEEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_rjmRYIlDEeSMS_IrQmEz4w" name="SG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}E!{events,event}" memberEnd="_rjrw8IlDEeSMS_IrQmEz4w _rjx3kIlDEeSMS_IrQmEz4w">
+        <ownedEnd xmi:id="_rjx3kIlDEeSMS_IrQmEz4w" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_rjmRYIlDEeSMS_IrQmEz4w">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rj3XIIlDEeSMS_IrQmEz4w" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rj3XIYlDEeSMS_IrQmEz4w"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_SnoGkIlEEeSMS_IrQmEz4w" name="V!{browseEvents,ViewEvent}">
+        <ownedOperation xmi:id="_SqB6UIlEEeSMS_IrQmEz4w" name="browseEvents"/>
+        <ownedOperation xmi:id="_SqE9oIlEEeSMS_IrQmEz4w" name="ViewEvent"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SqNggIlEEeSMS_IrQmEz4w" name="VisitorControlsV!{browseEvents,ViewEvent}" supplier="_SnoGkIlEEeSMS_IrQmEz4w" client="_nyAEgIlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SqU1QIlEEeSMS_IrQmEz4w" name="SGObservesV!{browseEvents,ViewEvent}" supplier="_SnoGkIlEEeSMS_IrQmEz4w" client="_Yi2ZwIlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Sq3AwIlEEeSMS_IrQmEz4w" name="A!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}">
+        <ownedOperation xmi:id="_Src2oIlEEeSMS_IrQmEz4w" name="addEvent"/>
+        <ownedOperation xmi:id="_Sroc0IlEEeSMS_IrQmEz4w" name="EditEvent"/>
+        <ownedOperation xmi:id="_SrujcIlEEeSMS_IrQmEz4w" name="deleteEvent"/>
+        <ownedOperation xmi:id="_Sr_pMIlEEeSMS_IrQmEz4w" name="addActivity"/>
+        <ownedOperation xmi:id="_SsJaMIlEEeSMS_IrQmEz4w" name="EditActivity"/>
+        <ownedOperation xmi:id="_SsR9EIlEEeSMS_IrQmEz4w" name="deleteActivity"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SsZR0IlEEeSMS_IrQmEz4w" name="AdministratorControlsA!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}" supplier="_Sq3AwIlEEeSMS_IrQmEz4w" client="_neJ7cIlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Ssv3IIlEEeSMS_IrQmEz4w" name="SGObservesA!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}" supplier="_Sq3AwIlEEeSMS_IrQmEz4w" client="_Yi2ZwIlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_StihUIlEEeSMS_IrQmEz4w" name="SG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}">
+        <ownedOperation xmi:id="_StpPAIlEEeSMS_IrQmEz4w" name="addingEvent"/>
+        <ownedOperation xmi:id="_StxK0IlEEeSMS_IrQmEz4w" name="editingEvent"/>
+        <ownedOperation xmi:id="_St6UwIlEEeSMS_IrQmEz4w" name="deletingEvent"/>
+        <ownedOperation xmi:id="_SuZc8IlEEeSMS_IrQmEz4w" name="addingActivity"/>
+        <ownedOperation xmi:id="_SuhYwIlEEeSMS_IrQmEz4w" name="editingActivity"/>
+        <ownedOperation xmi:id="_SuotgIlEEeSMS_IrQmEz4w" name="deletingActivity"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Interface" xmi:id="_Su06wIlEEeSMS_IrQmEz4w" name="E!{events,event}">
+        <ownedOperation xmi:id="_SvDkQIlEEeSMS_IrQmEz4w" name="events"/>
+        <ownedOperation xmi:id="_SvMuMIlEEeSMS_IrQmEz4w" name="event"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SvWfMIlEEeSMS_IrQmEz4w" name="SGControlsSG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}" supplier="_StihUIlEEeSMS_IrQmEz4w" client="_Yi2ZwIlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SviFYIlEEeSMS_IrQmEz4w" name="EventObservesSG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}" supplier="_StihUIlEEeSMS_IrQmEz4w" client="_k2mN4IlDEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SvxV8IlEEeSMS_IrQmEz4w" name="EventControlsE!{events,event}" supplier="_Su06wIlEEeSMS_IrQmEz4w" client="_k2mN4IlDEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Sv7uAIlEEeSMS_IrQmEz4w" name="SGObservesE!{events,event}" supplier="_Su06wIlEEeSMS_IrQmEz4w" client="_Yi2ZwIlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SxBTIIlEEeSMS_IrQmEz4w" name="FromSG_envtoSG" supplier="_Yi2ZwIlCEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SxRx0IlEEeSMS_IrQmEz4w" name="FromSG_envtoAdministrator" supplier="_neJ7cIlCEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SxXRYIlEEeSMS_IrQmEz4w" name="FromSG_envtoVisitor" supplier="_nyAEgIlCEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_Sxcw8IlEEeSMS_IrQmEz4w" name="FromSG_envtoV!{browseEvents,ViewEvent}" supplier="_SnoGkIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SyO0EIlEEeSMS_IrQmEz4w" name="FromSG_envtoA!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}" supplier="_Sq3AwIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SzCsYIlEEeSMS_IrQmEz4w" name="FromSG_envtoEvent" supplier="_k2mN4IlDEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SzNEcIlEEeSMS_IrQmEz4w" name="FromSG_envtoSG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}" supplier="_StihUIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_SzYqoIlEEeSMS_IrQmEz4w" name="FromSG_envtoE!{events,event}" supplier="_Su06wIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S0L74IlEEeSMS_IrQmEz4w" name="FromSG_envtoVisitorControlsV!{browseEvents,ViewEvent}" supplier="_SqNggIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S0rrIIlEEeSMS_IrQmEz4w" name="FromSG_envtoSGObservesV!{browseEvents,ViewEvent}" supplier="_SqU1QIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S1T9QIlEEeSMS_IrQmEz4w" name="FromSG_envtoAdministratorControlsA!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}" supplier="_SsZR0IlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S19dgIlEEeSMS_IrQmEz4w" name="FromSG_envtoSGObservesA!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity}" supplier="_Ssv3IIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S3S6QIlEEeSMS_IrQmEz4w" name="FromSG_envtoSGControlsSG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}" supplier="_SvWfMIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S3-2wIlEEeSMS_IrQmEz4w" name="FromSG_envtoEventObservesSG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}" supplier="_SviFYIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S4kFkIlEEeSMS_IrQmEz4w" name="FromSG_envtoEventControlsE!{events,event}" supplier="_SvxV8IlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_S45cwIlEEeSMS_IrQmEz4w" name="FromSG_envtoSGObservesE!{events,event}" supplier="_Sv7uAIlEEeSMS_IrQmEz4w" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+    </packagedElement>
+    <profileApplication xmi:id="_MDMbIolCEeSMS_IrQmEz4w">
+      <eAnnotations xmi:id="_MDMbI4lCEeSMS_IrQmEz4w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/schemas/Standard/1#/"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+    <profileApplication xmi:id="_OGMNoIlCEeSMS_IrQmEz4w">
+      <eAnnotations xmi:id="_OGPQ8IlCEeSMS_IrQmEz4w" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://resources/ProblemFrames.profile.uml#_YMyyIJlhEeCHXdTP_tHf1w"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://resources/ProblemFrames.profile.uml#_rCQ8YB4mEd6xsZlhdJF0cw"/>
+    </profileApplication>
+  </uml:Model>
+  <ProblemFrames:ContextDiagram xmi:id="_hW-h0IlCEeSMS_IrQmEz4w" base_Package="_Wxo60IlCEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Machine xmi:id="_mxozsIlCEeSMS_IrQmEz4w" base_Class="_Yi2ZwIlCEeSMS_IrQmEz4w" abbreviation="SG"/>
+  <ProblemFrames:BiddableDomain xmi:id="_ug9P0IlCEeSMS_IrQmEz4w" base_Class="_neJ7cIlCEeSMS_IrQmEz4w" abbreviation="A"/>
+  <ProblemFrames:BiddableDomain xmi:id="_vNwrcIlCEeSMS_IrQmEz4w" base_Class="_nyAEgIlCEeSMS_IrQmEz4w" abbreviation="V" description="V"/>
+  <ProblemFrames:connection xmi:id="_1Ak-oIlCEeSMS_IrQmEz4w" base_Association="_zTWn0IlCEeSMS_IrQmEz4w" description="V"/>
+  <ProblemFrames:connection xmi:id="_10_eIIlCEeSMS_IrQmEz4w" base_Association="_z9slUIlCEeSMS_IrQmEz4w" description="A"/>
+  <ProblemFrames:LexicalDomain xmi:id="_oOLNsIlDEeSMS_IrQmEz4w" base_Class="_k2mN4IlDEeSMS_IrQmEz4w" abbreviation="E"/>
+  <ProblemFrames:connection xmi:id="_uptGsIlDEeSMS_IrQmEz4w" base_Association="_rjmRYIlDEeSMS_IrQmEz4w" description="SG"/>
+  <ProblemFrames:generated_interface xmi:id="_SqAFIIlEEeSMS_IrQmEz4w" base_Interface="_SnoGkIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SqChYIlEEeSMS_IrQmEz4w" base_Operation="_SqB6UIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SqGLwIlEEeSMS_IrQmEz4w" base_Operation="_SqE9oIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:controls xmi:id="_SqOuoIlEEeSMS_IrQmEz4w" base_Dependency="_SqNggIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SqP8wIlEEeSMS_IrQmEz4w" base_Dependency="_SqNggIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:observes xmi:id="_SqX4kIlEEeSMS_IrQmEz4w" base_Dependency="_SqU1QIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SqYfoIlEEeSMS_IrQmEz4w" base_Dependency="_SqU1QIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_interface xmi:id="_Sq418IlEEeSMS_IrQmEz4w" base_Interface="_Sq3AwIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_Srf58IlEEeSMS_IrQmEz4w" base_Operation="_Src2oIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SrqSAIlEEeSMS_IrQmEz4w" base_Operation="_Sroc0IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SrwYoIlEEeSMS_IrQmEz4w" base_Operation="_SrujcIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SsD6oIlEEeSMS_IrQmEz4w" base_Operation="_Sr_pMIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SsLPYIlEEeSMS_IrQmEz4w" base_Operation="_SsJaMIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SsUZUIlEEeSMS_IrQmEz4w" base_Operation="_SsR9EIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:controls xmi:id="_Ssaf8IlEEeSMS_IrQmEz4w" base_Dependency="_SsZR0IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SsbuEIlEEeSMS_IrQmEz4w" base_Dependency="_SsZR0IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:observes xmi:id="_SsxsUIlEEeSMS_IrQmEz4w" base_Dependency="_Ssv3IIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_Ssy6cIlEEeSMS_IrQmEz4w" base_Dependency="_Ssv3IIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_interface xmi:id="_StkWgIlEEeSMS_IrQmEz4w" base_Interface="_StihUIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_StrEMIlEEeSMS_IrQmEz4w" base_Operation="_StpPAIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_StzAAIlEEeSMS_IrQmEz4w" base_Operation="_StxK0IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_St8J8IlEEeSMS_IrQmEz4w" base_Operation="_St6UwIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SubSIIlEEeSMS_IrQmEz4w" base_Operation="_SuZc8IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_Suim4IlEEeSMS_IrQmEz4w" base_Operation="_SuhYwIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SuqisIlEEeSMS_IrQmEz4w" base_Operation="_SuotgIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_interface xmi:id="_Su2v8IlEEeSMS_IrQmEz4w" base_Interface="_Su06wIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SvFZcIlEEeSMS_IrQmEz4w" base_Operation="_SvDkQIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:Phenomenon xmi:id="_SvPKcIlEEeSMS_IrQmEz4w" base_Operation="_SvMuMIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:controls xmi:id="_SvYUYIlEEeSMS_IrQmEz4w" base_Dependency="_SvWfMIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SvZigIlEEeSMS_IrQmEz4w" base_Dependency="_SvWfMIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:observes xmi:id="_Svj6kIlEEeSMS_IrQmEz4w" base_Dependency="_SviFYIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SvlIsIlEEeSMS_IrQmEz4w" base_Dependency="_SviFYIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:controls xmi:id="_SvzLIIlEEeSMS_IrQmEz4w" base_Dependency="_SvxV8IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_Sv0ZQIlEEeSMS_IrQmEz4w" base_Dependency="_SvxV8IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:observes xmi:id="_Sv9jMIlEEeSMS_IrQmEz4w" base_Dependency="_Sv7uAIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_Sv-xUIlEEeSMS_IrQmEz4w" base_Dependency="_Sv7uAIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SxChQIlEEeSMS_IrQmEz4w" base_Dependency="_SxBTIIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SxDvYIlEEeSMS_IrQmEz4w" base_Dependency="_SxBTIIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SxTnAIlEEeSMS_IrQmEz4w" base_Dependency="_SxRx0IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SxUOEIlEEeSMS_IrQmEz4w" base_Dependency="_SxRx0IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SxYfgIlEEeSMS_IrQmEz4w" base_Dependency="_SxXRYIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SxZGkIlEEeSMS_IrQmEz4w" base_Dependency="_SxXRYIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_Sxd_EIlEEeSMS_IrQmEz4w" base_Dependency="_Sxcw8IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SxemIIlEEeSMS_IrQmEz4w" base_Dependency="_Sxcw8IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SyQpQIlEEeSMS_IrQmEz4w" base_Dependency="_SyO0EIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SyRQUIlEEeSMS_IrQmEz4w" base_Dependency="_SyO0EIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SzEhkIlEEeSMS_IrQmEz4w" base_Dependency="_SzCsYIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SzFIoIlEEeSMS_IrQmEz4w" base_Dependency="_SzCsYIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SzO5oIlEEeSMS_IrQmEz4w" base_Dependency="_SzNEcIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_SzPgsIlEEeSMS_IrQmEz4w" base_Dependency="_SzNEcIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_SzZ4wIlEEeSMS_IrQmEz4w" base_Dependency="_SzYqoIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_Szaf0IlEEeSMS_IrQmEz4w" base_Dependency="_SzYqoIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S0NxEIlEEeSMS_IrQmEz4w" base_Dependency="_S0L74IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S0O_MIlEEeSMS_IrQmEz4w" base_Dependency="_S0L74IlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S0s5QIlEEeSMS_IrQmEz4w" base_Dependency="_S0rrIIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S0uHYIlEEeSMS_IrQmEz4w" base_Dependency="_S0rrIIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S1VycIlEEeSMS_IrQmEz4w" base_Dependency="_S1T9QIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S1XAkIlEEeSMS_IrQmEz4w" base_Dependency="_S1T9QIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S1_5wIlEEeSMS_IrQmEz4w" base_Dependency="_S19dgIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S2BH4IlEEeSMS_IrQmEz4w" base_Dependency="_S19dgIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S3UvcIlEEeSMS_IrQmEz4w" base_Dependency="_S3S6QIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S3VWgIlEEeSMS_IrQmEz4w" base_Dependency="_S3S6QIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S4Ar8IlEEeSMS_IrQmEz4w" base_Dependency="_S3-2wIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S4B6EIlEEeSMS_IrQmEz4w" base_Dependency="_S3-2wIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S4lTsIlEEeSMS_IrQmEz4w" base_Dependency="_S4kFkIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S4mh0IlEEeSMS_IrQmEz4w" base_Dependency="_S4kFkIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:isPart xmi:id="_S47R8IlEEeSMS_IrQmEz4w" base_Dependency="_S45cwIlEEeSMS_IrQmEz4w"/>
+  <ProblemFrames:generated_dependency xmi:id="_S48gEIlEEeSMS_IrQmEz4w" base_Dependency="_S45cwIlEEeSMS_IrQmEz4w"/>
+</xmi:XMI>

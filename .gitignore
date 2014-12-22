@@ -2,6 +2,7 @@
 /tmp/*
 /logs/*
 .idea/*
+models/.metadata
 
 
 #Files

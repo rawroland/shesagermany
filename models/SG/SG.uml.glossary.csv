@@ -1,0 +1,28 @@
+Name;Kinds;Description;Source
+addingActivity;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+addActivity;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+addingEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+editingActivity;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+EditActivity;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+event;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+A!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity};Interface, <<generated_interface>>;enter description here;SG_env;
+SG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity};Interface, <<generated_interface>>;enter description here;SG_env;
+events;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+deletingActivity;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+V!{browseEvents,ViewEvent};Association, <<connection>>;V;SG_env;
+SG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity}E!{events,event};Association, <<connection>>;SG;SG_env;
+EditEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+deletingEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+Event;Class, <<LexicalDomain>>;enter description here;SG_env;
+ViewEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+addEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+browseEvents;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+Administrator;Class, <<BiddableDomain>>;enter description here;SG_env;
+editingEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+SG;Class, <<Machine>>;enter description here;SG_env;
+deleteActivity;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+A!{addEvent,EditEvent,deleteEvent,addActivity,EditActivity,deleteActivity};Association, <<connection>>;A;SG_env;
+Visitor;Class, <<BiddableDomain>>;V;SG_env;
+deleteEvent;Phenomenon, <<Phenomenon>>;enter description here;SG_env;
+V!{browseEvents,ViewEvent};Interface, <<generated_interface>>;enter description here;SG_env;
+E!{events,event};Interface, <<generated_interface>>;enter description here;SG_env;
