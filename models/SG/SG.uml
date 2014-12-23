@@ -26,10 +26,18 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KxaKcIoDEeS2T8pr30dtbQ" value="*"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KxZjYIoDEeS2T8pr30dtbQ"/>
         </ownedAttribute>
+        <ownedAttribute xmi:id="_5sFVEIquEeSDtLKDoRjRIw" name="sponsor" type="_pNn-kIquEeSDtLKDoRjRIw" isUnique="false" aggregation="composite" association="_5riigIquEeSDtLKDoRjRIw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5sIYYIquEeSDtLKDoRjRIw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5sHxUIquEeSDtLKDoRjRIw"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_eGIPQIq6EeSDtLKDoRjRIw" name="message" type="_3ALugIq5EeSDtLKDoRjRIw" isUnique="false" association="_eFZPcIq6EeSDtLKDoRjRIw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGOV4Yq6EeSDtLKDoRjRIw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGOV4Iq6EeSDtLKDoRjRIw"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_neJ7cIlCEeSMS_IrQmEz4w" name="Administrator" clientDependency="_oojZUIoDEeS2T8pr30dtbQ _oo1tMIoDEeS2T8pr30dtbQ"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_nyAEgIlCEeSMS_IrQmEz4w" name="Visitor" clientDependency="_omKzsIoDEeS2T8pr30dtbQ _omarUIoDEeS2T8pr30dtbQ"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_zTWn0IlCEeSMS_IrQmEz4w" name="V!{browseEvents,ViewEvent,browseProjects,viewProject,browseEventsPhotos,viewEventPhotos,browseVideos,browseCurrentExecutive,browsePastExecutive}SG!{eventsView,eventView,projectsView,projectView,eventsImagesView,eventImagesView,videosView,executiveView}" memberEnd="_zTZEEIlCEeSMS_IrQmEz4w _zTcucIlCEeSMS_IrQmEz4w">
+      <packagedElement xmi:type="uml:Association" xmi:id="_zTWn0IlCEeSMS_IrQmEz4w" name="V!{browseEvents,ViewEvent,browseProjects,viewProject,browseEventsPhotos,viewEventPhotos,browseVideos,browseCurrentExecutive,browsePastExecutive,browseSponsors,contact}SG!{eventsView,eventView,projectsView,projectView,eventsImagesView,eventImagesView,videosView,executiveView,sponsorsView,contactView,contactFeedback}" memberEnd="_zTZEEIlCEeSMS_IrQmEz4w _zTcucIlCEeSMS_IrQmEz4w">
         <ownedEnd xmi:id="_zTcucIlCEeSMS_IrQmEz4w" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_zTWn0IlCEeSMS_IrQmEz4w">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zTfKsIlCEeSMS_IrQmEz4w" value="*"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zTfxwIlCEeSMS_IrQmEz4w"/>
@@ -39,7 +47,7 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zTbgUIlCEeSMS_IrQmEz4w"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_z9slUIlCEeSMS_IrQmEz4w" name="A!{addEvent,EditEvent,deleteEvent,addActivity,editActivity,deleteActivity,addProject,editProject,deleteProject,uploadImages,editImages,deleteImages,addVideo,editVideo,deleteVideo,addExecutive,editExecutive}SG!{feedbackAdmin}" memberEnd="_z9xd0IlCEeSMS_IrQmEz4w _z93kcIlCEeSMS_IrQmEz4w">
+      <packagedElement xmi:type="uml:Association" xmi:id="_z9slUIlCEeSMS_IrQmEz4w" name="A!{addEvent,EditEvent,deleteEvent,addActivity,editActivity,deleteActivity,addProject,editProject,deleteProject,uploadImages,editImages,deleteImages,addVideo,editVideo,deleteVideo,addExecutive,editExecutive,addSponsor,editSponsor,deleteSponsor,browseContactMessages,readContactMessage,replyToContactMessageSG!{feedbackAdmin,messages}" memberEnd="_z9xd0IlCEeSMS_IrQmEz4w _z93kcIlCEeSMS_IrQmEz4w">
         <ownedEnd xmi:id="_z93kcIlCEeSMS_IrQmEz4w" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_z9slUIlCEeSMS_IrQmEz4w">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_z99EAIlCEeSMS_IrQmEz4w" value="*"/>
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z99EAYlCEeSMS_IrQmEz4w"/>
@@ -260,6 +268,20 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_o54Z4IoDEeS2T8pr30dtbQ" name="FromSG_envtoExecutiveObservesSG!{addingExecutive,editingExecutive,deletingExecutive,getCurrent,getPast}" supplier="_owSZAIoDEeS2T8pr30dtbQ" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_o6LU0IoDEeS2T8pr30dtbQ" name="FromSG_envtoExecutiveControlsEx!{executive}" supplier="_owX4kIoDEeS2T8pr30dtbQ" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_o6fd4IoDEeS2T8pr30dtbQ" name="FromSG_envtoSGObservesEx!{executive}" supplier="_owbi8IoDEeS2T8pr30dtbQ" client="_Wxo60IlCEeSMS_IrQmEz4w"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_pNn-kIquEeSDtLKDoRjRIw" name="Sponsor"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5riigIquEeSDtLKDoRjRIw" name="SG!{addingSponsor,editingSponsor,deletingSponsor,getSponsors}S!{sponsors}" memberEnd="_5sFVEIquEeSDtLKDoRjRIw _5sIYYYquEeSDtLKDoRjRIw">
+        <ownedEnd xmi:id="_5sIYYYquEeSDtLKDoRjRIw" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_5riigIquEeSDtLKDoRjRIw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_5sK0oIquEeSDtLKDoRjRIw" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_5sK0oYquEeSDtLKDoRjRIw"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_3ALugIq5EeSDtLKDoRjRIw" name="Message"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_eFZPcIq6EeSDtLKDoRjRIw" name="SG!{sendMessage,getMessages,getMessage,replyingMessage}M!{messages,message}" memberEnd="_eGIPQIq6EeSDtLKDoRjRIw _eGO88Iq6EeSDtLKDoRjRIw">
+        <ownedEnd xmi:id="_eGO88Iq6EeSDtLKDoRjRIw" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_eFZPcIq6EeSDtLKDoRjRIw">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eGTOYIq6EeSDtLKDoRjRIw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eGTOYYq6EeSDtLKDoRjRIw"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <profileApplication xmi:id="_MDMbIolCEeSMS_IrQmEz4w">
       <eAnnotations xmi:id="_MDMbI4lCEeSMS_IrQmEz4w" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -530,4 +552,8 @@
   <ProblemFrames:generated_dependency xmi:id="_o6L74YoDEeS2T8pr30dtbQ" base_Dependency="_o6LU0IoDEeS2T8pr30dtbQ"/>
   <ProblemFrames:isPart xmi:id="_o6fd4YoDEeS2T8pr30dtbQ" base_Dependency="_o6fd4IoDEeS2T8pr30dtbQ"/>
   <ProblemFrames:generated_dependency xmi:id="_o6gE8IoDEeS2T8pr30dtbQ" base_Dependency="_o6fd4IoDEeS2T8pr30dtbQ"/>
+  <ProblemFrames:LexicalDomain xmi:id="_sTs-sIquEeSDtLKDoRjRIw" base_Class="_pNn-kIquEeSDtLKDoRjRIw" abbreviation="S"/>
+  <ProblemFrames:connection xmi:id="_8QbhIIquEeSDtLKDoRjRIw" base_Association="_5riigIquEeSDtLKDoRjRIw"/>
+  <ProblemFrames:LexicalDomain xmi:id="_AbtNwIq6EeSDtLKDoRjRIw" base_Class="_3ALugIq5EeSDtLKDoRjRIw"/>
+  <ProblemFrames:connection xmi:id="_ce9nsIq7EeSDtLKDoRjRIw" base_Association="_eFZPcIq6EeSDtLKDoRjRIw"/>
 </xmi:XMI>
