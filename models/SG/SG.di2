@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <di2:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di2="http://www.papyrusuml.org" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="255:255:255" foregroundColor="255:255:255" backgroundColor="255:255:255" borderColor="255:255:255" position="0:0" name="ContextDiagram" type="ClassDiagram">
-  <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="-463:3" size="1446:548">
+  <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="-463:3" size="1935:548">
     <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
     <property key="QUALIFIED_NAME_DEPTH" value="0"/>
     <property key="PropStereoDisplay" value="ProblemFrames::ContextDiagram"/>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="322:226" size="100:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="26:228" size="100:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::Machine"/>
@@ -23,17 +23,17 @@
       <semanticModel xsi:type="di2:Uml1SemanticModelBridge" presentation="TextStereotype">
         <element xsi:type="uml:Class" href="SG.uml#_Yi2ZwIlCEeSMS_IrQmEz4w"/>
       </semanticModel>
-      <anchorage position="368:225" graphEdge="//@contained.0/@contained.4"/>
-      <anchorage position="368:326" graphEdge="//@contained.0/@contained.3"/>
-      <anchorage position="422:263" graphEdge="//@contained.0/@contained.6"/>
-      <anchorage position="422:262" graphEdge="//@contained.0/@contained.8"/>
-      <anchorage position="422:258" graphEdge="//@contained.0/@contained.10"/>
-      <anchorage position="422:262" graphEdge="//@contained.0/@contained.12"/>
-      <anchorage position="422:263" graphEdge="//@contained.0/@contained.14"/>
-      <anchorage position="422:263" graphEdge="//@contained.0/@contained.16"/>
-      <anchorage position="422:263" graphEdge="//@contained.0/@contained.18"/>
+      <anchorage position="72:227" graphEdge="//@contained.0/@contained.4"/>
+      <anchorage position="72:328" graphEdge="//@contained.0/@contained.3"/>
+      <anchorage position="126:264" graphEdge="//@contained.0/@contained.8"/>
+      <anchorage position="126:260" graphEdge="//@contained.0/@contained.10"/>
+      <anchorage position="126:264" graphEdge="//@contained.0/@contained.12"/>
+      <anchorage position="126:265" graphEdge="//@contained.0/@contained.14"/>
+      <anchorage position="126:265" graphEdge="//@contained.0/@contained.16"/>
+      <anchorage position="126:265" graphEdge="//@contained.0/@contained.18"/>
+      <anchorage position="126:246" graphEdge="//@contained.0/@contained.6"/>
     </contained>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="317:48" size="128:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="13:40" size="128:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::BiddableDomain"/>
@@ -52,9 +52,9 @@
       <semanticModel xsi:type="di2:Uml1SemanticModelBridge" presentation="TextStereotype">
         <element xsi:type="uml:Class" href="SG.uml#_neJ7cIlCEeSMS_IrQmEz4w"/>
       </semanticModel>
-      <anchorage position="368:148" graphEdge="//@contained.0/@contained.4"/>
+      <anchorage position="64:140" graphEdge="//@contained.0/@contained.4"/>
     </contained>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="321:427" size="135:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="17:444" size="135:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::BiddableDomain"/>
@@ -73,13 +73,13 @@
       <semanticModel xsi:type="di2:Uml1SemanticModelBridge" presentation="TextStereotype">
         <element xsi:type="uml:Class" href="SG.uml#_nyAEgIlCEeSMS_IrQmEz4w"/>
       </semanticModel>
-      <anchorage position="372:426" graphEdge="//@contained.0/@contained.3"/>
+      <anchorage position="68:443" graphEdge="//@contained.0/@contained.3"/>
     </contained>
     <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.1 //@contained.0/@contained.2/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
-      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="60:0" size="100:100">
+      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="873:44" size="1877:15">
         <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       </contained>
@@ -113,7 +113,7 @@
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
-      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="0:0" size="100:100">
+      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="876:-2" size="1921:15">
         <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       </contained>
@@ -143,7 +143,7 @@
         <element xsi:type="uml:Association" href="SG.uml#_z9slUIlCEeSMS_IrQmEz4w"/>
       </semanticModel>
     </contained>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="815:229" size="100:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="920:41" size="100:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::LexicalDomain"/>
@@ -162,13 +162,13 @@
       <semanticModel xsi:type="di2:Uml1SemanticModelBridge" presentation="TextStereotype">
         <element xsi:type="uml:Class" href="SG.uml#_k2mN4IlDEeSMS_IrQmEz4w"/>
       </semanticModel>
-      <anchorage position="814:269" graphEdge="//@contained.0/@contained.6"/>
+      <anchorage position="919:66" graphEdge="//@contained.0/@contained.6"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.2 //@contained.0/@contained.5/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.8 //@contained.0/@contained.5/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
-      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="0:20" size="100:100">
+      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="380:-193" size="667:15">
         <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       </contained>
@@ -197,8 +197,10 @@
       <semanticModel xsi:type="di2:Uml1SemanticModelBridge" presentation="TextStereotype">
         <element xsi:type="uml:Association" href="SG.uml#_rjmRYIlDEeSMS_IrQmEz4w"/>
       </semanticModel>
+      <waypoints>-247:249</waypoints>
+      <waypoints>-247:69</waypoints>
     </contained>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="815:97" size="100:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="815:97" size="100:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::LexicalDomain"/>
@@ -219,7 +221,7 @@
       </semanticModel>
       <anchorage position="814:171" graphEdge="//@contained.0/@contained.8"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.3 //@contained.0/@contained.7/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.2 //@contained.0/@contained.7/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
@@ -253,7 +255,7 @@
         <element xsi:type="uml:Association" href="SG.uml#_949qcInYEeSrXrymwAVqFw"/>
       </semanticModel>
     </contained>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="816:369" size="100:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="816:369" size="100:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::LexicalDomain"/>
@@ -274,7 +276,7 @@
       </semanticModel>
       <anchorage position="815:409" graphEdge="//@contained.0/@contained.10"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.4 //@contained.0/@contained.9/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.3 //@contained.0/@contained.9/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
@@ -308,7 +310,7 @@
         <element xsi:type="uml:Association" href="SG.uml#_cPHFUIngEeSrXrymwAVqFw"/>
       </semanticModel>
     </contained>
-    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="992:95" size="100:100">
+    <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="255:255:255" borderColor="0:0:0" position="992:95" size="100:100">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::LexicalDomain"/>
@@ -329,7 +331,7 @@
       </semanticModel>
       <anchorage position="991:155" graphEdge="//@contained.0/@contained.12"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.5 //@contained.0/@contained.11/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.4 //@contained.0/@contained.11/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
@@ -384,7 +386,7 @@
       </semanticModel>
       <anchorage position="985:271" graphEdge="//@contained.0/@contained.14"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.6 //@contained.0/@contained.13/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.5 //@contained.0/@contained.13/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
@@ -439,7 +441,7 @@
       </semanticModel>
       <anchorage position="988:418" graphEdge="//@contained.0/@contained.16"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.7 //@contained.0/@contained.15/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.6 //@contained.0/@contained.15/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
@@ -494,15 +496,15 @@
       </semanticModel>
       <anchorage position="1173:266" graphEdge="//@contained.0/@contained.18"/>
     </contained>
-    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.8 //@contained.0/@contained.17/@anchorage.0">
+    <contained xsi:type="di2:GraphEdge" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="0:0:0" backgroundColor="0:0:0" borderColor="0:0:0" anchor="//@contained.0/@contained.0/@anchorage.7 //@contained.0/@contained.17/@anchorage.0">
       <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
       <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       <property key="PropStereoDisplay" value="ProblemFrames::connection"/>
-      <contained xsi:type="di2:GraphNode" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="0:20" size="100:100">
+      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="0:20" size="100:100">
         <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       </contained>
-      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="-60:20" size="100:100">
+      <contained xsi:type="di2:GraphNode" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="-60:20" size="100:100">
         <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
         <property key="custom_disp" value="1166"/>
@@ -512,7 +514,7 @@
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
         <property key="custom_disp" value="1166"/>
       </contained>
-      <contained xsi:type="di2:GraphNode" isVisible="true" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="-60:-20" size="100:100">
+      <contained xsi:type="di2:GraphNode" fontFamily="Arial" fontSize="9" lineStyle="solid" fontColor="0:0:0" foregroundColor="248:249:214" backgroundColor="248:249:214" borderColor="157:124:47" position="-60:-20" size="100:100">
         <property key="STEREOTYPE_DISPLAY_LOCATION" value="Comment"/>
         <property key="QUALIFIED_NAME_DEPTH" value="0"/>
       </contained>
