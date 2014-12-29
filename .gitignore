@@ -3,6 +3,7 @@
 /logs/*
 .idea/*
 models/.metadata
+*.log
 
 
 #Files
