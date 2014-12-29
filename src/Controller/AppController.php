@@ -15,6 +15,7 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Cake\Event\Event;
 
 /**
  * Application Controller
@@ -26,6 +27,11 @@ use Cake\Controller\Controller;
  */
 class AppController extends Controller {
 
+	/**
+	 * HTML title
+	 * @var string
+	 */
+	protected $title = '';
 /**
  * Initialization hook method.
  *
@@ -37,4 +43,8 @@ class AppController extends Controller {
 		$this->loadComponent('Flash');
 	}
 
+	public function beforeFilter(Event $event) {
+		parent::beforeFilter($event);
+		$this->set('title', $this->title);
+	}
 }
