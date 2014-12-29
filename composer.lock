@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "d6f63ac09d717be0ec9e58b3d04377ca04c71295"
+                "reference": "1db34c7a0cd46b9d455f65966483a8238ef91634"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/d6f63ac09d717be0ec9e58b3d04377ca04c71295",
-                "reference": "d6f63ac09d717be0ec9e58b3d04377ca04c71295",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/1db34c7a0cd46b9d455f65966483a8238ef91634",
+                "reference": "1db34c7a0cd46b9d455f65966483a8238ef91634",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2014-12-14 13:53:55"
+            "time": "2014-12-19 22:51:58"
         },
         {
             "name": "cakephp/debug_kit",
@@ -1554,16 +1554,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5b63fd3fe960e2020770c845e04254e5ca2b722a"
+                "reference": "d2a1d4c58fd2bb09ba376d0d19e67c0ab649e401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5b63fd3fe960e2020770c845e04254e5ca2b722a",
-                "reference": "5b63fd3fe960e2020770c845e04254e5ca2b722a",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d2a1d4c58fd2bb09ba376d0d19e67c0ab649e401",
+                "reference": "d2a1d4c58fd2bb09ba376d0d19e67c0ab649e401",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2014-12-05 00:14:12"
+            "time": "2014-12-18 02:37:51"
         },
         {
             "name": "symfony/config",
