@@ -1,1 +1,27 @@
+/* ----------------------
+ Icons
+---------------------- */
 
+/* Icon padding */
+.small-spaced-icon {
+    margin: 0 4px 0 0;
+}
+
+/* ----------------------
+ Icons
+---------------------- */
+
+/* Row colors */
+.row-black {
+    color: #ddd;
+    background: #48403D;
+}
+
+.social-media-strip {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    height: 140px;
+    padding: 0;
+}

@@ -41,6 +41,7 @@
     <?= $this->fetch('content'); ?>
     <?= $this->element('footer'); ?>
 
+    <?= $this->Html->script('jquery-1.11.2') ?>
     <?= $this->fetch('script') ?>
   </body>
 </html>
