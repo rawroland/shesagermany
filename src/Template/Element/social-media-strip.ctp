@@ -10,20 +10,22 @@
     echo $this->Html->link($fbLink, '#', array('escape' => false));
 
     $twitterLink = $this->Html->tag('i', '', array('class' => 'fa fa-twitter-square fa-2x small-spaced-icon'));
-    echo $this->Html->link($twitterLink, '#', array('escape' => false)).' ';
+    echo $this->Html->link($twitterLink, '#', array('escape' => false));
 
     $googlePlusLink = $this->Html->tag('i', '', array('class' => 'fa fa-google-plus-square fa-2x small-spaced-icon'));
-    echo $this->Html->link($googlePlusLink, '#', array('escape' => false)).' ';
+    echo $this->Html->link($googlePlusLink, '#', array('escape' => false));
 
     $youtubeLink = $this->Html->tag('i', '', array('class' => 'fa fa-youtube-square fa-2x small-spaced-icon'));
-    echo $this->Html->link($youtubeLink, '#', array('escape' => false)).' ';
+    echo $this->Html->link($youtubeLink, '#', array('escape' => false));
     ?>
   </div>
   <div class="col-xs-12 col-sm-4">
     <?php
-    $contactLink = $this->Html->tag('i', '', array('class' => 'fa fa-envelope fa-2x small-spaced-icon'));
-    echo $this->Html->link($contactLink, '#', array('escape' => false));
-
+    $contactLink = $this->Html->tag('i', '', array('class' => 'fa fa-envelope small-spaced-icon'));
+    echo $this->Html->link($contactLink.'Contact Us', '#', array('escape' => false));
+    ?>
+    <br>
+    <?php
     $emailLink = $this->Html->tag('i', '', array('class' => 'fa fa-at'));
     echo $this->Html->link($emailLink.' '.'info@shesagermany.org', 'mailto:info@shesagermany.org', array('escape' => false));
     ?>

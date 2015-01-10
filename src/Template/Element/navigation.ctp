@@ -4,7 +4,7 @@
  */
 ?>
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <div class="container container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -15,7 +15,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <?= $this->Html->image('logo.png', array('alt' => "SHESA Germany", 'class' => 'brand-image'));?>
+        <?= $this->Html->image('logo.png', array('alt' => "SHESA Germany"));?>
       </a>
     </div>
 
@@ -26,10 +26,8 @@
         <li><a href="#">About</a></li>
         <li><a href="#">Events</a></li>
         <li><a href="#">Projects</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
         <li><a href="#">Media</a></li>
+        <li><a href="#">Executive</a></li>
         <li><a href="#">Sponsors</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
