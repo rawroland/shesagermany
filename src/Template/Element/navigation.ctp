@@ -22,14 +22,19 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active">
+          <a href="#">
+            <i class="fa fa-home fa-stack-4x"></i>
+            Home <span class="sr-only">(current)</span>
+          </a>
+        </li>
         <li><a href="#">About</a></li>
         <li><a href="#">Events</a></li>
         <li><a href="#">Projects</a></li>
         <li><a href="#">Media</a></li>
         <li><a href="#">Executive</a></li>
         <li><a href="#">Sponsors</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#" class="hidden-sm">Contact</a></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->

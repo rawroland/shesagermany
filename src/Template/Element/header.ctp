@@ -3,5 +3,7 @@
  * @var $this \Cake\View\View
  */
 ?>
-<?= $this->fetch('marketing'); ?>
-<?= $this->element('navigation'); ?>
+<header>
+  <?= $this->fetch('marketing'); ?>
+  <?= $this->element('navigation'); ?>
+</header>
