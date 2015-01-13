@@ -8,7 +8,7 @@
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1">
+              data-target="#navbar-collapse">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -20,21 +20,56 @@
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="active">
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav navbar-right text-center text-uppercase">
+        <li class="active hidden-sm">
           <a href="#">
-            <i class="fa fa-home fa-stack-4x"></i>
-            Home <span class="sr-only">(current)</span>
+            <i class="fa fa-home fa-2x"></i><br>
+            <strong>Home <span class="sr-only">(current)</span></strong>
           </a>
         </li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Media</a></li>
-        <li><a href="#">Executive</a></li>
-        <li><a href="#">Sponsors</a></li>
-        <li><a href="#" class="hidden-sm">Contact</a></li>
+        <li>
+          <a href="#">
+            <i class="fa fa-university fa-2x"></i><br>
+            <strong>About</strong>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-calendar fa-2x"></i><br>
+            <strong>Events</strong>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-lightbulb-o fa-2x"></i><br>
+            <strong>Projects</strong>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-users fa-2x"></i><br>
+            <strong>Executive</strong>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-home fa-2x"></i><br>
+            <strong>Media</strong>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-home fa-2x"></i><br>
+            <strong>Sponsors</strong>
+          </a>
+        </li>
+        <li class="hidden-sm">
+          <a href="#">
+            <i class="fa fa-envelope-o fa-2x"></i><br>
+            <strong>Contact</strong>
+          </a>
+        </li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->

@@ -49,6 +49,19 @@ html, body {
   padding: 0;
 }
 
+ul.navbar-nav > li > a{
+  padding-top: 60px;
+  padding-bottom: 31px;
+}
+
+ul.navbar-nav > li > a > div{
+  padding: 5px 0 0 0 !important;
+}
+
+ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
+  background-color: #E7E7E7 !important;
+}
+
 /* ----------------------
  footer
 ---------------------- */
