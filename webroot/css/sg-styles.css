@@ -8,7 +8,6 @@ html, body {
 
 /* Content wrapping for fixed footer */
 #content {
-  min-height: 100%;
 }
 
 #main-content {
@@ -21,8 +20,11 @@ html, body {
 ---------------------- */
 
 /* Icon padding */
-.small-spaced-icon {
-  margin: 0 4px 0 0;
+.small-padding-text {
+  margin: 0 5px 0 0;
+}
+.medium-padding-text {
+  margin: 0 10px 0 0;
 }
 
 /* ----------------------
@@ -51,7 +53,12 @@ html, body {
 
 ul.navbar-nav > li > a{
   padding-top: 60px;
-  padding-bottom: 31px;
+  padding-bottom: 32px;
+}
+
+ul.navbar-nav > li > a.dropdown-toggle{
+  padding-top: 60px;
+  padding-bottom: 12px;
 }
 
 ul.navbar-nav > li > a > div{
@@ -69,7 +76,7 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 /* fixed bottom*/
 .footer {
   position: relative;
-  margin-top: 200px;
+  margin-top: 50px;
   height: 200px;
   clear: both;
   padding: 40px 0;
@@ -83,7 +90,6 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 @media (max-width: 767px) {
   /* footer height*/
   .footer {
-    margin-top: 450px;
     height: 450px;
     padding: 20px;
   }
@@ -96,7 +102,6 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 @media (min-width: 768px) and (max-width: 991px){
   /* footer height*/
   .footer {
-    margin-top: 270px;
     height: 270px;
     padding: 30px;
   }

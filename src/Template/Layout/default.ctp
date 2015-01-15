@@ -19,8 +19,8 @@
   <?php
   $wwwRoot = \Cake\Core\Configure::read('App.wwwRoot');
   ?>
-  <link type="text/css" rel="stylesheet" href="plugins/bootstrap-3.3.1/dist/css/bootstrap.css">
-  <link type="text/css" rel="stylesheet" href="plugins/font-awesome-4.2.0/font-awesome-4.2.0/css/font-awesome.css">
+  <link type="text/css" rel="stylesheet" href="<?= $this->request->webroot?>plugins/bootstrap-3.3.1/dist/css/bootstrap.css">
+  <link type="text/css" rel="stylesheet" href="<?= $this->request->webroot?>plugins/font-awesome-4.2.0/font-awesome-4.2.0/css/font-awesome.css">
   <!-- SG styles-->
   <?= $this->Html->css('sg-styles.css') ?>
   <?= $this->fetch('css') ?>
@@ -43,7 +43,7 @@
 <?= $this->element('footer'); ?>
 
 <?= $this->Html->script('jquery-1.11.2') ?>
-<script type="text/javascript" src="plugins/bootstrap-3.3.1/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="<?= $this->request->webroot?>plugins/bootstrap-3.3.1/dist/js/bootstrap.js"></script>
 <?= $this->fetch('script') ?>
 </body>
 </html>
