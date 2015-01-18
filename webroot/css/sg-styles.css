@@ -8,11 +8,30 @@ html, body {
 
 /* Content wrapping for fixed footer */
 #content {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -200px;
 }
 
-#main-content {
-  overflow: auto;
-  padding-bottom: 200px;
+
+/* ----------------------
+ footer
+---------------------- */
+
+.footer, .push {
+  height: 200px;
+}
+
+/* fixed bottom*/
+.footer {
+  padding: 40px 0;
+  margin-top: 50px;
+}
+
+.long-text p {
+  margin: 30px 0;
 }
 
 /* ----------------------
@@ -70,43 +89,49 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 }
 
 /* ----------------------
- footer
----------------------- */
-
-/* fixed bottom*/
-.footer {
-  position: relative;
-  margin-top: 50px;
-  height: 200px;
-  clear: both;
-  padding: 40px 0;
-}
-
-
-/* ----------------------
  Responsive definitions
 ---------------------- */
 /*Mobile*/
 @media (max-width: 767px) {
-  /* footer height*/
-  .footer {
-    height: 450px;
-    padding: 20px;
+
+  /* Content wrapping for fixed footer */
+  #content {
+    /* Negative indent footer by it's height */
+    margin: 0 auto -450px;
   }
-  /*Stop footer from hiding lower content*/
-  #main-content {
-    padding-bottom: 450px;
+
+  /* ----------------------
+   footer
+  ---------------------- */
+
+  .footer, .push {
+    height: 450px;
+  }
+
+  /* fixed bottom*/
+  .footer {
+    padding: 20px 0;
   }
 }
 /*Footer*/
 @media (min-width: 768px) and (max-width: 991px){
-  /* footer height*/
-  .footer {
-    height: 270px;
-    padding: 30px;
+
+  /* Content wrapping for fixed footer */
+  #content {
+    /* Negative indent footer by it's height */
+    margin: 0 auto -270px;
   }
-  /*Stop footer from hiding lower content*/
-  #main-content {
-    padding-bottom: 270px;
+
+  /* ----------------------
+   footer
+  ---------------------- */
+
+  .footer, .push {
+    height: 270px;
+  }
+
+  /* fixed bottom*/
+  .footer {
+    padding: 20px 0;
   }
 }

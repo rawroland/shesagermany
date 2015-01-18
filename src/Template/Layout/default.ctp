@@ -39,7 +39,10 @@
 <body>
 <?= $this->element('social-media-strip'); ?>
 <?= $this->element('header'); ?>
-<div id="content"> <?= $this->fetch('content'); ?></div>
+<div id="content">
+  <?= $this->fetch('content'); ?>
+  <div class="push"></div>
+</div>
 <?= $this->element('footer'); ?>
 
 <?= $this->Html->script('jquery-1.11.2') ?>

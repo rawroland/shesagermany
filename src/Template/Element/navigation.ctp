@@ -42,7 +42,8 @@
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Sacred Heart College Mankon', array('controller' => 'pages', 'action' => 'about_sg'))?>
+              <?= $this->Html->link('Sacred Heart College Mankon', array('controller' => 'pages', 'action' =>
+                'about_saheco'))?>
             </li>
           </ul>
         </li>
