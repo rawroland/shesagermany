@@ -8,25 +8,41 @@
     <div class="row">
       <div class="col-sm-6 col-md-3">
         <dl>
-          <dt class="">Shesa Germany</dt>
-          <dt class="">Home</dt>
-          <dt class="">SHESA Germany e.V</dt>
-          <dt class="">Sacred Heart College Mankon</dt>
+          <dt class="text-uppercase heading"><?= __('Shesa Germany');?></dt>
+          <dt class="">
+            <?= $this->Html->link(__('Home'), '/');?>
+          </dt>
+          <dt class="">
+            <?= $this->Html->link(__('SHESA Germany e.V'), '/');?>
+          </dt>
+          <dt class="">
+            <?= $this->Html->link(__('Sacred Heart College Mankon'), '/');?>
+          </dt>
         </dl>
       </div>
       <div class="col-sm-6 col-md-3">
         <dl>
-          <dt class="">Important Links</dt>
-          <dt class="">Events</dt>
-          <dt class="">Projects</dt>
-          <dt class="">Partners</dt>
+          <dt class="text-uppercase heading"><?= __('Important Links');?></dt>
+          <dt class="">
+            <?= $this->Html->link(__('Events'), '/');?>
+          </dt>
+          <dt class="">
+            <?= $this->Html->link(__('Projects'), '/');?>
+          </dt>
+          <dt class="">
+            <?= $this->Html->link(__('Partners'), '/');?>
+          </dt>
         </dl>
       </div>
       <div class="col-sm-6 col-md-3">
         <dl>
-          <dt class="">Other Links</dt>
-          <dt class="">Media</dt>
-          <dt class="">Executive</dt>
+          <dt class="text-uppercase heading"><?= __('Other Links');?></dt>
+          <dt class="">
+            <?= $this->Html->link(__('Media'), '/');?>
+          </dt>
+          <dt class="">
+            <?= $this->Html->link(__('Executive'), '/');?>
+          </dt>
         </dl>
       </div>
       <div class="col-sm-6 col-md-3">
@@ -35,17 +51,17 @@
           Postfach 10 11 10 <br>
           47011 Duisburg <br>
           <?php
-          $contactLink = $this->Html->tag('i', '', array('class' => 'fa fa-envelope small-spaced-icon'));
+          $contactLink = $this->Html->tag('i', '', array('class' => 'fa fa-envelope small-padding-text'));
           echo $this->Html->link($contactLink.'Contact Us', '#', array('escape' => false));
           ?>
           <br>
           <?php
-          $emailLink = $this->Html->tag('i', '', array('class' => 'fa fa-at small-spaced-icon'));
-          echo $this->Html->link($emailLink.' '.'info@shesagermany.org', 'mailto:info@shesagermany.org', array('escape' => false));
+          $emailLink = $this->Html->tag('i', '', array('class' => 'fa fa-at small-padding-text'));
+          echo $this->Html->link($emailLink.'info@shesagermany.org', 'mailto:info@shesagermany.org', array('escape' => false));
           ?>
           <br>
           <?php
-          $websiteLink = $this->Html->tag('i', '', array('class' => 'fa fa-globe small-spaced-icon'));
+          $websiteLink = $this->Html->tag('i', '', array('class' => 'fa fa-globe small-padding-text'));
           echo $this->Html->link($emailLink.'www.shesagermany.org', '/', array('escape' => false));
           ?>
         </address>
