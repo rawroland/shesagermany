@@ -3,7 +3,7 @@
  * @var $this \Cake\View\View
  */
 ?>
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default sg-navigation">
   <div class="container container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -130,7 +130,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <li class="hidden-sm">
           <?php
           $icon = $this->Html->tag('i', '', array('class' => 'fa fa-home fa-2x'));
           $br = $this->Html->tag('br');

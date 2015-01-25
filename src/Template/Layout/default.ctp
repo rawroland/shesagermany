@@ -47,6 +47,7 @@
 
 <?= $this->Html->script('jquery-1.11.2') ?>
 <script type="text/javascript" src="<?= $this->request->webroot?>plugins/bootstrap-3.3.1/dist/js/bootstrap.js"></script>
+<?= $this->Html->script('sg');?>
 <?= $this->fetch('script') ?>
 </body>
 </html>
