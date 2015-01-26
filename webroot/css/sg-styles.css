@@ -15,6 +15,10 @@ html, body {
   margin: 0 auto -200px;
 }
 
+.top-bottom-medium-padding {
+  padding: 20px 0;
+}
+
 
 /* ----------------------
  footer
@@ -207,7 +211,7 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 
 /* Carousel base class */
 .carousel {
-  height: 400px;
+  height: 440px;
 }
 
 /* Declare heights because of positioning of img element */
@@ -253,7 +257,7 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 
   /* Carousel base class */
   .carousel {
-    height: 200px;
+    height: 220px;
   }
 
   /* Declare heights because of positioning of img element */
@@ -270,12 +274,17 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
     top: 30%;
     font-size: 2em;
   }
+
+
+  .top-bottom-medium-padding {
+    padding: 10px 0;
+  }
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
   /* Carousel base class */
   .carousel {
-    height: 300px;
+    height: 330px;
   }
 
   /* Declare heights because of positioning of img element */
@@ -291,6 +300,10 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
   .carousel-control .fa-chevron-circle-right {
     top: 40%;
     font-size: 2.5em;
+  }
+
+  .top-bottom-medium-padding {
+    padding: 15px 0;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {}

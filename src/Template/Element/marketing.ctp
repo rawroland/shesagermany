@@ -6,7 +6,7 @@ $this->start('marketing');
 ?>
   <div class="strip-dark-grey">
     <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <div id="myCarousel" class="carousel slide top-bottom-medium-padding" data-ride="carousel">
         <!-- Indicators -->
         <ol class="carousel-indicators hidden-xs">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
