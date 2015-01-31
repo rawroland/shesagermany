@@ -33,7 +33,7 @@ class ToolbarHelper extends Helper
      *
      * @var array
      */
-    public $helpers = array('Html', 'Form', 'Url');
+    public $helpers = ['Html', 'Form', 'Url'];
 
     /**
      * Recursively goes through an array and makes neat HTML out of it.
@@ -42,13 +42,20 @@ class ToolbarHelper extends Helper
      * @param int $openDepth Depth to add open class
      * @param int $currentDepth current depth.
      * @param bool $doubleEncode Whether or not to double encode.
+     * @param \SplObjectStorage $currentAncestors Object references found down
+     * the path.
      * @return string
      */
-    public function makeNeatArray($values, $openDepth = 0, $currentDepth = 0, $doubleEncode = false)
+    public function makeNeatArray($values, $openDepth = 0, $currentDepth = 0, $doubleEncode = false, \SplObjectStorage $currentAncestors = null)
     {
-        static $printedObjects = null;
-        if ($currentDepth === 0) {
-            $printedObjects = new \SplObjectStorage();
+        if ($currentAncestors === null) {
+            $ancestors = new \SplObjectStorage();
+        } elseif (is_object($values)) {
+            $ancestors = new \SplObjectStorage();
+            $ancestors->addAll($currentAncestors);
+            $ancestors->attach($values);
+        } else {
+            $ancestors = $currentAncestors;
         }
         $className = "neat-array depth-$currentDepth";
         if ($openDepth > $currentDepth) {
@@ -58,10 +65,10 @@ class ToolbarHelper extends Helper
         $out = "<ul class=\"$className\">";
         if (!is_array($values)) {
             if (is_bool($values)) {
-                $values = array($values);
+                $values = [$values];
             }
             if ($values === null) {
-                $values = array(null);
+                $values = [null];
             }
             if (is_object($values) && method_exists($values, 'toArray')) {
                 $values = $values->toArray();
@@ -94,13 +101,9 @@ class ToolbarHelper extends Helper
             }
 
             $isObject = is_object($value);
-            if ($isObject && $printedObjects->contains($value)) {
+            if ($isObject && $ancestors->contains($value)) {
                 $isObject = false;
                 $value = ' - recursion';
-            }
-
-            if ($isObject) {
-                $printedObjects->attach($value);
             }
 
             if (
@@ -111,31 +114,13 @@ class ToolbarHelper extends Helper
                 $isObject
                 ) && !empty($value)
             ) {
-                $out .= $this->makeNeatArray($value, $openDepth, $nextDepth, $doubleEncode);
+                $out .= $this->makeNeatArray($value, $openDepth, $nextDepth, $doubleEncode, $ancestors);
             } else {
                 $out .= h($value, $doubleEncode);
             }
             $out .= '</li>';
         }
         $out .= '</ul>';
-        return $out;
-    }
-
-    /**
-     * Create a table.
-     *
-     * @param array $rows Rows to make.
-     * @param array $headers Optional header row.
-     * @return string
-     */
-    public function table($rows, $headers = array())
-    {
-        $out = '<table class="debug-table">';
-        if (!empty($headers)) {
-            $out .= $this->Html->tableHeaders($headers);
-        }
-        $out .= $this->Html->tableCells($rows);
-        $out .= '</table>';
         return $out;
     }
 }

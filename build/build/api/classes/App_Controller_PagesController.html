@@ -56,6 +56,9 @@
             <a href="#violations">Violations</a>
           </li>
           <li>
+            <a href="#members">Members</a>
+          </li>
+          <li>
             <a href="#methods">Methods</a>
           </li>
           <li>
@@ -74,8 +77,10 @@
         <h2 id="synopsis">Synopsis</h2>
         <div class="synopsis">class PagesController
                 extends <a title="App\Controller\AppController" href="../classes/App_Controller_AppController.html">AppController</a>
-            {<br/><ul class="none"><li>// methods</li><li>public Response <a title="App\Controller\PagesController" href="../classes/App_Controller_PagesController/display.html">display</a>()
+            {<br/><ul class="none"><li>// Inherited members from <span title="App\Controller\AppController">AppController</span></li><li>protected string <a href="#members">$title</a>;
+                        </li></ul><ul class="none"><li>// methods</li><li>public Response <a title="App\Controller\PagesController" href="../classes/App_Controller_PagesController/display.html">display</a>()
                     </li></ul><ul class="none"><li>// Inherited methods from <span title="App\Controller\AppController">AppController</span></li><li>public void <a title="App\Controller\AppController" href="../classes/App_Controller_AppController/initialize.html">initialize</a>()
+                        </li><li>public void <a title="App\Controller\AppController" href="../classes/App_Controller_AppController/beforeFilter.html">beforeFilter</a>()
                         </li></ul>
 
             }<br/></div>
@@ -104,9 +109,18 @@
               <td>
                 <a href="http://phpmd.org/rules/cleancode.html#staticaccess" target="_blank" title="Clean Code Rules">StaticAccess</a>
               </td>
-              <td>Avoid using static access to class '::' in method '::'.</td>
+              <td>Avoid using static access to class '\Cake\Core\Configure' in method 'display'.</td>
             </tr>
           </table>
+        </div>
+        <h2 id="members">Members</h2>
+        <div class="styled members">
+          <h4>protected</h4>
+          <ul class="members">
+            <li id="title"><strong>$title</strong>
+                —
+                string<br/><span class="indent">HTML title</span></li>
+          </ul>
         </div>
         <h2 id="methods">Methods</h2>
         <div class="styled">
@@ -118,6 +132,9 @@
           <h3>Inherited from <a title="App\Controller\AppController" href="../classes/App_Controller_AppController.html">App\Controller\AppController</a></h3>
           <h4>public</h4>
           <ul>
+            <li id="beforeFilter">
+              <a title="App\Controller\AppController" href="../classes/App_Controller_AppController/beforeFilter.html">beforeFilter()</a>
+            </li>
             <li id="initialize"><a title="App\Controller\AppController" href="../classes/App_Controller_AppController/initialize.html">initialize()</a>
                 — Initialization hook method.</li>
           </ul>
@@ -138,7 +155,7 @@
       </section>
     </div>
     <footer>
-      <span>Generated using phpDox 4745b94-dirty - Copyright (C) 2010 - 2014 by Arne Blankerts</span>
+      <span>Generated using phpDox 766945d-dirty - Copyright (C) 2010 - 2015 by Arne Blankerts</span>
     </footer>
   </body>
 </html>

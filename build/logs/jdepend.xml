@@ -28,7 +28,7 @@
         <ConcreteClasses>3</ConcreteClasses>
         <AbstractClasses>0</AbstractClasses>
         <Ca>0</Ca>
-        <Ce>4</Ce>
+        <Ce>5</Ce>
         <A>0</A>
         <I>1</I>
         <D>0</D>
@@ -42,6 +42,7 @@
       <DependsUpon>
         <Package>Cake\Controller</Package>
         <Package>Cake\Core</Package>
+        <Package>Cake\Event</Package>
         <Package>Cake\Network\Exception</Package>
         <Package>Cake\View\Exception</Package>
       </DependsUpon>

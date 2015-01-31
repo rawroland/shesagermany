@@ -17,13 +17,24 @@
   </method>
   <parent full="App\Controller\AppController" namespace="App\Controller" name="AppController">
     <extends full="Cake\Controller\Controller" namespace="Cake\Controller" name="Controller"/>
-    <method name="initialize" start="36" end="38" abstract="false" final="false" static="false" visibility="public">
+    <member name="title" type="string" default="''" visibility="protected" line="34">
+      <docblock>
+        <description compact="HTML title"/>
+        <var type="string"/>
+      </docblock>
+    </member>
+    <method name="initialize" start="42" end="44" abstract="false" final="false" static="false" visibility="public">
       <docblock>
         <description compact="Initialization hook method.">Use this method to add common initialization code like loading components.</description>
         <return type="object">
           <type full="App\Controller\void" namespace="App\Controller" name="void"/>
         </return>
       </docblock>
+    </method>
+    <method name="beforeFilter" start="46" end="49" abstract="false" final="false" static="false" visibility="public">
+      <parameter name="event" byreference="false" type="object">
+        <type full="Cake\Event\Event" namespace="Cake\Event" name="Event"/>
+      </parameter>
     </method>
   </parent>
 </class>
