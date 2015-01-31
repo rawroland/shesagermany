@@ -57,7 +57,19 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_z91vQIlCEeSMS_IrQmEz4w"/>
         </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_k2mN4IlDEeSMS_IrQmEz4w" name="Event" clientDependency="_luCwwI95EeSUKJIlMqu_9g _luPlEI95EeSUKJIlMqu_9g"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_k2mN4IlDEeSMS_IrQmEz4w" name="Event" clientDependency="_luCwwI95EeSUKJIlMqu_9g _luPlEI95EeSUKJIlMqu_9g">
+        <ownedAttribute xmi:id="_NYpoMKltEeSKxZWNJepnOQ" name="id" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NxQ8gKltEeSKxZWNJepnOQ" name="title" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_NzKZ8KltEeSKxZWNJepnOQ" name="description" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_N0ugMKltEeSKxZWNJepnOQ" name="date" type="_JATScKluEeSKxZWNJepnOQ" isUnique="false"/>
+        <ownedAttribute xmi:id="_N2sPEKltEeSKxZWNJepnOQ" name="Property_4" isUnique="false"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_rjmRYIlDEeSMS_IrQmEz4w" name="SG!{addingEvent,editingEvent,deletingEvent,addingActivity,editingActivity,deletingActivity,getEvents,getEvent}E!{events,event}" memberEnd="_rjrw8IlDEeSMS_IrQmEz4w _rjx3kIlDEeSMS_IrQmEz4w">
         <ownedEnd xmi:id="_rjx3kIlDEeSMS_IrQmEz4w" name="sG" type="_Yi2ZwIlCEeSMS_IrQmEz4w" isUnique="false" association="_rjmRYIlDEeSMS_IrQmEz4w">
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rj3XIIlDEeSMS_IrQmEz4w" value="1"/>
@@ -371,6 +383,54 @@
             <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Ua28QI96EeSRHYpBB9GYnw" value="*"/>
             <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Ua1HEI96EeSRHYpBB9GYnw"/>
           </ownedAttribute>
+          <ownedAttribute xmi:id="_QP53QKlvEeSKxZWNJepnOQ" name="Event" type="_k2mN4IlDEeSMS_IrQmEz4w" isUnique="false" association="_QPwGQKlvEeSKxZWNJepnOQ">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QQMyMalvEeSKxZWNJepnOQ" value="1"/>
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QQMyMKlvEeSKxZWNJepnOQ" value="1"/>
+          </ownedAttribute>
+          <ownedOperation xmi:id="_utPnoKloEeSKxZWNJepnOQ" name="addEvent"/>
+          <ownedOperation xmi:id="_vbKdkKloEeSKxZWNJepnOQ" name="editEvent">
+            <ownedParameter xmi:id="_5RN8sKloEeSKxZWNJepnOQ" name="eventId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_vslkwKloEeSKxZWNJepnOQ" name="deleteEvent">
+            <ownedParameter xmi:id="_SUX4IKlpEeSKxZWNJepnOQ" name="eventId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_mIUjwKlpEeSKxZWNJepnOQ" name="addActivity">
+            <ownedParameter xmi:id="_wSyMoKlpEeSKxZWNJepnOQ" name="eventId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_mVyYAKlpEeSKxZWNJepnOQ" name="editActivity">
+            <ownedParameter xmi:id="_59Z30KlpEeSKxZWNJepnOQ" name="eventId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_6AjScKlpEeSKxZWNJepnOQ" name="activityId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+              <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_C0RK0KlqEeSKxZWNJepnOQ" value="1"/>
+              <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_C0LEMKlqEeSKxZWNJepnOQ" value="1"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_mhtUIKlpEeSKxZWNJepnOQ" name="deleteActivity">
+            <ownedParameter xmi:id="_mKW5MKlrEeSKxZWNJepnOQ" name="eventId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+            <ownedParameter xmi:id="_mWR1UKlrEeSKxZWNJepnOQ" name="activityId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_o75eoKlpEeSKxZWNJepnOQ" name="browseEvents">
+            <ownedParameter xmi:id="_8mPQYKlrEeSKxZWNJepnOQ" name="time">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_pExGwKlpEeSKxZWNJepnOQ" name="viewEvent">
+            <ownedParameter xmi:id="_NCZg0KlsEeSKxZWNJepnOQ" name="eventId">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+            </ownedParameter>
+          </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_WlApEI6dEeSPtoxto6dBGQ" name="SGWebPage" clientDependency="_mBR10I95EeSUKJIlMqu_9g _mBaYsI95EeSUKJIlMqu_9g _mDyXQI95EeSUKJIlMqu_9g _mD66II95EeSUKJIlMqu_9g _mHEUwI95EeSUKJIlMqu_9g _mHmgQI95EeSUKJIlMqu_9g _mMj4wI95EeSUKJIlMqu_9g _mMtCsI95EeSUKJIlMqu_9g _mOiOsI95EeSUKJIlMqu_9g _mOr_sI95EeSUKJIlMqu_9g _mRD-QI95EeSUKJIlMqu_9g _mRk7oI95EeSUKJIlMqu_9g"/>
         <packagedElement xmi:type="uml:Dependency" xmi:id="_O5H-oI6hEeSPtoxto6dBGQ" name="events,event" supplier="_k2mN4IlDEeSMS_IrQmEz4w" client="_Zsp6AI6eEeSPtoxto6dBGQ"/>
@@ -500,6 +560,12 @@
         </packagedElement>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_nB6zcI95EeSUKJIlMqu_9g" name="FromEventManagementtopdEventManagement" supplier="_B53sMI6cEeSPtoxto6dBGQ" client="_Jm7T8I6bEeSPtoxto6dBGQ"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_QPwGQKlvEeSKxZWNJepnOQ" name="Event" memberEnd="_QP53QKlvEeSKxZWNJepnOQ _QQMyMqlvEeSKxZWNJepnOQ">
+        <ownedEnd xmi:id="_QQMyMqlvEeSKxZWNJepnOQ" name="sG_Events" type="_v4Ly8I6cEeSPtoxto6dBGQ" isUnique="false" association="_QPwGQKlvEeSKxZWNJepnOQ">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_QQWjMKlvEeSKxZWNJepnOQ" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_QQWjMalvEeSKxZWNJepnOQ"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_NpMIII6eEeSPtoxto6dBGQ" name="Requirements" clientDependency="_nQCvAI95EeSUKJIlMqu_9g _nQMgAI95EeSUKJIlMqu_9g _nQYGMI95EeSUKJIlMqu_9g _nQh3MI95EeSUKJIlMqu_9g _nQsPQI95EeSUKJIlMqu_9g _nRIUII95EeSUKJIlMqu_9g _nRSsMI95EeSUKJIlMqu_9g _nRW9oI95EeSUKJIlMqu_9g _nRij0I95EeSUKJIlMqu_9g _nS_VUI95EeSUKJIlMqu_9g _nTQbEI95EeSUKJIlMqu_9g _nTY98I95EeSUKJIlMqu_9g _nThg0I95EeSUKJIlMqu_9g _nTpcoI95EeSUKJIlMqu_9g _nTvjQI95EeSUKJIlMqu_9g">
       <packagedElement xmi:type="uml:Class" xmi:id="_XnmSAI6eEeSPtoxto6dBGQ" name="R01"/>
@@ -665,7 +731,7 @@
       <packagedElement xmi:type="uml:Dependency" xmi:id="_nTpcoI95EeSUKJIlMqu_9g" name="FromRequirementstoR12" supplier="_ixAVsI9qEeSUKJIlMqu_9g" client="_NpMIII6eEeSPtoxto6dBGQ"/>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_nTvjQI95EeSUKJIlMqu_9g" name="FromRequirementstoR10" supplier="_jNFNsI9qEeSUKJIlMqu_9g" client="_NpMIII6eEeSPtoxto6dBGQ"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_5Ia5EI9pEeSUKJIlMqu_9g" name="ProductManagement" clientDependency="_nU6A4I95EeSUKJIlMqu_9g">
+    <packagedElement xmi:type="uml:Package" xmi:id="_5Ia5EI9pEeSUKJIlMqu_9g" name="ProjectManagement" clientDependency="_nU6A4I95EeSUKJIlMqu_9g">
       <packagedElement xmi:type="uml:Package" xmi:id="_CIh8wI9sEeSUKJIlMqu_9g" name="pdProjectManagement" clientDependency="_nVKfkI95EeSUKJIlMqu_9g _nVRNQI95EeSUKJIlMqu_9g _nVeooI95EeSUKJIlMqu_9g _nVrc8I95EeSUKJIlMqu_9g _nV3DII95EeSUKJIlMqu_9g _nWNBYI95EeSUKJIlMqu_9g _nWbD0I95EeSUKJIlMqu_9g _nW16kI95EeSUKJIlMqu_9g _nXKDoI95EeSUKJIlMqu_9g _nXZUMI95EeSUKJIlMqu_9g _nXjsQI95EeSUKJIlMqu_9g _nXuEUI95EeSUKJIlMqu_9g _nYhVkI95EeSUKJIlMqu_9g _nYybUI95EeSUKJIlMqu_9g _nZJnsI95EeSUKJIlMqu_9g _nZSxoI95EeSUKJIlMqu_9g _nZxSwI95EeSUKJIlMqu_9g _nZ-HEI95EeSUKJIlMqu_9g _nbbfoI95EeSUKJIlMqu_9g _nb5ZsI95EeSUKJIlMqu_9g _ncvHMI95EeSUKJIlMqu_9g _ndO2cI95EeSUKJIlMqu_9g">
         <packagedElement xmi:type="uml:Class" xmi:id="_GhIfQI9tEeSUKJIlMqu_9g" name="SG_Projects" clientDependency="_mRO9YI95EeSUKJIlMqu_9g _mRYuYI95EeSUKJIlMqu_9g _mUZmII95EeSUKJIlMqu_9g _mUu9UI95EeSUKJIlMqu_9g">
           <ownedAttribute xmi:id="_39cW4I9tEeSUKJIlMqu_9g" name="project" type="_6FO6IInYEeSrXrymwAVqFw" isUnique="false" aggregation="composite" association="_39Sl4I9tEeSUKJIlMqu_9g">
@@ -776,6 +842,36 @@
         <packagedElement xmi:type="uml:Dependency" xmi:id="_ndO2cI95EeSUKJIlMqu_9g" name="FrompdProjectManagementtoSG_ProjectsObservesP!{projects,project}" supplier="_mUu9UI95EeSUKJIlMqu_9g" client="_CIh8wI9sEeSUKJIlMqu_9g"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Dependency" xmi:id="_nU6A4I95EeSUKJIlMqu_9g" name="FromProductManagementtopdProjectManagement" supplier="_CIh8wI9sEeSUKJIlMqu_9g" client="_5Ia5EI9pEeSUKJIlMqu_9g"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8Fzx8KltEeSKxZWNJepnOQ" name="Data types">
+      <packagedElement xmi:type="uml:DataType" xmi:id="_JATScKluEeSKxZWNJepnOQ" name="Date">
+        <ownedAttribute xmi:id="_Lmw-YKluEeSKxZWNJepnOQ" name="year" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_LpvZ4KluEeSKxZWNJepnOQ" name="month" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_Lst1YKluEeSKxZWNJepnOQ" name="day" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_WijWgKluEeSKxZWNJepnOQ" name="DateTime" clientDependency="_n1pO8KluEeSKxZWNJepnOQ">
+        <ownedAttribute xmi:id="_xaJEAKluEeSKxZWNJepnOQ" name="hour" visibility="public" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0HbJoKluEeSKxZWNJepnOQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0HR_sKluEeSKxZWNJepnOQ" value="1"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_0HbJoaluEeSKxZWNJepnOQ">
+            <value xsi:nil="true"/>
+          </defaultValue>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_ysNv4KluEeSKxZWNJepnOQ" name="minute" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_yvCaYKluEeSKxZWNJepnOQ" name="second" isUnique="false">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_n1pO8KluEeSKxZWNJepnOQ" name="FromDateTimetoDate" supplier="_JATScKluEeSKxZWNJepnOQ" client="_WijWgKluEeSKxZWNJepnOQ"/>
     </packagedElement>
     <profileApplication xmi:id="_MDMbIolCEeSMS_IrQmEz4w">
       <eAnnotations xmi:id="_MDMbI4lCEeSMS_IrQmEz4w" source="http://www.eclipse.org/uml2/2.0.0/UML">
@@ -1456,4 +1552,5 @@
   <ProblemFrames:isPart xmi:id="_ndQroI95EeSUKJIlMqu_9g" base_Dependency="_ndO2cI95EeSUKJIlMqu_9g"/>
   <ProblemFrames:generated_dependency xmi:id="_ndR5wI95EeSUKJIlMqu_9g" base_Dependency="_ndO2cI95EeSUKJIlMqu_9g"/>
   <ProblemFrames:connection xmi:id="_XHpSoI96EeSRHYpBB9GYnw" base_Association="_UZ7III96EeSRHYpBB9GYnw"/>
+  <ProblemFrames:extends xmi:id="_sb0v4KluEeSKxZWNJepnOQ" base_Dependency="_n1pO8KluEeSKxZWNJepnOQ"/>
 </xmi:XMI>
