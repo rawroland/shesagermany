@@ -7,8 +7,7 @@
 	"require": {
 		"php": ">=5.4.16",
 		"cakephp/cakephp": "3.0.*-dev",
-		"mobiledetect/mobiledetectlib": "2.*",
-		"cakephp/debug_kit": "3.0.*-dev"
+		"mobiledetect/mobiledetectlib": "2.*"
 	},
 	"require-dev": {
 		"d11wtq/boris": "1.0.*",
@@ -18,7 +17,10 @@
         "pdepend/pdepend": "*",
         "phploc/phploc": "*",
         "phpunit/phpunit": "*",
-        "theseer/phpdox": "*"
+        "theseer/phpdox": "*",
+        "cakephp/bake": "dev-master",
+        "cakephp/debug_kit": "3.0.*-dev",
+        "cakephp/migrations": "dev-master"
 	},
 	"suggest": {
 		"phpunit/phpunit": "Allows automated tests to be run without system-wide install.",
@@ -36,7 +38,8 @@
 		}
 	},
 	"scripts": {
-		"post-install-cmd": "App\\Console\\Installer::postInstall"
+		"post-install-cmd": "App\\Console\\Installer::postInstall",
+        "post-autoload-dump": "Cake\\Composer\\Installer\\PluginInstaller::postAutoloadDump"
 	},
 	"minimum-stability" : "dev",
 	"prefer-stable": true
