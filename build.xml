@@ -5,7 +5,7 @@
     <target name="build" depends="prepare, composer, lint, phpunit,phploc, pdepend, phploc-ci,phpmd, phpmd-ci, phpcpd, phpcpd-ci, phpdox" description=""/>
 
     <target name="clean" unless="clean.done" description="Cleanup build artifacts">
-        <delete dir="${basedir}/build/api"/>
+        <delete dir="${basedir}/build/build/api"/>
         <delete dir="${basedir}/build/coverage"/>
         <delete dir="${basedir}/build/logs"/>
         <delete dir="${basedir}/build/pdepend"/>

@@ -9,3 +9,6 @@ models/.metadata
 #Files
 .editorconfig
 cache.properties
+
+#Build
+/build/*
