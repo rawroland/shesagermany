@@ -41,6 +41,9 @@ class EventsControllerTest extends IntegrationTestCase {
     $this->assertResponseOk();
   }
 
+  /**
+   * @todo Mock session call
+   */
   public function testAddSuccessfully() {
     $this->post('/events/add', $this->data);
     $expected = __('The Event was successfully saved.');
