@@ -9,7 +9,7 @@ use Cake\Validation\Validator;
  * Class EventsTable
  * @package App\Model\Table
  */
-class EventsTable extends  Table{
+class EventsTable extends Table {
 
   /**
    * @param array $config
@@ -29,7 +29,7 @@ class EventsTable extends  Table{
       ->notEmpty('title', 'Please provide a title for the event.')
       ->add('title', 'validLength', [
         'rule' => ['lengthBetween', 10, 128],
-        'message' => 'The length of the event title must be between 10 and 128'
+        'message' => 'The length of the event title must be between 10 and 128.'
       ])->requirePresence('title');
     return $validator;
   }

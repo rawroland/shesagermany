@@ -10,17 +10,19 @@ use Cake\TestSuite\IntegrationTestCase;
  */
 class EventsControllerTest extends IntegrationTestCase {
 
-/**
- * Fixtures
- * @var array
- */
-	public $fixtures = [
-		'events' => 'app.events'
-	];
+  /**
+   * Fixtures
+   * @var array
+   */
+  public $fixtures = [
+    'events' => 'app.events'
+  ];
 
   public $data = [
     'title' => 'SHESA Germany SG7',
-    'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et.',
+    'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
+    phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
+    mollitia lectus. Nulla vestibulum massa neque ut et.',
     'date' => '2015-07-11',
   ];
 
