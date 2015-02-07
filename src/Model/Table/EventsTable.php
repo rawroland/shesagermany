@@ -30,7 +30,17 @@ class EventsTable extends Table {
       ->add('title', 'validLength', [
         'rule' => ['lengthBetween', 10, 128],
         'message' => 'The length of the event title must be between 10 and 128.'
-      ])->requirePresence('title');
+      ])->requirePresence('title')
+      ->notEmpty('description', 'Please provide a description for the event.')
+      ->add('description', 'minLength', [
+        'rule' => ['minLength', 50],
+        'message' => 'The length of the event description must be greater than 50.'
+      ])->requirePresence('description')
+      ->notEmpty('date', 'Please provide a date for the event.')
+      ->add('date', 'validDate', [
+        'rule' => ['date', ['dmy', 'ymd']],
+        'message' => 'Please provide a valid date. Allowed format is DD-MM-YYYY.'
+      ])->requirePresence('date');
     return $validator;
   }
 } 
