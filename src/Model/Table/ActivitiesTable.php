@@ -6,10 +6,10 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Class EventsTable
+ * Class ActivitiesTable
  * @package App\Model\Table
  */
-class EventsTable extends Table
+class ActivitiesTable extends Table
 {
 
     /**
@@ -17,11 +17,11 @@ class EventsTable extends Table
      */
     public function initialize(array $config) {
         parent::initialize($config);
-        $this->table('events');
+        $this->table('activities');
         $this->displayField('title');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->hasMany('Activities', []);
+        $this->hasMany('Participants', []);
     }
 
     public function validationDefault(Validator $validator) {
@@ -37,11 +37,11 @@ class EventsTable extends Table
             'rule' => ['minLength', 50],
             'message' => 'The length of the event description must be greater than 50.'
           ])->requirePresence('description')
-          ->notEmpty('date', 'Please provide a date for the event.')
-          ->add('date', 'validDate', [
-            'rule' => ['date', ['dmy', 'ymd']],
+          ->notEmpty('date_time', 'Please provide a date for the event.')
+          ->add('date_time', 'validDateTime', [
+            'rule' => ['datetime', ['dmy', 'ymd']],
             'message' => 'Please provide a valid date. Allowed format is DD-MM-YYYY.'
-          ])->requirePresence('date');
+          ])->requirePresence('date_time');
         return $validator;
     }
 } 

@@ -25,26 +25,28 @@ use Cake\Event\Event;
  *
  * @link http://book.cakephp.org/3.0/en/controllers.html#the-app-controller
  */
-class AppController extends Controller {
+class AppController extends Controller
+{
 
-	/**
-	 * HTML title
-	 * @var string
-	 */
-	protected $title = '';
-/**
- * Initialization hook method.
- *
- * Use this method to add common initialization code like loading components.
- *
- * @return void
- */
-	public function initialize() {
-		$this->loadComponent('Flash');
-	}
+    /**
+     * HTML title
+     * @var string
+     */
+    protected $title = '';
 
-	public function beforeFilter(Event $event) {
-		parent::beforeFilter($event);
-		$this->set('title', $this->title);
-	}
+    /**
+     * Initialization hook method.
+     *
+     * Use this method to add common initialization code like loading components.
+     *
+     * @return void
+     */
+    public function initialize() {
+        $this->loadComponent('Flash');
+    }
+
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->set('title', $this->title);
+    }
 }
