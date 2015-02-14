@@ -7,6 +7,6 @@ use Cake\ORM\Entity;
  * Class Activity
  * @package App\Model\Entity
  */
-class Activity extends Entity{
-
-} 
+class Activity extends Entity
+{
+}

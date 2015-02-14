@@ -46,8 +46,9 @@ class ParticipantsTable extends Table
             )->notEmpty('description', __('Please provide a description for the participant!'))
             ->add('description', 'minLength', [
                 'rule' => ['minLength', 50],
-                'message' => 'The length of the participant description must be greater than 50.'
+                'message' => 'The length of the participant description must be greater than 50.',
             ]);
+
         return $validator;
     }
-} 
+}

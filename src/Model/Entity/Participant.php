@@ -7,7 +7,8 @@ use Cake\ORM\Entity;
  * Class Participant
  * @package App\Model\Entity
  */
-class Participant extends Entity{
+class Participant extends Entity
+{
 
     /**
      * Participant types
@@ -20,5 +21,4 @@ class Participant extends Entity{
      */
     const ROLE_SPEAKER = 'Speaker';
     const ROLE_TEAM = 'Team';
-
-} 
+}

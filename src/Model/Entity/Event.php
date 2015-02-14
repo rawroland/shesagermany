@@ -7,6 +7,6 @@ use Cake\ORM\Entity;
  * Class Event
  * @package App\Model\Entity
  */
-class Event extends Entity{
-
-} 
+class Event extends Entity
+{
+}

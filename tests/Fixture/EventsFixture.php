@@ -10,11 +10,11 @@ use Cake\TestSuite\Fixture\TestFixture;
 class EventsFixture extends TestFixture
 {
 
-    /**
-     * Fields
-     *
-     * @var array
-     */
+/**
+ * Fields
+ *
+ * @var array
+ */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -27,7 +27,7 @@ class EventsFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd
@@ -44,7 +44,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 2,
@@ -52,7 +52,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 3,
@@ -60,7 +60,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 4,
@@ -68,7 +68,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 5,
@@ -76,7 +76,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 6,
@@ -84,7 +84,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 7,
@@ -92,7 +92,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 8,
@@ -100,7 +100,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 9,
@@ -108,7 +108,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
         [
             'id' => 10,
@@ -116,7 +116,7 @@ class EventsFixture extends TestFixture
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'date' => '2015-02-01',
             'created' => 1422812508,
-            'modified' => 1422812508
+            'modified' => 1422812508,
         ],
     ];
 }

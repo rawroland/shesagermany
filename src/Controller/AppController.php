@@ -41,11 +41,13 @@ class AppController extends Controller
      *
      * @return void
      */
-    public function initialize() {
+    public function initialize()
+    {
         $this->loadComponent('Flash');
     }
 
-    public function beforeFilter(Event $event) {
+    public function beforeFilter(Event $event)
+    {
         parent::beforeFilter($event);
         $this->set('title', $this->title);
     }

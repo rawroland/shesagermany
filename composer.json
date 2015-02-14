@@ -21,7 +21,8 @@
         "cakephp/plugin-installer": "*",
         "cakephp/bake": "dev-master",
         "cakephp/debug_kit": "3.0.*-dev",
-        "cakephp/migrations": "dev-master"
+        "cakephp/migrations": "dev-master",
+        "fabpot/php-cs-fixer": "*"
     },
     "suggest": {
         "phpunit/phpunit": "Allows automated tests to be run without system-wide install.",

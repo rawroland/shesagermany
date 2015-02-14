@@ -10,11 +10,11 @@ use Cake\TestSuite\Fixture\TestFixture;
 class ActivitiesFixture extends TestFixture
 {
 
-    /**
-     * Fields
-     *
-     * @var array
-     */
+/**
+ * Fields
+ *
+ * @var array
+ */
     // @codingStandardsIgnoreStart
     public $fields = [
       'id' => [
@@ -25,7 +25,7 @@ class ActivitiesFixture extends TestFixture
         'default' => null,
         'comment' => '',
         'autoIncrement' => true,
-        'precision' => null
+        'precision' => null,
       ],
       'title' => [
         'type' => 'string',
@@ -34,7 +34,7 @@ class ActivitiesFixture extends TestFixture
         'default' => null,
         'comment' => '',
         'precision' => null,
-        'fixed' => null
+        'fixed' => null,
       ],
       'description' => [
         'type' => 'text',
@@ -42,7 +42,7 @@ class ActivitiesFixture extends TestFixture
         'null' => false,
         'default' => null,
         'comment' => '',
-        'precision' => null
+        'precision' => null,
       ],
       'date_time' => [
         'type' => 'datetime',
@@ -50,7 +50,7 @@ class ActivitiesFixture extends TestFixture
         'null' => false,
         'default' => null,
         'comment' => '',
-        'precision' => null
+        'precision' => null,
       ],
       'event_id' => [
         'type' => 'integer',
@@ -60,7 +60,7 @@ class ActivitiesFixture extends TestFixture
         'default' => null,
         'comment' => '',
         'precision' => null,
-        'autoIncrement' => null
+        'autoIncrement' => null,
       ],
       'created' => [
         'type' => 'timestamp',
@@ -68,7 +68,7 @@ class ActivitiesFixture extends TestFixture
         'null' => true,
         'default' => null,
         'comment' => '',
-        'precision' => null
+        'precision' => null,
       ],
       'modified' => [
         'type' => 'timestamp',
@@ -76,14 +76,14 @@ class ActivitiesFixture extends TestFixture
         'null' => true,
         'default' => null,
         'comment' => '',
-        'precision' => null
+        'precision' => null,
       ],
       '_constraints' => [
         'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
       ],
       '_options' => [
         'engine' => 'InnoDB',
-        'collation' => 'utf8_general_ci'
+        'collation' => 'utf8_general_ci',
       ],
     ];
     // @codingStandardsIgnoreEnd
@@ -101,7 +101,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:16',
         'event_id' => 1,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 2,
@@ -110,7 +110,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 2,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 3,
@@ -119,7 +119,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 3,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 4,
@@ -128,7 +128,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 4,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 5,
@@ -137,7 +137,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 5,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 6,
@@ -146,7 +146,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 6,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 7,
@@ -155,7 +155,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 7,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 8,
@@ -164,7 +164,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 8,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 9,
@@ -173,7 +173,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 9,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
       [
         'id' => 10,
@@ -182,7 +182,7 @@ class ActivitiesFixture extends TestFixture
         'date_time' => '2015-02-11 19:46:17',
         'event_id' => 10,
         'created' => 1423683977,
-        'modified' => 1423683977
+        'modified' => 1423683977,
       ],
     ];
 }

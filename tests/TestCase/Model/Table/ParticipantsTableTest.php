@@ -2,13 +2,13 @@
 
 namespace App\Test\TestCase\Model\Table;
 
-
 use App\Model\Entity\Participant;
 use App\Model\Table\ParticipantsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
-class ParticipantsTableTest extends TestCase {
+class ParticipantsTableTest extends TestCase
+{
 
   public $fixtures = [
     'Participants' => 'app.Participants',
@@ -32,18 +32,21 @@ class ParticipantsTableTest extends TestCase {
       'activity_id' => 1,
   ];
 
-  public function setUp() {
-    parent::setUp();
-    $config = TableRegistry::exists('Participants') ? [] : ['className' => 'App\Model\Table\ParticipantsTable'];
-    $this->Participants = TableRegistry::get('Participants', $config);
-  }
+    public function setUp()
+    {
+        parent::setUp();
+        $config = TableRegistry::exists('Participants') ? [] : ['className' => 'App\Model\Table\ParticipantsTable'];
+        $this->Participants = TableRegistry::get('Participants', $config);
+    }
 
-  public function tearDown() {
-    parent::tearDown();
-    unset($this->Participants);
-  }
+    public function tearDown()
+    {
+        parent::tearDown();
+        unset($this->Participants);
+    }
 
-    public function testValidationFailsWithoutType() {
+    public function testValidationFailsWithoutType()
+    {
         unset($this->data['type']);
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -51,7 +54,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the type field.');
     }
 
-    public function testValidationFailsWithEmptyType() {
+    public function testValidationFailsWithEmptyType()
+    {
         $this->data['type'] = '';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -62,7 +66,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved with an empty type value.');
     }
 
-    public function testValidationFailsWithInvalidType() {
+    public function testValidationFailsWithInvalidType()
+    {
         $this->data['type'] = 'invalid';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -73,7 +78,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved with a short type field.');
     }
 
-    public function testValidationSucceedsWithPersonType() {
+    public function testValidationSucceedsWithPersonType()
+    {
         $this->data['type'] = Participant::TYPE_PERSON;
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -81,7 +87,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid type of person.');
     }
 
-    public function testValidationSucceedsWithOrganizationType() {
+    public function testValidationSucceedsWithOrganizationType()
+    {
         $this->data['type'] = Participant::TYPE_ORGANIZATION;
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -89,7 +96,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid type of organization.');
     }
 
-    public function testValidationFailsWithoutRole() {
+    public function testValidationFailsWithoutRole()
+    {
         unset($this->data['role']);
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -97,7 +105,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the role field.');
     }
 
-    public function testValidationFailsWithEmptyRole() {
+    public function testValidationFailsWithEmptyRole()
+    {
         $this->data['role'] = '';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -108,7 +117,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved with an empty role value.');
     }
 
-    public function testValidationFailsWithInvalidRole() {
+    public function testValidationFailsWithInvalidRole()
+    {
         $this->data['role'] = 'invalid';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -119,7 +129,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved with a short role field.');
     }
 
-    public function testValidationSucceedsWithTeamRole() {
+    public function testValidationSucceedsWithTeamRole()
+    {
         $this->data['role'] = Participant::ROLE_TEAM;
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -127,7 +138,8 @@ class ParticipantsTableTest extends TestCase {
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid role of team.');
     }
 
-    public function testValidationSucceedsWithOrganizationRole() {
+    public function testValidationSucceedsWithOrganizationRole()
+    {
         $this->data['role'] = Participant::ROLE_SPEAKER;
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
@@ -135,34 +147,36 @@ class ParticipantsTableTest extends TestCase {
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid role of speaker.');
     }
 
-  public function testValidationFailsWithoutDescription() {
-    unset($this->data['description']);
-    $participant = $this->Participants->newEntity($this->data);
-    $errors = $participant->errors();
-    $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
-    $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the description field.');
-  }
+    public function testValidationFailsWithoutDescription()
+    {
+        unset($this->data['description']);
+        $participant = $this->Participants->newEntity($this->data);
+        $errors = $participant->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
+        $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the description field.');
+    }
 
-  public function testValidationFailsWithEmptyDescription() {
-    $this->data['description'] = '';
-    $participant = $this->Participants->newEntity($this->data);
-    $errors = $participant->errors();
-    $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
-    $actual = $errors['description']['_empty'];
-    $expected = 'Please provide a description for the participant!';
-    $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty description value.');
-    $this->assertFalse($this->Participants->save($participant), 'Participant was saved with an empty description value.');
-  }
+    public function testValidationFailsWithEmptyDescription()
+    {
+        $this->data['description'] = '';
+        $participant = $this->Participants->newEntity($this->data);
+        $errors = $participant->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
+        $actual = $errors['description']['_empty'];
+        $expected = 'Please provide a description for the participant!';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty description value.');
+        $this->assertFalse($this->Participants->save($participant), 'Participant was saved with an empty description value.');
+    }
 
-  public function testValidationFailsWithInvalidDescriptionData() {
-    $this->data['description'] = 'Short description';
-    $participant = $this->Participants->newEntity($this->data);
-    $errors = $participant->errors();
-    $this->assertTrue(!empty($errors), 'No errors were triggered with a short description value.');
-    $actual = $errors['description']['minLength'];
-    $expected = 'The length of the participant description must be greater than 50.';
-    $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short description length.');
-    $this->assertFalse($this->Participants->save($participant), 'Participant was saved with a short description value.');
-  }
+    public function testValidationFailsWithInvalidDescriptionData()
+    {
+        $this->data['description'] = 'Short description';
+        $participant = $this->Participants->newEntity($this->data);
+        $errors = $participant->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered with a short description value.');
+        $actual = $errors['description']['minLength'];
+        $expected = 'The length of the participant description must be greater than 50.';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short description length.');
+        $this->assertFalse($this->Participants->save($participant), 'Participant was saved with a short description value.');
+    }
 }
- 

@@ -16,7 +16,7 @@ class EventsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-      'events' => 'app.events'
+      'events' => 'app.events',
     ];
 
     public $data = [
@@ -29,17 +29,20 @@ class EventsControllerTest extends IntegrationTestCase
 
     public $Events = null;
 
-    public function setUp() {
+    public function setUp()
+    {
         parent::setUp();
         $this->Events = TableRegistry::get('Events');
     }
 
-    public function tearDown() {
+    public function tearDown()
+    {
         parent::tearDown();
         $this->Events = null;
     }
 
-    public function testAddPageLoads() {
+    public function testAddPageLoads()
+    {
         $this->get('events/add');
         $this->assertResponseOk();
     }
@@ -47,7 +50,8 @@ class EventsControllerTest extends IntegrationTestCase
     /**
      * @todo Mock session call
      */
-    public function testAddSuccessfully() {
+    public function testAddSuccessfully()
+    {
         $this->post('/events/add', $this->data);
         $expected = __('The Event was successfully saved.');
         $this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
@@ -57,7 +61,8 @@ class EventsControllerTest extends IntegrationTestCase
         $this->assertEquals($expected, $actual, 'Number of events did not increase in the database.');
     }
 
-    public function testAddFailsWithEmptyData() {
+    public function testAddFailsWithEmptyData()
+    {
         $data = [];
         $this->post('/events/add', $data);
         $expected = __('The Event could not be saved. Please check the submitted data and try again.');
