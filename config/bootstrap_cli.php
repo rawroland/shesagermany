@@ -27,4 +27,4 @@ Configure::write('Log.error.file', 'cli-error');
 /**
  * Plugins
  */
-Plugin::load('Bake');
+Plugin::load(['Bake', 'Migrations']);
