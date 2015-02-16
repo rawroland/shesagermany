@@ -23,7 +23,8 @@ class ParticipantsTable extends Table
         $this->displayField('title');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->hasMany('Activities', []);
+        $this->hasOne('People', []);
+        $this->hasOne('Organizations', []);
     }
 
     public function validationDefault(Validator $validator)
@@ -42,8 +43,8 @@ class ParticipantsTable extends Table
                 'rule' => ['inList', [Participant::ROLE_SPEAKER, Participant::ROLE_TEAM]],
                 'message' => 'The provided participant role is invalid!',
             ])
-            ->requirePresence('description'
-            )->notEmpty('description', __('Please provide a description for the participant!'))
+            ->requirePresence('description')
+            ->notEmpty('description', __('Please provide a description for the participant!'))
             ->add('description', 'minLength', [
                 'rule' => ['minLength', 50],
                 'message' => 'The length of the participant description must be greater than 50.',
