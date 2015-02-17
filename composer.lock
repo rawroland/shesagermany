@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "9bae44e765273b0e2e6ffc264445fe98cc32db3e"
+                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/9bae44e765273b0e2e6ffc264445fe98cc32db3e",
-                "reference": "9bae44e765273b0e2e6ffc264445fe98cc32db3e",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/cbb2d345477652efd6043a510dd3107a2b6b72b6",
+                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-02-14 02:15:32"
+            "time": "2015-02-17 15:26:01"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -380,12 +380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "ff628e85fca14bbcf1f7420c93ee355cd474193a"
+                "reference": "82e5c4315091a89ab4494122a60896d47be50043"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/ff628e85fca14bbcf1f7420c93ee355cd474193a",
-                "reference": "ff628e85fca14bbcf1f7420c93ee355cd474193a",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/82e5c4315091a89ab4494122a60896d47be50043",
+                "reference": "82e5c4315091a89ab4494122a60896d47be50043",
                 "shasum": ""
             },
             "require": {
@@ -418,7 +418,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-02-12 02:18:54"
+            "time": "2015-02-14 21:00:18"
         },
         {
             "name": "cakephp/debug_kit",
