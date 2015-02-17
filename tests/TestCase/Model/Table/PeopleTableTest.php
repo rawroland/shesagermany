@@ -58,25 +58,25 @@ class PeopleTableTest extends TestCase
     public function testValidationFailsWithEmptySurname()
     {
         $this->data['surname'] = '';
-        $event = $this->People->newEntity($this->data);
-        $errors = $event->errors();
+        $person = $this->People->newEntity($this->data);
+        $errors = $person->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the surname field');
         $actual = $errors['surname']['_empty'];
         $expected = 'Please provide a surname!';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown.');
-        $this->assertFalse($this->People->save($event), 'Event was saved with an empty surname value.');
+        $this->assertFalse($this->People->save($person), 'Person was saved with an empty surname value.');
     }
 
     public function testValidationFailsWithShortSurname()
     {
         $this->data['surname'] = 'S';
-        $event = $this->People->newEntity($this->data);
-        $errors = $event->errors();
+        $person = $this->People->newEntity($this->data);
+        $errors = $person->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the Surname field');
         $actual = $errors['surname']['validLength'];
         $expected = 'The surname must be at least 2 characters and at most 128 characters long!';
-        $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short Surname length.');
-        $this->assertFalse($this->People->save($event), 'Event was saved with a short Surname field.');
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short surname length.');
+        $this->assertFalse($this->People->save($person), 'Person was saved with a short surname field.');
     }
 
     public function testValidationFailsWithLongSurname()
@@ -84,12 +84,38 @@ class PeopleTableTest extends TestCase
         $this->data['surname'] = 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
     phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
     mollitia lectus. Nulla vestibulum massa neque ut et.';
-        $event = $this->People->newEntity($this->data);
-        $errors = $event->errors();
+        $person = $this->People->newEntity($this->data);
+        $errors = $person->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the Surname field');
         $actual = $errors['surname']['validLength'];
         $expected = 'The surname must be at least 2 characters and at most 128 characters long!';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short Surname length.');
-        $this->assertFalse($this->People->save($event), 'Event was saved with a short Surname field.');
+        $this->assertFalse($this->People->save($person), 'Person was saved with a short surname field.');
+    }
+
+    public function testValidationFailsWithShortName()
+    {
+        $this->data['name'] = 'S';
+        $person = $this->People->newEntity($this->data);
+        $errors = $person->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered with a short name value.');
+        $actual = $errors['name']['validLength'];
+        $expected = 'The name must be at least 2 characters and at most 128 characters long!';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short name length.');
+        $this->assertFalse($this->People->save($person), 'Person was saved with a short name value.');
+    }
+
+    public function testValidationFailsWithLongName()
+    {
+        $this->data['surname'] = 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
+    phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
+    mollitia lectus. Nulla vestibulum massa neque ut et.';
+        $person = $this->People->newEntity($this->data);
+        $errors = $person->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered with a short name value.');
+        $actual = $errors['name']['validLength'];
+        $expected = 'The name must be at least 2 characters and at most 128 characters long!';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for a long name length.');
+        $this->assertFalse($this->People->save($person), 'Person was saved with a short Surname field.');
     }
 }
