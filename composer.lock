@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6"
+                "reference": "67d073e7f61e2d7463078e502ada1a38dbc9c74c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/cbb2d345477652efd6043a510dd3107a2b6b72b6",
-                "reference": "cbb2d345477652efd6043a510dd3107a2b6b72b6",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/67d073e7f61e2d7463078e502ada1a38dbc9c74c",
+                "reference": "67d073e7f61e2d7463078e502ada1a38dbc9c74c",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-02-17 15:26:01"
+            "time": "2015-02-18 20:00:46"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -660,16 +660,16 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.4.2",
+            "version": "v1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "3af00cf237289a406e7307e18e7ab0d92cf57038"
+                "reference": "2d6851520bf0250f668307ab2fd28cbb0b35d2b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/3af00cf237289a406e7307e18e7ab0d92cf57038",
-                "reference": "3af00cf237289a406e7307e18e7ab0d92cf57038",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/2d6851520bf0250f668307ab2fd28cbb0b35d2b9",
+                "reference": "2d6851520bf0250f668307ab2fd28cbb0b35d2b9",
                 "shasum": ""
             },
             "require": {
@@ -709,7 +709,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-02-03 21:20:51"
+            "time": "2015-02-18 19:35:59"
         },
         {
             "name": "nikic/php-parser",
