@@ -46,7 +46,7 @@ class PeopleTableTest extends TestCase
         unset($this->People);
     }
 
-    public function testValidationPassesWithDrSurname()
+    public function testValidationPassesWithAnInvalidTitle()
     {
         $this->data['title'] = 'Dds';
         $person = $this->People->newEntity($this->data);
