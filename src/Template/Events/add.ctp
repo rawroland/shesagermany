@@ -32,6 +32,9 @@
                 echo $this->Form->input('activities.0.participants.0.type');
                 echo $this->Form->input('activities.0.participants.0.role');
                 echo $this->Form->input('activities.0.participants.0.description');
+                echo $this->Form->input('activities.0.participants.0.people.title');
+                echo $this->Form->input('activities.0.participants.0.people.surname');
+                echo $this->Form->input('activities.0.participants.0.people.name');
             ?>
         </fieldset>
         <fieldset>
@@ -40,6 +43,9 @@
                 echo $this->Form->input('activities.0.participants.1.type');
                 echo $this->Form->input('activities.0.participants.1.role');
                 echo $this->Form->input('activities.0.participants.1.description');
+            echo $this->Form->input('activities.0.participants.0.people.title');
+            echo $this->Form->input('activities.0.participants.0.people.surname');
+            echo $this->Form->input('activities.0.participants.0.people.name');
             ?>
         </fieldset>
 	</fieldset>

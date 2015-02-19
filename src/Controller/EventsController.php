@@ -16,7 +16,7 @@ class EventsController extends AppController
     public function add()
     {
         $options = [
-            'associated' => ['Activities', 'Activities.Participants', ]
+            'associated' => ['Activities' => ['associated' => ['Participants' => ['associated' => ['People',]]]]]
         ];
         $event = $this->Events->newEntity($this->request->data, $options);
         if ($this->request->is('post')) {
