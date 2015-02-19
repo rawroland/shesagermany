@@ -12,12 +12,36 @@
 <div class="users form large-10 medium-9 columns">
 	<?= $this->Form->create($event); ?>
 	<fieldset>
-		<legend><?= __('Add User') ?></legend>
+		<legend><?= __('Add Event') ?></legend>
 		<?php
-			echo $this->Form->input('title', ['required' => false]);
+			echo $this->Form->input('title');
 			echo $this->Form->input('description');
 			echo $this->Form->input('date');
-		?>
+        ?>
+        <fieldset>
+            <legend><?= __('Add Activity 1') ?></legend>
+            <?php
+                echo $this->Form->input('activities.0.title');
+                echo $this->Form->input('activities.0.description');
+                echo $this->Form->input('activities.0.date_time');
+            ?>
+        </fieldset>
+        <fieldset>
+            <legend><?= __('Add Participant 1') ?></legend>
+            <?php
+                echo $this->Form->input('activities.0.participants.0.type');
+                echo $this->Form->input('activities.0.participants.0.role');
+                echo $this->Form->input('activities.0.participants.0.description');
+            ?>
+        </fieldset>
+        <fieldset>
+            <legend><?= __('Add Participant 2') ?></legend>
+            <?php
+                echo $this->Form->input('activities.0.participants.1.type');
+                echo $this->Form->input('activities.0.participants.1.role');
+                echo $this->Form->input('activities.0.participants.1.description');
+            ?>
+        </fieldset>
 	</fieldset>
 	<?= $this->Form->button(__('Submit')) ?>
 	<?= $this->Form->end() ?>

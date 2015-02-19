@@ -15,7 +15,10 @@ class EventsController extends AppController
      */
     public function add()
     {
-        $event = $this->Events->newEntity($this->request->data);
+        $options = [
+            'associated' => ['Activities', 'Activities.Participants', ]
+        ];
+        $event = $this->Events->newEntity($this->request->data, $options);
         if ($this->request->is('post')) {
             if ($this->Events->save($event)) {
                 $this->Flash->success('The Event was successfully saved.');
