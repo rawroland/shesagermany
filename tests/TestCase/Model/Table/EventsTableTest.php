@@ -22,7 +22,7 @@ class EventsTableTest extends TestCase
    * @var array Test data
    */
   public $data = [
-    'title' => 'SHESA Germany Five years anniversary',
+    'title' => 'SHESA Germany SG7',
     'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
     phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
     mollitia lectus. Nulla vestibulum massa neque ut et.',
@@ -42,11 +42,18 @@ class EventsTableTest extends TestCase
         unset($this->Events);
     }
 
-    public function testValidationFailsWithoutTitleForUpdate()
+    public function testValidationFailsWithEmptydata()
     {
-        $event = $this->Events->get(1);
+        $event = $this->Events->newEntity([]);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
+        $this->assertFalse($this->Events->save($event), 'Event was saved without the title field.');
+    }
+
+    public function testValidationFailsWithoutTitle()
+    {
         unset($this->data['title']);
-        $this->Events->patchEntity($event, $this->data);
+        $event = $this->Events->newEntity($this->data);
         $errors = $event->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
         $this->assertFalse($this->Events->save($event), 'Event was saved without the title field.');
@@ -90,11 +97,10 @@ class EventsTableTest extends TestCase
         $this->assertFalse($this->Events->save($event), 'Event was saved with a short title field.');
     }
 
-    public function testValidationFailsWithoutDescriptionForUpdate()
+    public function testValidationFailsWithoutDescription()
     {
-        $event = $this->Events->get(1);
         unset($this->data['description']);
-        $this->Events->patchEntity($event, $this->data);
+        $event = $this->Events->newEntity($this->data);
         $errors = $event->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
         $this->assertFalse($this->Events->save($event), 'Event was saved without the description field.');
@@ -124,11 +130,10 @@ class EventsTableTest extends TestCase
         $this->assertFalse($this->Events->save($event), 'Event was saved with a short description value.');
     }
 
-    public function testValidationFailsWithoutDateForUpdate()
+    public function testValidationFailsWithoutDate()
     {
-        $event = $this->Events->get(1);
         unset($this->data['date']);
-        $this->Events->patchEntity($event, $this->data);
+        $event = $this->Events->newEntity($this->data);
         $errors = $event->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
         $this->assertFalse($this->Events->save($event), 'Event was saved without the date field.');

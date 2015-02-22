@@ -29,7 +29,7 @@ class OrganizationsTable extends Table
     {
         $validator->add('id', 'isNumeric', ['rule' => 'numeric', 'message' => 'Please provide an id for the entry'])
             ->allowEmpty('id', 'created')
-            ->requirePresence('name', 'update')
+            ->requirePresence('name')
             ->notEmpty('name', 'Please provide a name!')
             ->add('name', 'validLength', [
                 'rule' => ['lengthBetween', 2, 128],

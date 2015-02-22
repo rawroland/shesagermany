@@ -42,14 +42,21 @@ class ActivitiesTableTest extends TestCase
         unset($this->Activities);
     }
 
-    public function testValidationFailsWithoutTitleForUpdate()
+    public function testValidationFailsWithEmptydata()
     {
-        $activity = $this->Activities->get(1);
-        unset($this->data['title']);
-        $this->Activities->patchEntity($activity, $this->data);
+        $activity = $this->Activities->newEntity([]);
         $errors = $activity->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved without the title field.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved without the title field.');
+    }
+
+    public function testValidationFailsWithoutTitle()
+    {
+        unset($this->data['title']);
+        $activity = $this->Activities->newEntity($this->data);
+        $errors = $activity->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved without the title field.');
     }
 
     public function testValidationFailsWithEmptyTitle()
@@ -61,7 +68,7 @@ class ActivitiesTableTest extends TestCase
         $actual = $errors['title']['_empty'];
         $expected = 'Please provide a title for the event.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown.');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved with an empty title value.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an empty title value.');
     }
 
     public function testValidationFailsWithShortTitle()
@@ -73,7 +80,7 @@ class ActivitiesTableTest extends TestCase
         $actual = $errors['title']['validLength'];
         $expected = 'The length of the event title must be between 10 and 128.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short title length.');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved with a short title field.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with a short title field.');
     }
 
     public function testValidationFailsWithLongTitle()
@@ -87,17 +94,16 @@ class ActivitiesTableTest extends TestCase
         $actual = $errors['title']['validLength'];
         $expected = 'The length of the event title must be between 10 and 128.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short title length.');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved with a short title field.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with a short title field.');
     }
 
     public function testValidationFailsWithoutDescription()
     {
-        $activity = $this->Activities->get(1);
         unset($this->data['description']);
-        $this->Activities->patchEntity($activity, $this->data);
+        $activity = $this->Activities->newEntity($this->data);
         $errors = $activity->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved without the description field.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved without the description field.');
     }
 
     public function testValidationFailsWithEmptyDescription()
@@ -109,7 +115,7 @@ class ActivitiesTableTest extends TestCase
         $actual = $errors['description']['_empty'];
         $expected = 'Please provide a description for the event.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty description value.');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved with an empty description value.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an empty description value.');
     }
 
     public function testValidationFailsWithInvalidDescriptionData()
@@ -121,17 +127,16 @@ class ActivitiesTableTest extends TestCase
         $actual = $errors['description']['minLength'];
         $expected = 'The length of the event description must be greater than 50.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for a short description length.');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved with a short description value.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with a short description value.');
     }
 
-    public function testValidationFailsWithoutDateForUpate()
+    public function testValidationFailsWithoutDate()
     {
-        $activity = $this->Activities->get(1);
         unset($this->data['date_time']);
-        $this->Activities->patchEntity($activity, $this->data);
+        $activity = $this->Activities->newEntity($this->data);
         $errors = $activity->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved without the date field.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved without the date field.');
     }
 
     public function testValidationFailsWithEmptyDate()
@@ -143,7 +148,7 @@ class ActivitiesTableTest extends TestCase
         $actual = $errors['date_time']['_empty'];
         $expected = 'Please provide a date for the event.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty date value.');
-        $this->assertFalse($this->Activities->save($activity), 'Event was saved with an empty date value.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an empty date value.');
     }
 
   /**
@@ -158,6 +163,6 @@ class ActivitiesTableTest extends TestCase
       $actual = $errors['date_time']['validDateTime'];
       $expected = __('Please provide a valid date. Allowed format is DD-MM-YYYY.');
       $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
-      $this->assertFalse($this->Activities->save($activity), 'Event was saved with an invalid date.');
+      $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an invalid date.');
   }
 }

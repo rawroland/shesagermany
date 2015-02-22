@@ -46,6 +46,14 @@ class PeopleTableTest extends TestCase
         unset($this->People);
     }
 
+    public function testValidationFailsWithEmptydata()
+    {
+        $person = $this->People->newEntity([]);
+        $errors = $person->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
+        $this->assertFalse($this->People->save($person), 'Event was saved without the title field.');
+    }
+
     public function testValidationPassesWithAnInvalidTitle()
     {
         $this->data['title'] = 'Dds';
@@ -58,14 +66,13 @@ class PeopleTableTest extends TestCase
         $this->assertFalse($this->People->save($person), 'Person was saved with an invalid title value.');
     }
 
-    public function testValidationFailsWithoutSurnameForUpdate()
+    public function testValidationFailsWithoutSurname()
     {
-        $person = $this->People->get(1);
         unset($this->data['surname']);
-        $this->People->patchEntity($person, $this->data);
-        $errors = $person->errors();
+        $participant = $this->People->newEntity($this->data);
+        $errors = $participant->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the type field');
-        $this->assertFalse($this->People->save($person), 'Participant was saved without the type field.');
+        $this->assertFalse($this->People->save($participant), 'Participant was saved without the type field.');
     }
 
     public function testValidationFailsWithEmptySurname()
@@ -132,14 +139,13 @@ class PeopleTableTest extends TestCase
         $this->assertFalse($this->People->save($person), 'Person was saved with a short Surname field.');
     }
 
-    public function testValidationFailsWithoutNameForUpdate()
+    public function testValidationFailsWithoutName()
     {
-        $person = $this->People->get(1);
         unset($this->data['name']);
-        $this->People->patchEntity($person, $this->data);
-        $errors = $person->errors();
+        $participant = $this->People->newEntity($this->data);
+        $errors = $participant->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the type field');
-        $this->assertFalse($this->People->save($person), 'Participant was saved without the type field.');
+        $this->assertFalse($this->People->save($participant), 'Participant was saved without the type field.');
     }
 
     public function testValidationFailsWithEmptyName()

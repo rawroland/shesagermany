@@ -36,14 +36,14 @@ class ParticipantsTable extends Table
                 'message' => 'The provided participant type is invalid!',
             ])
             ->notEmpty('type', __('Please provide a type for the participant!'))
-            ->requirePresence('type', 'update')
+            ->requirePresence('type')
             ->notEmpty('role', __('Please provide a role for the participant!'))
-            ->requirePresence('role', 'update')
+            ->requirePresence('role')
             ->add('role', 'validRole', [
                 'rule' => ['inList', [Participant::ROLE_SPEAKER, Participant::ROLE_TEAM]],
                 'message' => 'The provided participant role is invalid!',
             ])
-            ->requirePresence('description', 'update')
+            ->requirePresence('description')
             ->notEmpty('description', __('Please provide a description for the participant!'))
             ->add('description', 'minLength', [
                 'rule' => ['minLength', 50],

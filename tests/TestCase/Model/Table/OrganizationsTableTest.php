@@ -41,6 +41,14 @@ class OrganizationsTableTest extends TestCase
         parent::tearDown();
         unset($this->Organizations);
     }
+
+    public function testValidationFailsWithEmptydata()
+    {
+        $organization = $this->Organizations->newEntity([]);
+        $errors = $organization->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
+        $this->assertFalse($this->Organizations->save($organization), 'Organization was saved without the title field.');
+    }
     
     public function testValidationFailsWithShortName()
     {
@@ -70,12 +78,11 @@ class OrganizationsTableTest extends TestCase
 
     public function testValidationFailsWithoutName()
     {
-        $organization = $this->Organizations->get(1);
         unset($this->data['name']);
-        $this->Organizations->patchEntity($organization, $this->data);
-        $errors = $organization->errors();
+        $participant = $this->Organizations->newEntity($this->data);
+        $errors = $participant->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the type field');
-        $this->assertFalse($this->Organizations->save($organization), 'Organization was saved without the type field.');
+        $this->assertFalse($this->Organizations->save($participant), 'Organization was saved without the type field.');
     }
 
     public function testValidationFailsWithEmptyName()
