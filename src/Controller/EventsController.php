@@ -9,17 +9,28 @@ namespace App\Controller;
  */
 class EventsController extends AppController
 {
+    public $paginate = [];
+
+    public function initialize() {
+        $this->paginate = ['contain', $this->Events->defaultContain];
+        parent::initialize();
+    }
 
     /**
-     * Action for adding events.
+     * Add or edit an event depending on the presence of an id.
+     * @param int $eventId Event id to be edited
      */
-    public function add()
+    public function edit($eventId = null)
     {
         $options = [
             'associated' => ['Activities' => ['associated' => ['Participants' => ['associated' => ['People',]]]]]
         ];
-        $event = $this->Events->newEntity($this->request->data, $options);
-        if ($this->request->is('post')) {
+        $event = $this->Events->newEntity();
+        if(!empty($eventId)) {
+            $event = $this->Events->getSingle($eventId);
+        }
+        if ($this->request->is(['post', 'put', 'patch'])) {
+            $event = $this->Events->patchEntity($event, $this->request->data(), $options);
             if ($this->Events->save($event)) {
                 $this->Flash->success('The Event was successfully saved.');
 
@@ -28,5 +39,10 @@ class EventsController extends AppController
             $this->Flash->error('The Event could not be saved. Please check the submitted data and try again.');
         }
         $this->set(compact('event'));
+    }
+
+    public function index()
+    {
+        $this->set('events', $this->paginate($this->Events));
     }
 }

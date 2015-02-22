@@ -45,10 +45,11 @@ class ParticipantsTableTest extends TestCase
         unset($this->Participants);
     }
 
-    public function testValidationFailsWithoutType()
+    public function testValidationFailsWithoutTypeForUpdate()
     {
+        $participant = $this->Participants->get(1);
         unset($this->data['type']);
-        $participant = $this->Participants->newEntity($this->data);
+        $this->Participants->patchEntity($participant, $this->data);
         $errors = $participant->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the type field');
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the type field.');
@@ -96,10 +97,11 @@ class ParticipantsTableTest extends TestCase
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid type of organization.');
     }
 
-    public function testValidationFailsWithoutRole()
+    public function testValidationFailsWithoutRoleForUpdate()
     {
+        $participant = $this->Participants->get(1);
         unset($this->data['role']);
-        $participant = $this->Participants->newEntity($this->data);
+        $this->Participants->patchEntity($participant, $this->data);
         $errors = $participant->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the role field');
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the role field.');
@@ -147,10 +149,11 @@ class ParticipantsTableTest extends TestCase
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid role of speaker.');
     }
 
-    public function testValidationFailsWithoutDescription()
+    public function testValidationFailsWithoutDescriptionForUpdate()
     {
+        $participant = $this->Participants->get(1);
         unset($this->data['description']);
-        $participant = $this->Participants->newEntity($this->data);
+        $this->Participants->patchEntity($participant, $this->data);
         $errors = $participant->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the description field');
         $this->assertFalse($this->Participants->save($participant), 'Participant was saved without the description field.');

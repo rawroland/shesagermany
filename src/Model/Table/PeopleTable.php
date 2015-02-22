@@ -30,12 +30,12 @@ class PeopleTable extends Table
     {
         $validator->add('id', 'isNumeric', ['rule' => 'numeric', 'message' => 'Please provide an id for the entry'])
             ->allowEmpty('id', 'created')
-            ->requirePresence('surname')
+            ->requirePresence('surname', 'update')
             ->notEmpty('surname', 'Please provide a surname!')
             ->add('surname', 'validLength', [
                 'rule' => ['lengthBetween', 2, 128],
                 'message' => 'The surname must be at least 2 characters and at most 128 characters long!',
-            ])->requirePresence('name')
+            ])->requirePresence('name', 'update')
             ->notEmpty('name', 'Please provide a name!')
             ->add('name', 'validLength', [
                 'rule' => ['lengthBetween', 2, 128],

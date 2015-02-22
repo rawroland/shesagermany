@@ -41,18 +41,12 @@ class EventsControllerTest extends IntegrationTestCase
         $this->Events = null;
     }
 
-    public function testAddPageLoads()
-    {
-        $this->get('events/add');
-        $this->assertResponseOk();
-    }
-
     /**
      * @todo Mock session call
      */
     public function testAddSuccessfully()
     {
-        $this->post('/events/add', $this->data);
+        $this->post('/events/edit', $this->data);
         $expected = __('The Event was successfully saved.');
         $this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
         $query = $this->Events->find('all');
@@ -64,7 +58,7 @@ class EventsControllerTest extends IntegrationTestCase
     public function testAddFailsWithEmptyData()
     {
         $data = [];
-        $this->post('/events/add', $data);
+        $this->post('/events/edit', $data);
         $expected = __('The Event could not be saved. Please check the submitted data and try again.');
         $this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
         $query = $this->Events->find('all');
