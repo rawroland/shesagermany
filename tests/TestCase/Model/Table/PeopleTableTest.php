@@ -10,7 +10,6 @@ use Cake\TestSuite\TestCase;
 
 class PeopleTableTest extends TestCase
 {
-
     public $fixtures = [
         'People' => 'app.People',
     ];
@@ -159,5 +158,4 @@ class PeopleTableTest extends TestCase
         $this->assertEquals($expected, $actual, 'Wrong error message was shown.');
         $this->assertFalse($this->People->save($person), 'Person was saved with an empty name value.');
     }
-
 }

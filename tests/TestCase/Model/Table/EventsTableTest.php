@@ -2,15 +2,16 @@
 
 namespace App\Test\TestCase\Model\Table;
 
+use App\Model\Entity\Event;
 use App\Model\Table\EventsTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
 class EventsTableTest extends TestCase
 {
-
   public $fixtures = [
     'Events' => 'app.Events',
+    'Activities' => 'app.Activities',
   ];
 
   /**
@@ -151,11 +152,11 @@ class EventsTableTest extends TestCase
         $this->assertFalse($this->Events->save($event), 'Event was saved with an empty date value.');
     }
 
-  /**
-   * @todo Possible invalid date inputs.
-   */
-  public function testValidationFailsWithInvalidDateData()
-  {
+    /**
+    * @todo Possible invalid date inputs.
+    */
+    public function testValidationFailsWithInvalidDateData()
+    {
       $this->data['date'] = '2014';
       $event = $this->Events->newEntity($this->data);
       $errors = $event->errors();
@@ -164,5 +165,22 @@ class EventsTableTest extends TestCase
       $expected = __('Please provide a valid date. Allowed format is DD-MM-YYYY.');
       $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
       $this->assertFalse($this->Events->save($event), 'Event was saved with an invalid date.');
-  }
+    }
+
+    /**
+     * @todo Test after deleting
+     */
+    public function testDeleteSuccessful()
+    {
+        $event = $this->Events->get(1, ['contain' => ['Activities']]);
+        $this->assertFalse($event->deleted,'Event is deleted.');
+        $deletedActivities = 0;
+        foreach($event->activities as $activity) {
+            if($activity->deleted) {
+                $deletedActivities++;
+            }
+        }
+        $totalActivities = count($event->activities);
+        $this->assertFalse((bool) $deletedActivities, "$deletedActivities activities out of $totalActivities are deleted.");
+    }
 }

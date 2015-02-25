@@ -8,7 +8,6 @@ use Cake\TestSuite\TestCase;
 
 class ActivitiesTableTest extends TestCase
 {
-
   public $fixtures = [
     'Activities' => 'app.Activities',
   ];

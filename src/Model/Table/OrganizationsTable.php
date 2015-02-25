@@ -6,12 +6,10 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Class OrganizationsTable
- * @package App\Model\Table
+ * Class OrganizationsTable.
  */
 class OrganizationsTable extends Table
 {
-
     /**
      * @param array $config
      */

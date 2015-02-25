@@ -4,14 +4,12 @@ namespace App\Test\Fixture;
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * EventsFixture
- *
+ * EventsFixture.
  */
 class EventsFixture extends TestFixture
 {
-
 /**
- * Fields
+ * Fields.
  *
  * @var array
  */
@@ -21,6 +19,7 @@ class EventsFixture extends TestFixture
         'title' => ['type' => 'string', 'length' => 128, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null, 'fixed' => null],
         'description' => ['type' => 'text', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
         'date' => ['type' => 'date', 'length' => null, 'null' => false, 'default' => null, 'comment' => '', 'precision' => null],
+        'deleted' => ['type' => 'boolean', 'length' => null, 'null' => false, 'default' => '0', 'comment' => '', 'precision' => null],
         'created' => ['type' => 'timestamp', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         'modified' => ['type' => 'timestamp', 'length' => null, 'null' => true, 'default' => null, 'comment' => '', 'precision' => null],
         '_constraints' => [
@@ -33,7 +32,7 @@ class EventsFixture extends TestFixture
     // @codingStandardsIgnoreEnd
 
     /**
-     * Records
+     * Records.
      *
      * @var array
      */
@@ -42,81 +41,91 @@ class EventsFixture extends TestFixture
             'id' => 1,
             'title' => 'SHESA Germany Five years anniversary',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 2,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 3,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 4,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 5,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 6,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 7,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 8,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 9,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
         [
             'id' => 10,
             'title' => 'Lorem ipsum dolor sit amet',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
-            'date' => '2015-02-01',
-            'created' => 1422812508,
-            'modified' => 1422812508,
+            'date' => '2015-02-25',
+            'deleted' => 0,
+            'created' => 1424904253,
+            'modified' => 1424904253,
         ],
     ];
 }

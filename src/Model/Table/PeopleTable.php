@@ -7,12 +7,10 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Class PeopleTable
- * @package App\Model\Table
+ * Class PeopleTable.
  */
 class PeopleTable extends Table
 {
-
     /**
      * @param array $config
      */
@@ -42,9 +40,9 @@ class PeopleTable extends Table
                 'message' => 'The name must be at least 2 characters and at most 128 characters long!',
             ])
             ->add('title', 'validTitle', [
-                'rule' => ['inList', [Person::TITLE_DR, Person::TITLE_MR, Person::TITLE_MRS,]],
+                'rule' => ['inList', [Person::TITLE_DR, Person::TITLE_MR, Person::TITLE_MRS]],
                 'message' => 'Valid values for the title are Dr., Mr and Mrs!',
-            ]);
+            ])->allowEmpty('title');
 
         return $validator;
     }

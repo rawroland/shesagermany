@@ -6,13 +6,13 @@ use Cake\ORM\TableRegistry;
 use Cake\TestSuite\IntegrationTestCase;
 
 /**
- * App\Controller\EventsController Test Case
+ * App\Controller\EventsController Test Case.
  */
 class EventsControllerTest extends IntegrationTestCase
 {
-
     /**
-     * Fixtures
+     * Fixtures.
+     *
      * @var array
      */
     public $fixtures = [

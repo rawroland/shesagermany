@@ -7,12 +7,10 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Class ParticipantsTable
- * @package App\Model\Table
+ * Class ParticipantsTable.
  */
 class ParticipantsTable extends Table
 {
-
     /**
      * @param array $config
      */

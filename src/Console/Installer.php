@@ -1,17 +1,20 @@
 <?php
 /**
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org).
  *
  * Licensed under The MIT License
  * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
  * @link          http://cakephp.org CakePHP(tm) Project
  * @since         3.0.0
+ *
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
+
 namespace App\Console;
 
 use Composer\Script\Event;
@@ -23,13 +26,12 @@ use Exception;
  */
 class Installer
 {
-
     /**
      * Does some routine installation tasks so people don't have to.
      *
-     * @param  \Composer\Script\Event $event The composer event object.
-     * @throws \Exception             Exception raised by validator.
-     * @return void
+     * @param \Composer\Script\Event $event The composer event object.
+     *
+     * @throws \Exception Exception raised by validator.
      */
     public static function postInstall(Event $event)
     {
@@ -62,9 +64,8 @@ class Installer
     /**
      * Create the config/app.php file if it does not exist.
      *
-     * @param  string                   $dir The application's root directory.
-     * @param  \Composer\IO\IOInterface $io  IO interface to write to console.
-     * @return void
+     * @param string                   $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io  IO interface to write to console.
      */
     public static function createAppConfig($dir, $io)
     {
@@ -81,9 +82,8 @@ class Installer
      *
      * This is not the most secure default, but it gets people up and running quickly.
      *
-     * @param  string                   $dir The application's root directory.
-     * @param  \Composer\IO\IOInterface $io  IO interface to write to console.
-     * @return void
+     * @param string                   $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io  IO interface to write to console.
      */
     public static function setFolderPermissions($dir, $io)
     {
@@ -126,9 +126,8 @@ class Installer
     /**
      * Set the security.salt value in the application's config file.
      *
-     * @param  string                   $dir The application's root directory.
-     * @param  \Composer\IO\IOInterface $io  IO interface to write to console.
-     * @return void
+     * @param string                   $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io  IO interface to write to console.
      */
     public static function setSecuritySalt($dir, $io)
     {

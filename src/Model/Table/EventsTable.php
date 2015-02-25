@@ -8,8 +8,7 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Class EventsTable
- * @package App\Model\Table
+ * Class EventsTable.
  */
 class EventsTable extends Table
 {
@@ -52,12 +51,21 @@ class EventsTable extends Table
 
     /**
      * Retrieve a single event record.
+     *
      * @param int $eventId
+     *
      * @return Event Retrieved event.
+     *
      * @throws NotFoundException When the record is not found.
      */
-    public function getSingle($eventId = null) {
+    public function getSingle($eventId = null)
+    {
         $options = ['contain' => $this->defaultContain];
+
         return $this->get($eventId, $options);
+    }
+
+    public function customDelete($eventId)
+    {
     }
 }

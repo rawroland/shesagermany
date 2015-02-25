@@ -4,14 +4,12 @@ namespace App\Test\Fixture;
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * ParticipantsFixture
- *
+ * ParticipantsFixture.
  */
 class ParticipantsFixture extends TestFixture
 {
-
 /**
- * Fields
+ * Fields.
  *
  * @var array
  */
@@ -35,7 +33,7 @@ class ParticipantsFixture extends TestFixture
     // @codingStandardsIgnoreEnd
 
     /**
-     * Records
+     * Records.
      *
      * @var array
      */

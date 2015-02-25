@@ -2,8 +2,8 @@
 namespace App\Controller;
 
 /**
- * Class EventsController
- * @package App\Controller
+ * Class EventsController.
+ *
  * @property \App\Model\Table\EventsTable $Events
  * @property \Cake\Controller\Component\FlashComponent $Flash
  */
@@ -11,22 +11,24 @@ class EventsController extends AppController
 {
     public $paginate = [];
 
-    public function initialize() {
+    public function initialize()
+    {
         $this->paginate = ['contain', $this->Events->defaultContain];
         parent::initialize();
     }
 
     /**
      * Add or edit an event depending on the presence of an id.
+     *
      * @param int $eventId Event id to be edited
      */
     public function edit($eventId = null)
     {
         $options = [
-            'associated' => ['Activities' => ['associated' => ['Participants' => ['associated' => ['People',]]]]]
+            'associated' => ['Activities' => ['associated' => ['Participants' => ['associated' => ['People']]]]],
         ];
         $event = $this->Events->newEntity();
-        if(!empty($eventId)) {
+        if (!empty($eventId)) {
             $event = $this->Events->getSingle($eventId);
         }
         if ($this->request->is(['post', 'put', 'patch'])) {

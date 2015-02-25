@@ -4,8 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Class Activity
- * @package App\Model\Entity
+ * Class Activity.
  */
 class Activity extends Entity
 {

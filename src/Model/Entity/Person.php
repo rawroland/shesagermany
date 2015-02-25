@@ -4,13 +4,12 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Class Person
- * @package App\Model\Entity
+ * Class Person.
  */
 class Person extends Entity
 {
     /**
-     * Titles
+     * Titles.
      */
     const TITLE_DR = 'Dr.';
     const TITLE_MR = 'Mr';

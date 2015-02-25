@@ -4,20 +4,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Class Participant
- * @package App\Model\Entity
+ * Class Participant.
  */
 class Participant extends Entity
 {
-
     /**
-     * Participant types
+     * Participant types.
      */
     const TYPE_PERSON = 'person';
     const TYPE_ORGANIZATION = 'organization';
 
     /**
-     * Participant roles
+     * Participant roles.
      */
     const ROLE_SPEAKER = 'Speaker';
     const ROLE_TEAM = 'Team';

@@ -8,7 +8,6 @@ use Cake\TestSuite\TestCase;
 
 class OrganizationsTableTest extends TestCase
 {
-
     public $fixtures = [
         'Organizations' => 'app.Organizations',
     ];
@@ -49,7 +48,7 @@ class OrganizationsTableTest extends TestCase
         $this->assertTrue(!empty($errors), 'No errors were triggered without the title field');
         $this->assertFalse($this->Organizations->save($organization), 'Organization was saved without the title field.');
     }
-    
+
     public function testValidationFailsWithShortName()
     {
         $this->data['name'] = 'S';
@@ -96,5 +95,4 @@ class OrganizationsTableTest extends TestCase
         $this->assertEquals($expected, $actual, 'Wrong error message was shown.');
         $this->assertFalse($this->Organizations->save($organization), 'Organization was saved with an empty name value.');
     }
-
 }

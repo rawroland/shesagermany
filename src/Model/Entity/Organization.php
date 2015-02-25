@@ -4,8 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Class Organization
- * @package App\Model\Entity
+ * Class Organization.
  */
 class Organization extends Entity
 {

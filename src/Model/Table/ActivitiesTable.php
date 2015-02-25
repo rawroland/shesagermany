@@ -6,12 +6,10 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Class ActivitiesTable
- * @package App\Model\Table
+ * Class ActivitiesTable.
  */
 class ActivitiesTable extends Table
 {
-
     /**
      * @param array $config
      */
