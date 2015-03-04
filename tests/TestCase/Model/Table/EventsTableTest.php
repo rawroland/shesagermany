@@ -153,46 +153,47 @@ class EventsTableTest extends TestCase
     }
 
     /**
-    * @todo Possible invalid date inputs.
-    */
+     * @todo Possible invalid date inputs.
+     */
     public function testValidationFailsWithInvalidDateData()
     {
-      $this->data['date'] = '2014';
-      $event = $this->Events->newEntity($this->data);
-      $errors = $event->errors();
-      $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid date value.');
-      $actual = $errors['date']['validDate'];
-      $expected = __('Please provide a valid date. Allowed format is DD-MM-YYYY.');
-      $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
-      $this->assertFalse($this->Events->save($event), 'Event was saved with an invalid date.');
+        $this->data['date'] = '2014';
+        $event = $this->Events->newEntity($this->data);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid date value.');
+        $actual = $errors['date']['validDate'];
+        $expected = __('Please provide a valid date. Allowed format is DD-MM-YYYY.');
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
+        $this->assertFalse($this->Events->save($event), 'Event was saved with an invalid date.');
     }
 
     /**
      * @expectedException \Cake\Datasource\Exception\RecordNotFoundException
      */
-    public function testNonexistentEventNotFoundForDeleting() {
+    public function testNonexistentEventNotFoundForDeleting()
+    {
         $this->Events->customDelete(11);
     }
 
     public function testDeleteSuccessful()
     {
         $event = $this->Events->get(1, ['contain' => ['Activities']]);
-        $this->assertFalse($event->deleted,'Event is deleted.');
+        $this->assertFalse($event->deleted, 'Event is deleted.');
         $deletedActivities = 0;
-        foreach($event->activities as $activity) {
-            if($activity->deleted) {
+        foreach ($event->activities as $activity) {
+            if ($activity->deleted) {
                 $deletedActivities++;
             }
         }
         $totalActivities = count($event->activities);
         $this->assertFalse((bool) $deletedActivities, "$deletedActivities activities out of $totalActivities are deleted.");
 
-        $this->assertTrue((bool)$this->Events->customDelete(1));
+        $this->assertTrue((bool) $this->Events->customDelete(1));
         $event = $this->Events->get(1, ['contain' => ['Activities']]);
-        $this->assertTrue($event->deleted,'Event was not deleted.');
+        $this->assertTrue($event->deleted, 'Event was not deleted.');
         $activeActivities = 0;
-        foreach($event->activities as $activity) {
-            if(!$activity->deleted) {
+        foreach ($event->activities as $activity) {
+            if (!$activity->deleted) {
                 $activeActivities++;
             }
         }

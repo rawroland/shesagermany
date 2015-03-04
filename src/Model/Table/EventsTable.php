@@ -3,7 +3,6 @@
 namespace App\Model\Table;
 
 use App\Model\Entity\Event;
-use Cake\Network\Exception\NotFoundException;
 use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
@@ -51,8 +50,10 @@ class EventsTable extends Table
 
     /**
      * Retrieve a single event record.
-     * @param int $eventId
+     *
+     * @param int   $eventId
      * @param array $parameters Additional parameters for searching.
+     *
      * @return \Cake\Datasource\EntityInterface|mixed
      */
     public function getSingle($eventId, $parameters = [])
@@ -67,10 +68,11 @@ class EventsTable extends Table
     {
         $event = $this->getSingle($eventId, ['contain' => ['Activities']]);
         $event->set('deleted', 1);
-        foreach($event->activities as $index => $activity) {
+        foreach ($event->activities as $index => $activity) {
             $activity->set('deleted', 1);
         }
         $event->dirty('activities', true);
+
         return $this->save($event);
     }
 }

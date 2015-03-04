@@ -50,19 +50,24 @@ class EventsController extends AppController
 
     /**
      * @param $eventId
+     *
      * @return \Cake\Network\Response|void
+     *
      * @todo What could go wrong so that saving fails
      */
-    public function delete($eventId) {
+    public function delete($eventId)
+    {
         $this->autoRender = false;
         $this->request->allowMethod(['post', 'delete']);
-        if(!$this->Events->exists([$this->Events->alias().'.'.$this->Events->primaryKey() => $eventId])) {
+        if (!$this->Events->exists([$this->Events->alias().'.'.$this->Events->primaryKey() => $eventId])) {
             $this->Flash->error("The event with id $eventId was not found!");
+
             return $this->redirect($this->referer());
         }
-        if($this->Events->customDelete($eventId)) {
+        if ($this->Events->customDelete($eventId)) {
             $this->Flash->success("The event with id $eventId was successfully deleted!");
         }
+
         return $this->redirect($this->referer());
     }
 }
