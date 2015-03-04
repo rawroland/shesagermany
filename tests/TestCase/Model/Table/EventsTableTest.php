@@ -168,8 +168,12 @@ class EventsTableTest extends TestCase
     }
 
     /**
-     * @todo Test after deleting
+     * @expectedException \Cake\Datasource\Exception\RecordNotFoundException
      */
+    public function testNonexistentEventNotFoundForDeleting() {
+        $this->Events->customDelete(11);
+    }
+
     public function testDeleteSuccessful()
     {
         $event = $this->Events->get(1, ['contain' => ['Activities']]);
@@ -182,5 +186,17 @@ class EventsTableTest extends TestCase
         }
         $totalActivities = count($event->activities);
         $this->assertFalse((bool) $deletedActivities, "$deletedActivities activities out of $totalActivities are deleted.");
+
+        $this->assertTrue((bool)$this->Events->customDelete(1));
+        $event = $this->Events->get(1, ['contain' => ['Activities']]);
+        $this->assertTrue($event->deleted,'Event was not deleted.');
+        $activeActivities = 0;
+        foreach($event->activities as $activity) {
+            if(!$activity->deleted) {
+                $activeActivities++;
+            }
+        }
+        $totalActivities = count($event->activities);
+        $this->assertFalse((bool) $activeActivities, "$activeActivities activities out of $totalActivities were not deleted.");
     }
 }

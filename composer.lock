@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "250d30dbda906a7548d935ba9cd5bd6ff3aa04a9"
+                "reference": "ca7ff37e6e4dac906d47b2c6cd5cc8b12dcee608"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/250d30dbda906a7548d935ba9cd5bd6ff3aa04a9",
-                "reference": "250d30dbda906a7548d935ba9cd5bd6ff3aa04a9",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/ca7ff37e6e4dac906d47b2c6cd5cc8b12dcee608",
+                "reference": "ca7ff37e6e4dac906d47b2c6cd5cc8b12dcee608",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-02-25 17:02:51"
+            "time": "2015-03-04 20:31:08"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -380,12 +380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "7e4cdf8f1a920aa7cf078309eb6ec29a4af7d040"
+                "reference": "f0211df164af2b68f64bd5e0857b99166406ef2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/7e4cdf8f1a920aa7cf078309eb6ec29a4af7d040",
-                "reference": "7e4cdf8f1a920aa7cf078309eb6ec29a4af7d040",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/f0211df164af2b68f64bd5e0857b99166406ef2b",
+                "reference": "f0211df164af2b68f64bd5e0857b99166406ef2b",
                 "shasum": ""
             },
             "require": {
@@ -418,7 +418,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-02-25 03:24:20"
+            "time": "2015-02-26 02:40:26"
         },
         {
             "name": "cakephp/debug_kit",
@@ -426,12 +426,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "ac1f6cdb8b659fb5044fb01e38817667149f822d"
+                "reference": "1ff614286eb9d9c4c6066e76add0987ec22ca563"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/ac1f6cdb8b659fb5044fb01e38817667149f822d",
-                "reference": "ac1f6cdb8b659fb5044fb01e38817667149f822d",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/1ff614286eb9d9c4c6066e76add0987ec22ca563",
+                "reference": "1ff614286eb9d9c4c6066e76add0987ec22ca563",
                 "shasum": ""
             },
             "require": {
@@ -475,7 +475,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-02-25 02:50:12"
+            "time": "2015-03-03 02:05:09"
         },
         {
             "name": "cakephp/migrations",
@@ -483,12 +483,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/migrations.git",
-                "reference": "b4f5a772bb34a040c0633291af49252d65835b2d"
+                "reference": "7238a88961c9ad081603d2f1e68ef096c9a5fe6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/migrations/zipball/b4f5a772bb34a040c0633291af49252d65835b2d",
-                "reference": "b4f5a772bb34a040c0633291af49252d65835b2d",
+                "url": "https://api.github.com/repos/cakephp/migrations/zipball/7238a88961c9ad081603d2f1e68ef096c9a5fe6b",
+                "reference": "7238a88961c9ad081603d2f1e68ef096c9a5fe6b",
                 "shasum": ""
             },
             "require": {
@@ -525,7 +525,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2015-02-21 00:47:16"
+            "time": "2015-03-03 08:01:30"
         },
         {
             "name": "cakephp/plugin-installer",
@@ -569,25 +569,23 @@
         },
         {
             "name": "d11wtq/boris",
-            "version": "v1.0.8",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/d11wtq/boris.git",
-                "reference": "125dd4e5752639af7678a22ea597115646d89c6e"
+                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/d11wtq/boris/zipball/125dd4e5752639af7678a22ea597115646d89c6e",
-                "reference": "125dd4e5752639af7678a22ea597115646d89c6e",
+                "url": "https://api.github.com/repos/d11wtq/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
+                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
-            },
-            "suggest": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "ext-readline": "*"
+                "ext-readline": "*",
+                "php": ">=5.3.0"
             },
             "bin": [
                 "bin/boris"
@@ -599,7 +597,11 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-01-17 12:21:18"
+            "license": [
+                "MIT"
+            ],
+            "description": "A tiny, but robust REPL (Read-Evaluate-Print-Loop) for PHP.",
+            "time": "2015-03-01 08:05:19"
         },
         {
             "name": "doctrine/instantiator",
@@ -755,16 +757,16 @@
         },
         {
             "name": "pdepend/pdepend",
-            "version": "2.0.4",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pdepend/pdepend.git",
-                "reference": "1b0acf162da4f30237987e61e177a57f78e3d87e"
+                "reference": "a15ffcbfbcc4570d4a733ca7b76e9cac0a56c3f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/1b0acf162da4f30237987e61e177a57f78e3d87e",
-                "reference": "1b0acf162da4f30237987e61e177a57f78e3d87e",
+                "url": "https://api.github.com/repos/pdepend/pdepend/zipball/a15ffcbfbcc4570d4a733ca7b76e9cac0a56c3f4",
+                "reference": "a15ffcbfbcc4570d4a733ca7b76e9cac0a56c3f4",
                 "shasum": ""
             },
             "require": {
@@ -790,7 +792,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2014-12-04 12:38:39"
+            "time": "2015-03-02 08:06:43"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -893,16 +895,16 @@
         },
         {
             "name": "phpmd/phpmd",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpmd/phpmd.git",
-                "reference": "580e6ca75b472a844389ab8df7a0b412901d0d91"
+                "reference": "58c4b00f924d301e8c5281f40cfa9a66f3df9eee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/580e6ca75b472a844389ab8df7a0b412901d0d91",
-                "reference": "580e6ca75b472a844389ab8df7a0b412901d0d91",
+                "url": "https://api.github.com/repos/phpmd/phpmd/zipball/58c4b00f924d301e8c5281f40cfa9a66f3df9eee",
+                "reference": "58c4b00f924d301e8c5281f40cfa9a66f3df9eee",
                 "shasum": ""
             },
             "require": {
@@ -913,7 +915,8 @@
                 "symfony/filesystem": ">=2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "*"
+                "phpunit/phpunit": "*",
+                "squizlabs/php_codesniffer": "*"
             },
             "bin": [
                 "src/bin/phpmd"
@@ -950,7 +953,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2015-01-25 13:46:59"
+            "time": "2015-03-02 10:26:50"
         },
         {
             "name": "phpspec/prophecy",
@@ -1953,20 +1956,21 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "b301c98f19414d836fdaa678648745fcca5aeb4f"
+                "reference": "5046b0e01c416fc2b06df961d0673c85bcdc896c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/b301c98f19414d836fdaa678648745fcca5aeb4f",
-                "reference": "b301c98f19414d836fdaa678648745fcca5aeb4f",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5046b0e01c416fc2b06df961d0673c85bcdc896c",
+                "reference": "5046b0e01c416fc2b06df961d0673c85bcdc896c",
                 "shasum": ""
             },
             "require": {
                 "ext-tokenizer": "*",
+                "ext-xmlwriter": "*",
                 "php": ">=5.1.2"
             },
             "bin": [
@@ -1974,6 +1978,11 @@
                 "scripts/phpcbf"
             ],
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
             "autoload": {
                 "classmap": [
                     "CodeSniffer.php",
@@ -2017,7 +2026,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2015-01-21 22:44:05"
+            "time": "2015-03-04 02:07:03"
         },
         {
             "name": "symfony/config",

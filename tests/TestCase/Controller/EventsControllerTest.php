@@ -2,6 +2,7 @@
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\EventsController;
+use Cake\Network\Session;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\IntegrationTestCase;
 
@@ -17,8 +18,17 @@ class EventsControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
       'events' => 'app.events',
+      'activities' => 'app.activities',
+      'participants' => 'app.participants',
+      'activities_participants' => 'app.activities_participants',
+      'people' => 'app.people',
+      'organization' => 'app.organizations',
     ];
 
+    /**
+     * @var array Test event data
+     * @todo Complete data with associations
+     */
     public $data = [
         'title' => 'SHESA Germany e.V. Five years anniversary',
         'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
@@ -47,8 +57,13 @@ class EventsControllerTest extends IntegrationTestCase
     public function testAddSuccessfully()
     {
         $this->post('/events/edit', $this->data);
-        $expected = __('The Event was successfully saved.');
-        $this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
+        $expected = [
+            'message' => __('The Event was successfully saved.'),
+            'key' => 'flash',
+            'element' => 'Flash/success',
+            'params' => []
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
         $query = $this->Events->find('all');
         $expected = 11;
         $actual = $query->count();
@@ -63,8 +78,13 @@ class EventsControllerTest extends IntegrationTestCase
     {
         $data = ['title' => ''];
         $this->post('/events/edit/1', $data);
-        //$expected = __('The Event could not be saved. Please check the submitted data and try again.');
-        //$this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
+        $expected = [
+            'message' => "The Event could not be saved. Please check the submitted data and try again.",
+            'key' => 'flash',
+            'element' => 'Flash/error',
+            'params' => []
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
         $query = $this->Events->find('all');
         $expected = 10;
         $actual = $query->count();
@@ -78,8 +98,13 @@ class EventsControllerTest extends IntegrationTestCase
     {
         $this->data['id'] = 1;
         $this->post('/events/edit/1', $this->data);
-        //$expected = __('The Event was successfully saved.');
-        //$this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
+        $expected = [
+            'message' => "The Event was successfully saved.",
+            'key' => 'flash',
+            'element' => 'Flash/success',
+            'params' => []
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
         $query = $this->Events->find('all');
         $expected = 10;
         $actual = $query->count();
@@ -94,11 +119,51 @@ class EventsControllerTest extends IntegrationTestCase
     {
         $this->data = ['title' => ''];
         $this->post('/events/edit/1', $this->data);
-        //$expected = __('The Event could not be saved. Please check the submitted data and try again.');
-        //$this->assertSession($expected, 'Flash.flash.message', 'Correct flash message was not displayed.');
+        $expected = [
+            'message' => "The Event could not be saved. Please check the submitted data and try again.",
+            'key' => 'flash',
+            'element' => 'Flash/error',
+            'params' => []
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
         $query = $this->Events->find('all');
         $expected = 10;
         $actual = $query->count();
         $this->assertEquals($expected, $actual, 'Event adding failed with invalid data!');
+    }
+
+    public function testDeleteFailsIfMethodIsPost() {
+        $this->get('/events/delete/1');
+        $this->assertResponseError();
+    }
+
+    public function testDeleteFailsForNonExistentEvent() {
+        $this->post('/events/delete/15');
+        $expected = [
+            'message' => "The event with id 15 was not found!",
+            'key' => 'flash',
+            'element' => 'Flash/error',
+            'params' => []
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
+    }
+
+    public function testDeleteSuccessful() {
+        $this->post('/events/delete/1');
+        $expected = [
+            'message' => "The event with id 1 was successfully deleted!",
+            'key' => 'flash',
+            'element' => 'Flash/success',
+            'params' => []
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
+    }
+
+    public function assertFlash($expected, $message = '') {
+        if(empty($this->_requestSession)) {
+            $this->fail('No session stored.');
+        }
+        $actual = $this->_requestSession->read('Flash.flash');
+        $this->assertEquals($expected,$actual, $message);
     }
 }

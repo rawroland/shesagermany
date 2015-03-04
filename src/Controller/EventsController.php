@@ -36,15 +36,33 @@ class EventsController extends AppController
             if ($this->Events->save($event)) {
                 $this->Flash->success('The Event was successfully saved.');
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'index_admin']);
             }
             $this->Flash->error('The Event could not be saved. Please check the submitted data and try again.');
         }
         $this->set(compact('event'));
     }
 
-    public function index()
+    public function index_admin()
     {
         $this->set('events', $this->paginate($this->Events));
+    }
+
+    /**
+     * @param $eventId
+     * @return \Cake\Network\Response|void
+     * @todo What could go wrong so that saving fails
+     */
+    public function delete($eventId) {
+        $this->autoRender = false;
+        $this->request->allowMethod(['post', 'delete']);
+        if(!$this->Events->exists([$this->Events->alias().'.'.$this->Events->primaryKey() => $eventId])) {
+            $this->Flash->error("The event with id $eventId was not found!");
+            return $this->redirect($this->referer());
+        }
+        if($this->Events->customDelete($eventId)) {
+            $this->Flash->success("The event with id $eventId was successfully deleted!");
+        }
+        return $this->redirect($this->referer());
     }
 }

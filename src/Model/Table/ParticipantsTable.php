@@ -23,6 +23,7 @@ class ParticipantsTable extends Table
         $this->addBehavior('Timestamp');
         $this->hasOne('People', []);
         $this->hasOne('Organizations', []);
+        $this->belongsToMany('Activities', []);
     }
 
     public function validationDefault(Validator $validator)

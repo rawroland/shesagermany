@@ -51,21 +51,26 @@ class EventsTable extends Table
 
     /**
      * Retrieve a single event record.
-     *
      * @param int $eventId
-     *
-     * @return Event Retrieved event.
-     *
-     * @throws NotFoundException When the record is not found.
+     * @param array $parameters Additional parameters for searching.
+     * @return \Cake\Datasource\EntityInterface|mixed
      */
-    public function getSingle($eventId = null)
+    public function getSingle($eventId, $parameters = [])
     {
-        $options = ['contain' => $this->defaultContain];
+        $defaultOptions = ['contain' => $this->defaultContain];
+        $options = array_merge($defaultOptions, $parameters);
 
         return $this->get($eventId, $options);
     }
 
     public function customDelete($eventId)
     {
+        $event = $this->getSingle($eventId, ['contain' => ['Activities']]);
+        $event->set('deleted', 1);
+        foreach($event->activities as $index => $activity) {
+            $activity->set('deleted', 1);
+        }
+        $event->dirty('activities', true);
+        return $this->save($event);
     }
 }

@@ -20,7 +20,7 @@ class ActivitiesTable extends Table
         $this->displayField('title');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->hasMany('Participants', []);
+        $this->belongsToMany('Participants', []);
     }
 
     public function validationDefault(Validator $validator)
