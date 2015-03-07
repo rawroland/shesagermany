@@ -39,6 +39,8 @@ class EventsTable extends Table
                 'rule' => ['minLength', 50],
                 'message' => 'The length of the event description must be greater than 50.',
             ])->requirePresence('description')
+            ->notEmpty('location', 'Please provide a location for the event.')
+            ->requirePresence('location')
             ->notEmpty('date', 'Please provide a date for the event.')
             ->add('date', 'validDate', [
                 'rule' => ['date', ['dmy', 'ymd']],

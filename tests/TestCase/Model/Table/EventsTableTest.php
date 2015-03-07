@@ -43,7 +43,7 @@ class EventsTableTest extends TestCase
         unset($this->Events);
     }
 
-    public function testValidationFailsWithEmptydata()
+    public function testValidationFailsWithEmptyData()
     {
         $event = $this->Events->newEntity([]);
         $errors = $event->errors();
@@ -117,6 +117,27 @@ class EventsTableTest extends TestCase
         $expected = 'Please provide a description for the event.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty description value.');
         $this->assertFalse($this->Events->save($event), 'Event was saved with an empty description value.');
+    }
+
+    public function testValidationFailsWithoutLocation()
+    {
+        unset($this->data['location']);
+        $event = $this->Events->newEntity($this->data);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the location field');
+        $this->assertFalse($this->Events->save($event), 'Event was saved without the location field.');
+    }
+
+    public function testValidationFailsWithEmptyLocation()
+    {
+        $this->data['location'] = '';
+        $event = $this->Events->newEntity($this->data);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the location field');
+        $actual = $errors['location']['_empty'];
+        $expected = 'Please provide a location for the event.';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty location value.');
+        $this->assertFalse($this->Events->save($event), 'Event was saved with an empty location value.');
     }
 
     public function testValidationFailsWithInvalidDescriptionData()

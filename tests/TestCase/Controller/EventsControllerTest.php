@@ -33,6 +33,7 @@ class EventsControllerTest extends IntegrationTestCase
     public $data = [
         'title' => 'SHESA Germany e.V. Five years anniversary',
         'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+        'location' => 'Essen, Germany',
         'date' => '2015-02-01',
         'created' => 1422812508,
         'modified' => 1422812508,
@@ -172,7 +173,8 @@ class EventsControllerTest extends IntegrationTestCase
         $this->assertEquals($expected, $actual, $message);
     }
 
-    public function testIndexSuccess() {
+    public function testIndexSuccess()
+    {
         $this->get('/events');
         $this->assertResponseOk();
         $events = $this->viewVariable('events');

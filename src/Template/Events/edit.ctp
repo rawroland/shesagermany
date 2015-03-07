@@ -17,6 +17,7 @@
         echo $this->Form->input('id');
         echo $this->Form->input('title');
         echo $this->Form->input('description');
+        echo $this->Form->input('location');
         echo $this->Form->input('date');
         ?>
         <fieldset>

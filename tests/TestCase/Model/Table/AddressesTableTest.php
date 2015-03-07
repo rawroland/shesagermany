@@ -27,7 +27,7 @@ class AddressesTableTest extends TestCase
         'state' => 'Nordrhein-Westfalen',
         'country' => 'Germany',
         'created' => '2015-03-07 15:54:35',
-        'modified' => '2015-03-07 15:54:35'
+        'modified' => '2015-03-07 15:54:35',
     ];
 
     public function setUp()
