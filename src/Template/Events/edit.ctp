@@ -54,6 +54,41 @@
             echo $this->Form->input('activities.0.participants.1.person.name');
             ?>
         </fieldset>
+        <fieldset>
+            <legend><?= __('Add Activity 2') ?></legend>
+            <?php
+            echo $this->Form->input('activities.1.id');
+            echo $this->Form->input('activities.1.title');
+            echo $this->Form->input('activities.1.description');
+            echo $this->Form->input('activities.1.date_time');
+            ?>
+        </fieldset>
+        <fieldset>
+            <legend><?= __('Add Participant 1') ?></legend>
+            <?php
+            echo $this->Form->input('activities.1.participants.0.id');
+            echo $this->Form->input('activities.1.participants.0.type');
+            echo $this->Form->input('activities.1.participants.0.role');
+            echo $this->Form->input('activities.1.participants.0.description');
+            echo $this->Form->input('activities.1.participants.0.person.id');
+            echo $this->Form->input('activities.1.participants.0.person.title');
+            echo $this->Form->input('activities.1.participants.0.person.surname');
+            echo $this->Form->input('activities.1.participants.0.person.name');
+            ?>
+        </fieldset>
+        <fieldset>
+            <legend><?= __('Add Participant 2') ?></legend>
+            <?php
+            echo $this->Form->input('activities.1.participants.1.id', ['type' => 'hidden']);
+            echo $this->Form->input('activities.1.participants.1.type');
+            echo $this->Form->input('activities.1.participants.1.role');
+            echo $this->Form->input('activities.1.participants.1.description');
+            echo $this->Form->input('activities.1.participants.1.person.id');
+            echo $this->Form->input('activities.1.participants.1.person.title');
+            echo $this->Form->input('activities.1.participants.1.person.surname');
+            echo $this->Form->input('activities.1.participants.1.person.name');
+            ?>
+        </fieldset>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "ca7ff37e6e4dac906d47b2c6cd5cc8b12dcee608"
+                "reference": "0c8caaf76bc8c8cf007bcac80753fba400d00a53"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/ca7ff37e6e4dac906d47b2c6cd5cc8b12dcee608",
-                "reference": "ca7ff37e6e4dac906d47b2c6cd5cc8b12dcee608",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/0c8caaf76bc8c8cf007bcac80753fba400d00a53",
+                "reference": "0c8caaf76bc8c8cf007bcac80753fba400d00a53",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-03-04 20:31:08"
+            "time": "2015-03-07 15:09:03"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -380,12 +380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "f0211df164af2b68f64bd5e0857b99166406ef2b"
+                "reference": "0adfe6f2004eb2c7f6c55a4af01bcea57aa1c933"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/f0211df164af2b68f64bd5e0857b99166406ef2b",
-                "reference": "f0211df164af2b68f64bd5e0857b99166406ef2b",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/0adfe6f2004eb2c7f6c55a4af01bcea57aa1c933",
+                "reference": "0adfe6f2004eb2c7f6c55a4af01bcea57aa1c933",
                 "shasum": ""
             },
             "require": {
@@ -418,7 +418,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-02-26 02:40:26"
+            "time": "2015-03-05 06:45:14"
         },
         {
             "name": "cakephp/debug_kit",
@@ -483,12 +483,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/migrations.git",
-                "reference": "7238a88961c9ad081603d2f1e68ef096c9a5fe6b"
+                "reference": "0af679cc7ff292b9a517d634f76739855a55ba65"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/migrations/zipball/7238a88961c9ad081603d2f1e68ef096c9a5fe6b",
-                "reference": "7238a88961c9ad081603d2f1e68ef096c9a5fe6b",
+                "url": "https://api.github.com/repos/cakephp/migrations/zipball/0af679cc7ff292b9a517d634f76739855a55ba65",
+                "reference": "0af679cc7ff292b9a517d634f76739855a55ba65",
                 "shasum": ""
             },
             "require": {
@@ -525,7 +525,7 @@
                 "cakephp",
                 "migrations"
             ],
-            "time": "2015-03-03 08:01:30"
+            "time": "2015-03-06 08:03:16"
         },
         {
             "name": "cakephp/plugin-installer",

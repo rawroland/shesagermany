@@ -171,4 +171,11 @@ class EventsControllerTest extends IntegrationTestCase
         $actual = $this->_requestSession->read('Flash.flash');
         $this->assertEquals($expected, $actual, $message);
     }
+
+    public function testIndexSuccess() {
+        $this->get('/events');
+        $this->assertResponseOk();
+        $events = $this->viewVariable('events');
+        $this->assertTrue(!empty($events), 'Pagination results for events was not returned.');
+    }
 }

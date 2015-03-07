@@ -13,7 +13,7 @@ class EventsController extends AppController
 
     public function initialize()
     {
-        $this->paginate = ['contain', $this->Events->defaultContain];
+        $this->paginate = ['contain' => $this->Events->defaultContain];
         parent::initialize();
     }
 
@@ -45,6 +45,10 @@ class EventsController extends AppController
 
     public function index_admin()
     {
+        $this->set('events', $this->paginate($this->Events));
+    }
+
+    public function index() {
         $this->set('events', $this->paginate($this->Events));
     }
 

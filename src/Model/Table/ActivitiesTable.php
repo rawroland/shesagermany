@@ -21,6 +21,7 @@ class ActivitiesTable extends Table
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
         $this->belongsToMany('Participants', []);
+        $this->belongsTo('Addresses', []);
     }
 
     public function validationDefault(Validator $validator)
