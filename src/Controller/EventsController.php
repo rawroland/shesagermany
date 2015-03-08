@@ -43,7 +43,7 @@ class EventsController extends AppController
         $this->set(compact('event'));
     }
 
-    public function index_admin()
+    public function indexAdmin()
     {
         $this->set('events', $this->paginate($this->Events));
     }

@@ -23,7 +23,7 @@ class ParticipantsTableTest extends TestCase
    */
   public $data = [
     'type' => 'person',
-    'role' => 'Speaker',
+    'role' => 'Panelist',
     'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
     phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
     mollitia lectus. Nulla vestibulum massa neque ut et.',
@@ -145,9 +145,18 @@ class ParticipantsTableTest extends TestCase
         $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid role of team.');
     }
 
-    public function testValidationSucceedsWithOrganizationRole()
+    public function testValidationSucceedsWithPanelistRole()
     {
-        $this->data['role'] = Participant::ROLE_SPEAKER;
+        $this->data['role'] = Participant::ROLE_PANELIST;
+        $participant = $this->Participants->newEntity($this->data);
+        $errors = $participant->errors();
+        $this->assertTrue(empty($errors), 'Errors were triggered with a valid role "speaker"!');
+        $this->assertTrue((bool) $this->Participants->save($participant), 'Participant could not be saved with a valid role of speaker.');
+    }
+
+    public function testValidationSucceedsWithModeratorRole()
+    {
+        $this->data['role'] = Participant::ROLE_MODERATOR;
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
         $this->assertTrue(empty($errors), 'Errors were triggered with a valid role "speaker"!');

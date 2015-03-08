@@ -40,7 +40,10 @@ class PeopleTable extends Table
                 'message' => 'The name must be at least 2 characters and at most 128 characters long!',
             ])
             ->add('title', 'validTitle', [
-                'rule' => ['inList', [Person::TITLE_DR, Person::TITLE_MR, Person::TITLE_MRS]],
+                'rule' => ['inList', [
+                    Person::TITLE_DR, Person::TITLE_DR_ING, Person::TITLE_DR_MED,
+                    Person::TITLE_MR, Person::TITLE_MRS, Person::TITLE_MS, Person::TITLE_MS,
+                ]],
                 'message' => 'Valid values for the title are Dr., Mr and Mrs!',
             ])->allowEmpty('title');
 

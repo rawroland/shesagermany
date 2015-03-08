@@ -5,7 +5,7 @@
 ?>
 <div class="wrap row">
   <div class="container">
-    <!-- Start side menu -->
+    <!-- Start side menu -->to
     <div class="col-md-3">
       <div class="panel panel-default">
         <div class="panel-heading"><strong>About</strong></div>

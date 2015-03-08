@@ -39,7 +39,7 @@ class ParticipantsTable extends Table
             ->notEmpty('role', __('Please provide a role for the participant!'))
             ->requirePresence('role')
             ->add('role', 'validRole', [
-                'rule' => ['inList', [Participant::ROLE_SPEAKER, Participant::ROLE_TEAM]],
+                'rule' => ['inList', [Participant::ROLE_PANELIST, Participant::ROLE_TEAM, Participant::ROLE_MODERATOR]],
                 'message' => 'The provided participant role is invalid!',
             ])
             ->requirePresence('description')

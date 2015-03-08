@@ -17,6 +17,7 @@ class Participant extends Entity
     /**
      * Participant roles.
      */
-    const ROLE_SPEAKER = 'Speaker';
+    const ROLE_MODERATOR = 'Moderator';
+    const ROLE_PANELIST = 'Panelist';
     const ROLE_TEAM = 'Team';
 }

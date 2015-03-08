@@ -30,6 +30,15 @@
             ?>
         </fieldset>
         <fieldset>
+            <legend><?= __('Add Address') ?></legend>
+            <?php
+            echo $this->Form->input('activities.0.address');
+            echo $this->Form->input('activities.0.address');
+            echo $this->Form->input('activities.0.address');
+            echo $this->Form->input('activities.0.address');
+            ?>
+        </fieldset>
+        <fieldset>
             <legend><?= __('Add Participant 1') ?></legend>
             <?php
             echo $this->Form->input('activities.0.participants.0.id');

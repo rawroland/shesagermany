@@ -2,12 +2,16 @@
 
 namespace App\Test\TestCase\Model\Table;
 
-use App\Model\Entity\Participant;
 use App\Model\Entity\Person;
 use App\Model\Table\PeopleTable;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
 
+/**
+ * Class PeopleTableTest.
+ *
+ * @todo Tests for successful validations.
+ */
 class PeopleTableTest extends TestCase
 {
     public $fixtures = [
