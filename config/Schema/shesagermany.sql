@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 09. Mrz 2015 um 22:34
+-- Erstellungszeit: 14. Mrz 2015 um 14:58
 -- Server Version: 5.5.32-log
 -- PHP-Version: 5.4.17
 
@@ -38,8 +38,10 @@ CREATE TABLE IF NOT EXISTS `activities` (
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+  PRIMARY KEY (`id`),
+  KEY `event_id` (`event_id`),
+  KEY `address_id` (`address_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Daten für Tabelle `activities`
@@ -50,7 +52,11 @@ INSERT INTO `activities` (`id`, `event_id`, `title`, `description`, `date_time`,
   (2, 1, 'Familien Grill', 'Familien Grill with Shesans, their families and friends', '2013-05-10 15:00:00', 2, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
   (3, 1, 'Football Tournament (OSSUCS)', 'Football Tournament (OSSUCS) involving other ex-student associations', '2013-05-11 10:00:00', 3, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
   (4, 1, 'Gala Night', 'Gala Night', '2013-05-11 21:00:00', 4, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (5, 1, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00');
+  (5, 1, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (6, 2, 'Seminar/Debate: Development Aid, Curse or Blessing for Sub-saharan Africa.', 'Leading experts in the field of development aid participate as panelists.', '2011-10-01 09:00:00', 6, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (7, 2, 'SHESA Gold Cup Football Tournament', '', '2011-10-01 12:00:00', 7, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (8, 2, 'Holy mass celebration', 'Holy mass celebration with Reverend Father Tatah Humphrey Mbuy', '2011-10-02 13:30:00', 5, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (9, 2, 'Gala Night Sunday', 'Gala Night Sunday with the acclaimed Cameroonian soul singer Myra Maimoh, Germany''s best DJ Pokus Nr.1 and DJ Noufi Depago bringing you the best of Makossa, Coupé Decalé, Hip Hop, Ndombolo and more.', '2011-10-02 21:00:00', 4, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00');
 
 -- --------------------------------------------------------
 
@@ -62,8 +68,11 @@ CREATE TABLE IF NOT EXISTS `activities_participants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `activity_id` int(11) NOT NULL,
   `participant_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+  PRIMARY KEY (`id`),
+  KEY `activity_id` (`activity_id`),
+  KEY `participant_id` (`participant_id`),
+  KEY `participant_id_2` (`participant_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Daten für Tabelle `activities_participants`
@@ -88,7 +97,18 @@ INSERT INTO `activities_participants` (`id`, `activity_id`, `participant_id`) VA
   (16, 3, 16),
   (17, 3, 17),
   (18, 4, 18),
-  (19, 5, 19);
+  (19, 5, 19),
+  (20, 7, 9),
+  (21, 7, 12),
+  (22, 7, 16),
+  (23, 7, 11),
+  (24, 7, 11),
+  (25, 7, 20),
+  (26, 7, 13),
+  (27, 7, 21),
+  (28, 7, 22),
+  (29, 7, 23),
+  (30, 7, 24);
 
 -- --------------------------------------------------------
 
@@ -106,7 +126,7 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   `created` datetime DEFAULT NULL,
   `modified` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 --
 -- Daten für Tabelle `addresses`
@@ -117,7 +137,9 @@ INSERT INTO `addresses` (`id`, `street`, `postal_code`, `town`, `state`, `countr
   (2, 'Virchowstrasse 167a', '45147', 'Essen', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-08 00:00:00', '2015-03-08 00:00:00'),
   (3, 'Kalkweg 153', '47055', 'Duisburg', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-08 00:00:00', '2015-03-08 00:00:00'),
   (4, 'Bamlerstrasse 90', '45141', 'Duisburg', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-08 00:00:00', '2015-03-08 00:00:00'),
-  (5, 'Marienplatz 9', '45476', 'Mülheim an der Ruhr', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-08 00:00:00', '2015-03-08 00:00:00');
+  (5, 'Marienplatz 9', '45476', 'Mülheim an der Ruhr', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-08 00:00:00', '2015-03-08 00:00:00'),
+  (6, 'Neustadtstrasse 19', '45476', 'Mülheim an der Ruhr', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-11 00:00:00', '2015-03-11 00:00:00'),
+  (7, 'Pappenbuschstrasse 20', '45473', 'Mülheim an der Ruhr', 'Nordrhein-Westfalen (NRW)', 'Germany', '2015-03-11 00:00:00', '2015-03-11 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -135,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 --
 -- Daten für Tabelle `events`
@@ -206,8 +228,9 @@ CREATE TABLE IF NOT EXISTS `organizations` (
   `participant_id` int(11) NOT NULL,
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+  PRIMARY KEY (`id`),
+  KEY `participant_id` (`participant_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=16 ;
 
 --
 -- Daten für Tabelle `organizations`
@@ -223,7 +246,12 @@ INSERT INTO `organizations` (`id`, `name`, `participant_id`, `created`, `modifie
   (7, 'B.H.S Buea', 15, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (8, 'C.P.C Bali', 16, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (9, 'PEMEXA Germany', 17, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (10, 'Cameroon Catholic Community Mülheim an der Ruhr', 19, '2015-03-08 23:00:00', '2015-03-08 23:00:00');
+  (10, 'Cameroon Catholic Community Mülheim an der Ruhr', 19, '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (11, 'CCAST Bambili Ex-Students Association', 20, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (12, 'Longla Ex-Students Association', 21, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (13, 'Choppers', 22, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (14, 'P.H.S Buea', 23, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (15, 'BIROCOL', 24, '2015-03-10 23:00:00', '2015-03-10 23:00:00');
 
 -- --------------------------------------------------------
 
@@ -239,7 +267,7 @@ CREATE TABLE IF NOT EXISTS `participants` (
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Daten für Tabelle `participants`
@@ -264,7 +292,12 @@ INSERT INTO `participants` (`id`, `type`, `role`, `description`, `created`, `mod
   (16, 'organization', 'Team', 'C.P.C Bali', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (17, 'organization', 'Team', 'P.S.S Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (18, 'person', 'DJ', 'DJ for the gala night.', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
-  (19, 'organization', 'Other', 'CCC Mülheim', '2015-03-08 23:00:00', '2015-03-08 23:00:00');
+  (19, 'organization', 'Other', 'CCC Mülheim', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (20, 'organization', 'Team', 'CCAST Bambili Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (21, 'organization', 'Team', 'Longla Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (22, 'organization', 'Team', 'GBHS Bamenda', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (23, 'organization', 'Team', 'P.H.S Buea', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (24, 'organization', 'Team', 'BIROCOL', '2015-03-10 23:00:00', '2015-03-10 23:00:00');
 
 -- --------------------------------------------------------
 
@@ -293,7 +326,8 @@ CREATE TABLE IF NOT EXISTS `people` (
   `participant_id` int(11) NOT NULL,
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  KEY `participant_id` (`participant_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
@@ -357,6 +391,36 @@ CREATE TABLE IF NOT EXISTS `users` (
   `modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- Constraints der exportierten Tabellen
+--
+
+--
+-- Constraints der Tabelle `activities`
+--
+ALTER TABLE `activities`
+ADD CONSTRAINT `activities_events` FOREIGN KEY (`event_id`) REFERENCES `events` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `addresses_activities` FOREIGN KEY (`address_id`) REFERENCES `addresses` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints der Tabelle `activities_participants`
+--
+ALTER TABLE `activities_participants`
+ADD CONSTRAINT `activity_activity_participants` FOREIGN KEY (`activity_id`) REFERENCES `activities` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `participants_activity_participants` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints der Tabelle `organizations`
+--
+ALTER TABLE `organizations`
+ADD CONSTRAINT `organizations_participants` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints der Tabelle `people`
+--
+ALTER TABLE `people`
+ADD CONSTRAINT `participants_people` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
