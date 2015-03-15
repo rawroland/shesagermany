@@ -5,22 +5,21 @@
 ?>
 <div class="wrap row">
   <div class="container">
-    <!-- Start side menu -->to
-    <div class="col-md-3">
-      <div class="panel panel-default">
-        <div class="panel-heading"><strong>About</strong></div>
-
-        <div class="list-group">
-          <a href="#" class="list-group-item">SHESA Germany e.V</a>
-          <a href="#" class="list-group-item">Sacred Heart College Mankon</a>
-        </div>
-      </div>
-    </div>
-    <!-- End side menu -->
+      <?php
+      $data = [
+          'header' => __('About'),
+          'links' => [
+              __('SHESA Germany e.V') => ['controller' => 'pages', 'action' => 'about_sg'],
+              __('Sacred Heart College Mankon') => ['controller' => 'pages', 'action' => 'about_saheco'],
+          ]
+      ];
+      echo $this->element('sidebar', $data);
+      $this->assign('title', __('SHESA Germany e.V'));
+      ?>
 
     <!-- Start actual content-->
     <div class="col-md-9 long-text">
-      <h3>SHESA Germany e.V</h3>
+      <h2><?= $this->fetch('title')?></h2>
 
       <p>
         SHESA Germany e.V. is a non-profit organization of the alumni of Sacred Heart College (SaHeCo), Mankon, Bamenda,

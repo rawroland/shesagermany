@@ -3,51 +3,43 @@
  * @var $this \Cake\View\View
  */
 ?>
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('New Event'), ['action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('List Activities'), ['controller' => 'Activities', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Activity'), ['controller' => 'Activities', 'action' => 'add']) ?> </li>
-    </ul>
-</div>
-<div class="events index large-10 medium-9 columns">
-    <table cellpadding="0" cellspacing="0">
-        <thead>
-        <tr>
-            <th><?= $this->Paginator->sort('id') ?></th>
-            <th><?= $this->Paginator->sort('title') ?></th>
-            <th><?= $this->Paginator->sort('date') ?></th>
-            <th><?= $this->Paginator->sort('created') ?></th>
-            <th><?= $this->Paginator->sort('modified') ?></th>
-            <th class="actions"><?= __('Actions') ?></th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php foreach ($events as $event): ?>
-            <tr>
-                <td><?= $this->Number->format($event->id) ?></td>
-                <td><?= h($event->title) ?></td>
-                <td><?= h($event->date) ?></td>
-                <td><?= h($event->created) ?></td>
-                <td><?= h($event->modified) ?></td>
-                <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $event->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $event->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $event->id],
-                        ['confirm' => __('Are you sure you want to delete # {0}?', $event->id)]) ?>
-                </td>
-            </tr>
+<div class="wrap row">
+    <div class="container">
+        <?php
+        $data = [
+            'header' => __('Events'),
+            'links' => [
+                __('All Events') => ['controller' => 'events', 'action' => 'index'],
+                __('Upcoming Events') => ['controller' => 'events', 'action' => 'upcoming'],
+                __('Past Events') => ['controller' => 'events', 'action' => 'past'],
+            ]
+        ];
+        echo $this->element('sidebar', $data);
+        ?>
 
-        <?php endforeach; ?>
-        </tbody>
-    </table>
-    <div class="paginator">
-        <ul class="pagination">
-            <?= $this->Paginator->prev('< ' . __('previous')) ?>
-            <?= $this->Paginator->numbers() ?>
-            <?= $this->Paginator->next(__('next') . ' >') ?>
-        </ul>
-        <p><?= $this->Paginator->counter() ?></p>
+        <div class="col-md-9">
+            <h2><?= $pageTitle ?></h2>
+            <?php foreach ($events as $event): ?>
+                <div class="row">
+                    <div class="col-md-9 col-md-push-3">
+                        <h3><?= $event->title ?></h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <i class="fa fa-calendar-o"></i>&nbsp;
+                                <?=
+                                $event->date->i18nFormat(__('d.M.Y'))
+                                ?>
+                            </div>
+                            <div class="col-md-12">
+                                <i class="fa fa-map-marker"></i>&nbsp;<?= $event->location ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-md-pull-9">
+                        <?= $this->Html->image($event->getCoverImage(), ['class' => 'img-responsive img-thumbnail']);?>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 </div>

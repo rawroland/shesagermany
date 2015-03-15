@@ -5,22 +5,21 @@
 ?>
 <div class="wrap row">
   <div class="container">
-    <!-- Start side menu -->
-    <div class="col-md-3">
-      <div class="panel panel-default">
-        <div class="panel-heading"><strong>About</strong></div>
+    <?php
+    $data = [
+        'header' => __('About'),
+        'links' => [
+            __('SHESA Germany e.V') => ['controller' => 'pages', 'action' => 'about_sg'],
+            __('Sacred Heart College Mankon') => ['controller' => 'pages', 'action' => 'about_saheco'],
+        ]
+    ];
+    echo $this->element('sidebar', $data);
+    $this->assign('title', __('Sacred Heart College Mankon'));
+    ?>
 
-        <div class="list-group">
-          <a href="#" class="list-group-item">SHESA Germany e.V</a>
-          <a href="#" class="list-group-item">Sacred Heart College Mankon</a>
-        </div>
-      </div>
-    </div>
-    <!-- End side menu -->
-
-    <!-- Start actual content-->
-    <div class="col-md-9 long-text">
-      <h3>Sacred Heart College Mankon, Cameroon</h3>
+      <!-- Start actual content-->
+      <div class="col-md-9 long-text">
+          <h2><?= $this->fetch('title')?></h2>
 
       <p>
         Sacred Heart College, Mankon is a boarding secondary school for boys located in Bamenda, in the North West

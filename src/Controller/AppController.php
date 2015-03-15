@@ -35,7 +35,7 @@ class AppController extends Controller
      *
      * @var string
      */
-    protected $title = '';
+    protected $pageTitle = '';
 
     /**
      * Initialization hook method.
@@ -50,6 +50,11 @@ class AppController extends Controller
     public function beforeFilter(Event $event)
     {
         parent::beforeFilter($event);
-        $this->set('title', $this->title);
+    }
+
+    public function beforeRender(Event $event)
+    {
+        $this->set('pageTitle', $this->pageTitle);
+        parent::beforeRender($event);
     }
 }
