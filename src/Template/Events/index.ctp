@@ -27,7 +27,7 @@
                             <div class="col-md-12">
                                 <i class="fa fa-calendar-o"></i>&nbsp;
                                 <?=
-                                $event->date->i18nFormat(__('d.M.Y'))
+                                $event->date
                                 ?>
                             </div>
                             <div class="col-md-12">

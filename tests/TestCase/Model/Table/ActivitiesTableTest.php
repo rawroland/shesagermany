@@ -21,11 +21,14 @@ class ActivitiesTableTest extends TestCase
    * @var array Test data
    */
   public $data = [
-    'title' => 'SHESA Germany SG7',
-    'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
-    phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
-    mollitia lectus. Nulla vestibulum massa neque ut et.',
-    'date' => '2015-07-11',
+      'event_id' => 1,
+      'title' => 'Be your own boss',
+      'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
+      'start_time' => '2015-02-25 22:45:20',
+      'end_time' => '2015-02-25 22:45:20',
+      'deleted' => 0,
+      'created' => 1424904320,
+      'modified' => 1424904320,
   ];
 
     public function setUp()
@@ -129,39 +132,75 @@ class ActivitiesTableTest extends TestCase
         $this->assertFalse($this->Activities->save($activity), 'Activity was saved with a short description value.');
     }
 
-    public function testValidationFailsWithoutDate()
+    public function testValidationFailsWithoutStartTime()
     {
-        unset($this->data['date_time']);
+        unset($this->data['start_time']);
         $activity = $this->Activities->newEntity($this->data);
         $errors = $activity->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
         $this->assertFalse($this->Activities->save($activity), 'Activity was saved without the date field.');
     }
 
-    public function testValidationFailsWithEmptyDate()
+    public function testValidationFailsWithEmptyStartTime()
     {
-        $this->data['date_time'] = '';
+        $this->data['start_time'] = '';
         $activity = $this->Activities->newEntity($this->data);
         $errors = $activity->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
-        $actual = $errors['date_time']['_empty'];
-        $expected = 'Please provide a date for the event.';
-        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty date value.');
-        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an empty date value.');
+        $actual = $errors['start_time']['_empty'];
+        $expected = 'Please provide a start date and time for the activity.';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty start time value.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an empty start timevalue.');
     }
 
   /**
    * @todo Possible invalid date inputs.
    */
-  public function testValidationFailsWithInvalidDateTimeData()
+  public function testValidationFailsWithInvalidStartDateTimeData()
   {
-      $this->data['date_time'] = '2014-01-01';
+      $this->data['start_time'] = '2014-01-01';
       $activity = $this->Activities->newEntity($this->data);
       $errors = $activity->errors();
-      $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid date value.');
-      $actual = $errors['date_time']['validDateTime'];
-      $expected = __('Please provide a valid date. Allowed format is DD-MM-YYYY.');
+      $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid start date and time value.');
+      $actual = $errors['start_time']['validStartDateTime'];
+      $expected = __('Please provide a valid start date and time for the activity.');
       $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
-      $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an invalid date.');
+      $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an invalid start date and time.');
+  }
+
+    public function testValidationFailsWithoutEndTime()
+    {
+        unset($this->data['end_time']);
+        $activity = $this->Activities->newEntity($this->data);
+        $errors = $activity->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the end time field');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved without the date field.');
+    }
+
+    public function testValidationFailsWithEmptyEndTime()
+    {
+        $this->data['end_time'] = '';
+        $activity = $this->Activities->newEntity($this->data);
+        $errors = $activity->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the end time field');
+        $actual = $errors['end_time']['_empty'];
+        $expected = 'Please provide a end date and time for the activity.';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty start time value.');
+        $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an empty end time value.');
+    }
+
+  /**
+   * @todo Possible invalid date inputs.
+   */
+  public function testValidationFailsWithInvalidEndDateTimeData()
+  {
+      $this->data['end_time'] = '2014-01-01';
+      $activity = $this->Activities->newEntity($this->data);
+      $errors = $activity->errors();
+      $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid start date and time value.');
+      $actual = $errors['end_time']['validEndDateTime'];
+      $expected = __('Please provide a valid end date and time for the activity.');
+      $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
+      $this->assertFalse($this->Activities->save($activity), 'Activity was saved with an invalid start date and time.');
   }
 }

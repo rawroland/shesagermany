@@ -21,7 +21,6 @@ class OrganizationsTableTest extends TestCase
      * @var array Test data
      */
     public $data = [
-        'id' => 1,
         'name' => "Ex Student's Association",
         'participant_id' => 1,
         'created' => 1424016409,

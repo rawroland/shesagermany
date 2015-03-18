@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 14. Mrz 2015 um 14:58
--- Server Version: 5.5.32-log
--- PHP-Version: 5.4.17
+-- Erstellungszeit: 18. Mrz 2015 um 23:20
+-- Server Version: 5.5.41-0ubuntu0.14.04.1
+-- PHP-Version: 5.5.9-1ubuntu4.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -33,7 +33,8 @@ CREATE TABLE IF NOT EXISTS `activities` (
   `event_id` int(11) NOT NULL,
   `title` varchar(128) NOT NULL,
   `description` text NOT NULL,
-  `date_time` datetime NOT NULL,
+  `start_time` datetime NOT NULL,
+  `end_time` datetime NOT NULL,
   `address_id` int(11) NOT NULL,
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `created` timestamp NULL DEFAULT NULL,
@@ -47,16 +48,16 @@ CREATE TABLE IF NOT EXISTS `activities` (
 -- Daten für Tabelle `activities`
 --
 
-INSERT INTO `activities` (`id`, `event_id`, `title`, `description`, `date_time`, `address_id`, `deleted`, `created`, `modified`) VALUES
-  (1, 1, 'Seminar: "Be your own boss"', 'Selfemployment and Starting up a Business An Option as a Professional in Germany ', '2013-05-09 13:30:00', 1, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (2, 1, 'Familien Grill', 'Familien Grill with Shesans, their families and friends', '2013-05-10 15:00:00', 2, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (3, 1, 'Football Tournament (OSSUCS)', 'Football Tournament (OSSUCS) involving other ex-student associations', '2013-05-11 10:00:00', 3, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (4, 1, 'Gala Night', 'Gala Night', '2013-05-11 21:00:00', 4, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (5, 1, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (6, 2, 'Seminar/Debate: Development Aid, Curse or Blessing for Sub-saharan Africa.', 'Leading experts in the field of development aid participate as panelists.', '2011-10-01 09:00:00', 6, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (7, 2, 'SHESA Gold Cup Football Tournament', '', '2011-10-01 12:00:00', 7, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (8, 2, 'Holy mass celebration', 'Holy mass celebration with Reverend Father Tatah Humphrey Mbuy', '2011-10-02 13:30:00', 5, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (9, 2, 'Gala Night Sunday', 'Gala Night Sunday with the acclaimed Cameroonian soul singer Myra Maimoh, Germany''s best DJ Pokus Nr.1 and DJ Noufi Depago bringing you the best of Makossa, Coupé Decalé, Hip Hop, Ndombolo and more.', '2011-10-02 21:00:00', 4, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00');
+INSERT INTO `activities` (`id`, `event_id`, `title`, `description`, `start_time`, `end_time`, `address_id`, `deleted`, `created`, `modified`) VALUES
+  (1, 1, 'Seminar: "Be your own boss"', 'Selfemployment and Starting up a Business An Option as a Professional in Germany ', '2013-05-09 13:30:00', '0000-00-00 00:00:00', 1, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (2, 1, 'Familien Grill', 'Familien Grill with Shesans, their families and friends', '2013-05-10 15:00:00', '0000-00-00 00:00:00', 2, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (3, 1, 'Football Tournament (OSSUCS)', 'Football Tournament (OSSUCS) involving other ex-student associations', '2013-05-11 10:00:00', '0000-00-00 00:00:00', 3, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (4, 1, 'Gala Night', 'Gala Night', '2013-05-11 21:00:00', '0000-00-00 00:00:00', 4, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (5, 1, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', '0000-00-00 00:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (6, 2, 'Seminar/Debate: Development Aid, Curse or Blessing for Sub-saharan Africa.', 'Leading experts in the field of development aid participate as panelists.', '2011-10-01 09:00:00', '0000-00-00 00:00:00', 6, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (7, 2, 'SHESA Gold Cup Football Tournament', '', '2011-10-01 12:00:00', '0000-00-00 00:00:00', 7, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (8, 2, 'Holy mass celebration', 'Holy mass celebration with Reverend Father Tatah Humphrey Mbuy', '2011-10-02 13:30:00', '0000-00-00 00:00:00', 5, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (9, 2, 'Gala Night Sunday', 'Gala Night Sunday with the acclaimed Cameroonian soul singer Myra Maimoh, Germany''s best DJ Pokus Nr.1 and DJ Noufi Depago bringing you the best of Makossa, Coupé Decalé, Hip Hop, Ndombolo and more.', '2011-10-02 21:00:00', '0000-00-00 00:00:00', 4, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00');
 
 -- --------------------------------------------------------
 
@@ -152,7 +153,8 @@ CREATE TABLE IF NOT EXISTS `events` (
   `title` varchar(128) NOT NULL,
   `description` text NOT NULL,
   `location` varchar(128) NOT NULL,
-  `date` date NOT NULL,
+  `start` date NOT NULL,
+  `end` date NOT NULL,
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
@@ -163,9 +165,9 @@ CREATE TABLE IF NOT EXISTS `events` (
 -- Daten für Tabelle `events`
 --
 
-INSERT INTO `events` (`id`, `title`, `description`, `location`, `date`, `deleted`, `created`, `modified`) VALUES
-  (1, 'Celebrating 5 Years of SHESA Germany e.V', 'One of the best Secondary and High Schools in Cameroon is the Catholic institution called "Sacred Heart College" which is located at Bamenda, the capital of the North West Region. Sacred Heart College, an all-boys college went into operation in 1961. Since then it has sent out thousands of ex-students, who have been making their impact in every work of life all over the world. A Sacred Heart ex-student is called a "Shesan". Shesans all over the world are organised in different Shesa Associations. In Germany Shesans are organised in the association called "SHESA Germany e. V." which was founded in 2008. From the 9th to 12th of May 2013 Shesa Germany is planning to celebrate its 5th anniversary by organising many different activities on each of the said days culminating in the Anniversary Gala on the night of May 11th 2013. This film is all about Shesa Germany and its intention is to publicize the planned activities as well as woo more Shesans to join their kind. Non-Shesans are also targeted because Shesans are very social and would very much love to celebrate together with their friends and well wishers. For more on the activities of Shesa Germany e. V. please feel free to contact us using the email link displayed in the film.', 'Duisburg/Essen, Germany', '2013-05-09', 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (2, 'SHESA Germany e.V: Golden Jubilee of our Alma Matter Sacred Heart College Mankon', 'SHESA Germany e.V: Golden Jubilee of our Alma Matter Sacred Heart College Mankon', 'Duisburg/Essen, Germany', '2011-10-01', 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00');
+INSERT INTO `events` (`id`, `title`, `description`, `location`, `start`, `end`, `deleted`, `created`, `modified`) VALUES
+  (1, 'Celebrating 5 Years of SHESA Germany e.V', 'One of the best Secondary and High Schools in Cameroon is the Catholic institution called "Sacred Heart College" which is located at Bamenda, the capital of the North West Region. Sacred Heart College, an all-boys college went into operation in 1961. Since then it has sent out thousands of ex-students, who have been making their impact in every work of life all over the world. A Sacred Heart ex-student is called a "Shesan". Shesans all over the world are organised in different Shesa Associations. In Germany Shesans are organised in the association called "SHESA Germany e. V." which was founded in 2008. From the 9th to 12th of May 2013 Shesa Germany is planning to celebrate its 5th anniversary by organising many different activities on each of the said days culminating in the Anniversary Gala on the night of May 11th 2013. This film is all about Shesa Germany and its intention is to publicize the planned activities as well as woo more Shesans to join their kind. Non-Shesans are also targeted because Shesans are very social and would very much love to celebrate together with their friends and well wishers. For more on the activities of Shesa Germany e. V. please feel free to contact us using the email link displayed in the film.', 'Duisburg/Essen, Germany', '2013-05-09', '0000-00-00', 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (2, 'SHESA Germany e.V: Golden Jubilee of our Alma Matter Sacred Heart College Mankon', 'SHESA Germany e.V: Golden Jubilee of our Alma Matter Sacred Heart College Mankon', 'Duisburg/Essen, Germany', '2011-10-01', '0000-00-00', 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00');
 
 -- --------------------------------------------------------
 

@@ -27,7 +27,8 @@ class EventsTableTest extends TestCase
     'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida,
     phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed,
     mollitia lectus. Nulla vestibulum massa neque ut et.',
-    'date' => '2015-07-11',
+    'start' => '2015-07-11',
+    'end' => '2015-07-12',
   ];
 
     public function setUp()
@@ -152,23 +153,23 @@ class EventsTableTest extends TestCase
         $this->assertFalse($this->Events->save($event), 'Event was saved with a short description value.');
     }
 
-    public function testValidationFailsWithoutDate()
+    public function testValidationFailsWithoutStartDate()
     {
-        unset($this->data['date']);
+        unset($this->data['start']);
         $event = $this->Events->newEntity($this->data);
         $errors = $event->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
         $this->assertFalse($this->Events->save($event), 'Event was saved without the date field.');
     }
 
-    public function testValidationFailsWithEmptyDate()
+    public function testValidationFailsWithEmptyStartDate()
     {
-        $this->data['date'] = '';
+        $this->data['start'] = '';
         $event = $this->Events->newEntity($this->data);
         $errors = $event->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
-        $actual = $errors['date']['_empty'];
-        $expected = 'Please provide a date for the event.';
+        $actual = $errors['start']['_empty'];
+        $expected = 'Please provide a start date for the event.';
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty date value.');
         $this->assertFalse($this->Events->save($event), 'Event was saved with an empty date value.');
     }
@@ -176,16 +177,53 @@ class EventsTableTest extends TestCase
     /**
      * @todo Possible invalid date inputs.
      */
-    public function testValidationFailsWithInvalidDateData()
+    public function testValidationFailsWithInvalidStartDateData()
     {
-        $this->data['date'] = '2014';
+        $this->data['start'] = '2014';
         $event = $this->Events->newEntity($this->data);
         $errors = $event->errors();
         $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid date value.');
-        $actual = $errors['date']['validDate'];
-        $expected = __('Please provide a valid date. Allowed format is DD-MM-YYYY.');
+        $actual = $errors['start']['validStartDate'];
+        $expected = __('Please provide a valid start date. Allowed format is DD-MM-YYYY.');
         $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid date.');
         $this->assertFalse($this->Events->save($event), 'Event was saved with an invalid date.');
+    }
+
+
+    public function testValidationFailsWithoutEndDate()
+    {
+        unset($this->data['start']);
+        $event = $this->Events->newEntity($this->data);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the date field');
+        $this->assertFalse($this->Events->save($event), 'Event was saved without the date field.');
+    }
+
+    public function testValidationFailsWithEmptyEndDate()
+    {
+        $this->data['end'] = '';
+        $event = $this->Events->newEntity($this->data);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered without the end date field');
+        $actual = $errors['end']['_empty'];
+        $expected = 'Please provide an end date for the event.';
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an empty end date value.');
+        $this->assertFalse($this->Events->save($event), 'Event was saved with an empty end date value.');
+    }
+
+    /**
+     * @todo Possible invalid date inputs.
+     */
+    public function testValidationFailsWithInvalidEndDateData()
+    {
+        $this->data['end'] = '2014';
+        $event = $this->Events->newEntity($this->data);
+        $errors = $event->errors();
+        $this->assertTrue(!empty($errors), 'No errors were triggered with an invalid date value.');
+        $actual = $errors['end']['validEndDate'];
+        $expected = __('Please provide a valid end date. Allowed format is DD-MM-YYYY.');
+        $this->assertEquals($expected, $actual, 'Wrong error message was shown for an invalid end date.');
+        $this->assertFalse($this->Events->save($event), 'Event was saved with an invalid end date.');
     }
 
     /**

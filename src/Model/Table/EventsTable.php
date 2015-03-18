@@ -41,11 +41,16 @@ class EventsTable extends Table
             ])->requirePresence('description')
             ->notEmpty('location', 'Please provide a location for the event.')
             ->requirePresence('location')
-            ->notEmpty('date', 'Please provide a date for the event.')
-            ->add('date', 'validDate', [
+            ->notEmpty('start', 'Please provide a start date for the event.')
+            ->add('start', 'validStartDate', [
                 'rule' => ['date', ['dmy', 'ymd']],
-                'message' => 'Please provide a valid date. Allowed format is DD-MM-YYYY.',
-            ])->requirePresence('date');
+                'message' => 'Please provide a valid start date. Allowed format is DD-MM-YYYY.',
+            ])->requirePresence('start')
+            ->notEmpty('end', 'Please provide an end date for the event.')
+            ->add('end', 'validEndDate', [
+                'rule' => ['date', ['dmy', 'ymd']],
+                'message' => 'Please provide a valid end date. Allowed format is DD-MM-YYYY.',
+            ])->requirePresence('end');
 
         return $validator;
     }

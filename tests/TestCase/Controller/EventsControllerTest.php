@@ -34,7 +34,8 @@ class EventsControllerTest extends IntegrationTestCase
         'title' => 'SHESA Germany e.V. Five years anniversary',
         'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
         'location' => 'Essen, Germany',
-        'date' => '2015-02-01',
+        'start' => '2015-02-01',
+        'end' => '2015-02-03',
         'created' => 1422812508,
         'modified' => 1422812508,
     ];

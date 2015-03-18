@@ -38,11 +38,16 @@ class ActivitiesTable extends Table
             'rule' => ['minLength', 50],
             'message' => 'The length of the event description must be greater than 50.',
           ])->requirePresence('description')
-          ->notEmpty('date_time', 'Please provide a date for the event.')
-          ->add('date_time', 'validDateTime', [
+          ->notEmpty('start_time', 'Please provide a start date and time for the activity.')
+          ->add('start_time', 'validStartDateTime', [
             'rule' => ['datetime', ['dmy', 'ymd']],
-            'message' => 'Please provide a valid date. Allowed format is DD-MM-YYYY.',
-          ])->requirePresence('date_time');
+            'message' => 'Please provide a valid start date and time for the activity.',
+          ])->requirePresence('start_time')
+          ->notEmpty('end_time', 'Please provide a end date and time for the activity.')
+          ->add('end_time', 'validEndDateTime', [
+            'rule' => ['datetime', ['dmy', 'ymd']],
+            'message' => 'Please provide a valid end date and time for the activity.',
+          ])->requirePresence('end_time');
 
         return $validator;
     }
