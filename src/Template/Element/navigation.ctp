@@ -17,7 +17,7 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <?= $this->Html->image('logo.png', array('alt' => "SHESA Germany")); ?>
+        <?= $this->Html->image('logo-xl.png', array('alt' => "SHESA Germany", 'height' => '140px')); ?>
       </a>
     </div>
 
