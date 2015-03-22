@@ -11,7 +11,8 @@ class Event extends Entity
     /**
      * @todo Functionality for getting cover photo and return default thumb if not found
      */
-    public function getCoverImage() {
+    public function getCoverImage()
+    {
         return 'default-thumb.png';
     }
 }

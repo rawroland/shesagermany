@@ -15,7 +15,7 @@ class EventsController extends AppController
     {
         $this->paginate = [
             'contain' => $this->Events->defaultContain, 'limit' => $this->Events->defaultLimit,
-            'order' => $this->Events->defaultSort
+            'order' => $this->Events->defaultSort,
         ];
         parent::initialize();
     }

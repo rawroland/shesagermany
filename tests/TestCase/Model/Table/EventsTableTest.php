@@ -189,7 +189,6 @@ class EventsTableTest extends TestCase
         $this->assertFalse($this->Events->save($event), 'Event was saved with an invalid date.');
     }
 
-
     public function testValidationFailsWithoutEndDate()
     {
         unset($this->data['start']);
