@@ -30,6 +30,8 @@ use Cake\Event\Event;
  */
 class AppController extends Controller
 {
+    public $helpers = ['Time', 'Text', 'Url'];
+
     /**
      * HTML title.
      *

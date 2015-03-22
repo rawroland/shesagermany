@@ -19,6 +19,18 @@ html, body {
   padding: 20px 0;
 }
 
+.top-sm-offset  {
+    margin-top: 10px;
+}
+
+
+.bottom-md-offset {
+    margin-bottom: 20px;
+}
+
+.bottom-sm-offset {
+    margin-bottom: 10px;
+}
 
 /* ----------------------
  footer
@@ -308,3 +320,9 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
 }
 @media (min-width: 992px) and (max-width: 1199px) {}
 @media (min-width: 1200px) {}
+
+/* Pagination elements */
+.pagination-element {
+    border-bottom: solid 1px #F5F5F5;
+    padding-bottom: 5px;
+}
