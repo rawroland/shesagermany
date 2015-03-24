@@ -18,7 +18,7 @@
         ?>
 
         <div class="col-md-9">
-            <h2><?= $pageTitle ?></h2>
+            <h1 class="top-zero-offset bottom-md-offset"><?= $pageTitle ?></h1>
             <?php
             foreach ($events as $event):
                 $eventUrlArray = [
@@ -29,32 +29,33 @@
                 $eventUrl = $this->Url->build( $eventUrlArray);
             ?>
                 <div class="row bottom-md-offset pagination-element">
-                    <div class="col-md-12">
-                        <?php
-                        $header = $this->Html->tag('h3', $event->title);
-                        echo $this->Html->link($header, $eventUrl, ['escape' => false]);
-                        ?>
-                    </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4 col-sm-4">
                         <?=
                         $this->Html->image($event->getCoverImage(),
                             ['class' => 'img-responsive img-thumbnail', 'url' => $eventUrl]
                         );
                         ?>
                     </div>
-                    <div class="col-md-9">
+                    <div class="col-md-8 col-sm-8">
                         <div class="row">
                             <div class="col-md-12">
+                                <?php
+                                $header = $this->Html->tag('h3', $event->title, ['class' => 'top-zero-offset']);
+                                echo $this->Html->link($header, $eventUrl, ['escape' => false]);
+                                ?>
+                            </div>
+                            <div class="col-md-6 col-sm-12 text-muted">
                                 <i class="fa fa-calendar-o"></i>&nbsp;
                                 <?= $this->Time->format($event->start, __('dd.MM.Y')) ?>
                                 <i class="fa fa-arrow-right"></i>
                                 <?= $this->Time->format($event->end, __('dd.MM.Y'))?>
                             </div>
-                            <div class="col-md-12  bottom-sm-offset">
-                                <i class="fa fa-map-marker"></i>&nbsp;<?= $event->location ?>
+                            <div class="col-md-6 col-sm-12 text-muted">
+                                <i class="fa fa-map-marker"></i>&nbsp;
+                                <?= $event->location ?>
                             </div>
-                            <p class="col-md-12">
-                                <?= $this->Text->truncate($event->description, 150)?>
+                            <p class="col-md-12 text-justify top-md-offset">
+                                <?= $this->Text->truncate($event->description, 200)?>
                             </p>
                             <?php if(!empty($event->activities)):?>
                                 <div class="col-md-12">

@@ -15,14 +15,25 @@ html, body {
   margin: 0 auto -200px;
 }
 
+.wrap {
+    margin-top: 60px;
+}
+
 .top-bottom-medium-padding {
   padding: 20px 0;
+}
+
+.top-zero-offset {
+    margin-top: 0 !important;
 }
 
 .top-sm-offset  {
     margin-top: 10px;
 }
 
+.top-md-offset {
+    margin-top: 20px;
+}
 
 .bottom-md-offset {
     margin-bottom: 20px;
@@ -138,6 +149,11 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus{
   .footer {
     padding: 20px 0;
   }
+
+  /* Header margins */
+    .top-zero-offset {
+        margin-top: 20px !important;
+    }
 }
 /*Footer*/
 @media (min-width: 768px) and (max-width: 991px){

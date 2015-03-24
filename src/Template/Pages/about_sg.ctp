@@ -19,7 +19,7 @@
 
     <!-- Start actual content-->
     <div class="col-md-9 long-text">
-      <h2><?= $this->fetch('title')?></h2>
+      <h1><?= $this->fetch('title')?></h1>
 
       <p>
         SHESA Germany e.V. is a non-profit organization of the alumni of Sacred Heart College (SaHeCo), Mankon, Bamenda,

@@ -19,7 +19,7 @@
 
       <!-- Start actual content-->
       <div class="col-md-9 long-text">
-          <h2><?= $this->fetch('title')?></h2>
+          <h1><?= $this->fetch('title')?></h1>
 
       <p>
         Sacred Heart College, Mankon is a boarding secondary school for boys located in Bamenda, in the North West

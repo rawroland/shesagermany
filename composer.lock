@@ -200,16 +200,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
-                "reference": "af9111f4f3e6bf8f7f47150dbd19bb4400f887cd"
+                "reference": "705409203b9877271ec4c838b8e4f10ca3124a43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/af9111f4f3e6bf8f7f47150dbd19bb4400f887cd",
-                "reference": "af9111f4f3e6bf8f7f47150dbd19bb4400f887cd",
+                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/705409203b9877271ec4c838b8e4f10ca3124a43",
+                "reference": "705409203b9877271ec4c838b8e4f10ca3124a43",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp": "3.0.*-dev"
+                "cakephp/cakephp": "~3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "4.1.*"
@@ -242,7 +242,7 @@
                 "cakephp",
                 "twitter"
             ],
-            "time": "2015-03-12 19:04:37"
+            "time": "2015-03-24 13:56:36"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -432,12 +432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "ad86dbce53c16a8c8af4ee30fdaa4ff41a924778"
+                "reference": "bd0dc50a615922f3414b91fce515ea8ca7839bc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/ad86dbce53c16a8c8af4ee30fdaa4ff41a924778",
-                "reference": "ad86dbce53c16a8c8af4ee30fdaa4ff41a924778",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/bd0dc50a615922f3414b91fce515ea8ca7839bc1",
+                "reference": "bd0dc50a615922f3414b91fce515ea8ca7839bc1",
                 "shasum": ""
             },
             "require": {
@@ -470,7 +470,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-03-22 18:09:12"
+            "time": "2015-03-23 12:13:21"
         },
         {
             "name": "cakephp/debug_kit",
