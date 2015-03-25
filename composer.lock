@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4682f643dc20cdf5a1cd8ccfaddc047f",
+    "hash": "5b0d6f41918a2ae0d9b45e510e98cfa7",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "09eb23891dc8134830f4e39e01a3a39f82935e41"
+                "reference": "b672239d53593535e79c234c033ccd034133cced"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/09eb23891dc8134830f4e39e01a3a39f82935e41",
-                "reference": "09eb23891dc8134830f4e39e01a3a39f82935e41",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/b672239d53593535e79c234c033ccd034133cced",
+                "reference": "b672239d53593535e79c234c033ccd034133cced",
                 "shasum": ""
             },
             "require": {
@@ -192,7 +192,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-03-22 16:42:46"
+            "time": "2015-03-25 00:18:44"
         },
         {
             "name": "friendsofcake/bootstrap-ui",
@@ -432,12 +432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "bd0dc50a615922f3414b91fce515ea8ca7839bc1"
+                "reference": "69a1460adab467284081fd07f17453d949a27c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/bd0dc50a615922f3414b91fce515ea8ca7839bc1",
-                "reference": "bd0dc50a615922f3414b91fce515ea8ca7839bc1",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/69a1460adab467284081fd07f17453d949a27c4e",
+                "reference": "69a1460adab467284081fd07f17453d949a27c4e",
                 "shasum": ""
             },
             "require": {
@@ -470,7 +470,7 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-03-23 12:13:21"
+            "time": "2015-03-25 08:44:28"
         },
         {
             "name": "cakephp/debug_kit",
@@ -624,23 +624,25 @@
         },
         {
             "name": "d11wtq/boris",
-            "version": "v1.0.10",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/d11wtq/boris.git",
-                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483"
+                "reference": "125dd4e5752639af7678a22ea597115646d89c6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/d11wtq/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
-                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
+                "url": "https://api.github.com/repos/d11wtq/boris/zipball/125dd4e5752639af7678a22ea597115646d89c6e",
+                "reference": "125dd4e5752639af7678a22ea597115646d89c6e",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.3.0"
+            },
+            "suggest": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "ext-readline": "*",
-                "php": ">=5.3.0"
+                "ext-readline": "*"
             },
             "bin": [
                 "bin/boris"
@@ -652,11 +654,7 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A tiny, but robust REPL (Read-Evaluate-Print-Loop) for PHP.",
-            "time": "2015-03-01 08:05:19"
+            "time": "2014-01-17 12:21:18"
         },
         {
             "name": "doctrine/instantiator",
@@ -767,16 +765,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "edbf162e4cf116102d95eb635608b7d310cc01c6"
+                "reference": "dba7524b3724f25b947cd26a580787c55c8a6f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/edbf162e4cf116102d95eb635608b7d310cc01c6",
-                "reference": "edbf162e4cf116102d95eb635608b7d310cc01c6",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/dba7524b3724f25b947cd26a580787c55c8a6f9b",
+                "reference": "dba7524b3724f25b947cd26a580787c55c8a6f9b",
                 "shasum": ""
             },
             "require": {
@@ -808,7 +806,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2015-03-22 16:17:25"
+            "time": "2015-03-24 19:10:28"
         },
         {
             "name": "pdepend/pdepend",
