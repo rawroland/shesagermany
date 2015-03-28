@@ -4,7 +4,7 @@
  */
 ?>
 <!-- Start side menu -->
-<div class="col-md-3">
+<div class="col-md-3 hidden-sm hidden-xs">
     <div class="panel panel-default">
         <div class="panel-heading"><strong><?= $header;?></strong></div>
 

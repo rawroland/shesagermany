@@ -18,7 +18,7 @@
         ?>
 
         <div class="col-md-9">
-            <h1 class="top-zero-offset bottom-md-offset"><?= $pageTitle ?></h1>
+            <?= $this->element('page_title')?>
             <?php
             foreach ($events as $event):
                 $eventUrlArray = [
