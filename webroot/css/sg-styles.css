@@ -357,3 +357,12 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus {
     border-bottom: solid 1px #F5F5F5;
     padding-bottom: 5px;
 }
+
+.blog-main {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.blog-main img {
+    padding: 0 30px 10px 0;
+}

@@ -1,6 +1,8 @@
 <?php
 namespace App\Controller;
 
+use Cake\Datasource\Exception\RecordNotFoundException;
+
 /**
  * Class EventsController.
  *
@@ -79,5 +81,20 @@ class EventsController extends AppController
         }
 
         return $this->redirect($this->referer());
+    }
+
+    public function view($eventId)
+    {
+        try {
+            $event = $this->Events->getSingle($eventId);
+        } catch (RecordNotFoundException $exception) {
+            $this->log("Tried to access nonexistent Event with id [{$eventId}]");
+            $this->log($exception->getTraceAsString());
+            $this->Flash->error('The resource you are looking for could not be found. Please try again later.');
+
+            return $this->redirect($this->referer());
+        }
+        $this->pageTitle = $event->get('title');
+        $this->set(compact('event'));
     }
 }

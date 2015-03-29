@@ -2,6 +2,7 @@
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\EventsController;
+use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Network\Session;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\IntegrationTestCase;
@@ -180,5 +181,24 @@ class EventsControllerTest extends IntegrationTestCase
         $this->assertResponseOk();
         $events = $this->viewVariable('events');
         $this->assertTrue(!empty($events), 'Pagination results for events was not returned.');
+    }
+
+    public function testViewSuccess()
+    {
+        $this->get('events/view/8');
+        $this->assertResponseOk();
+        $this->assertNotEmpty($this->viewVariable('event'), 'No event was found with the id 8');
+    }
+
+    public function testViewFailsForNonexistentId()
+    {
+        $this->get('events/view/11');
+        $expected = [
+            'message' => "The resource you are looking for could not be found. Please try again later.",
+            'key' => 'flash',
+            'element' => 'Flash/error',
+            'params' => [],
+        ];
+        $this->assertFlash($expected, 'Wrong flash message was returned');
     }
 }

@@ -17,6 +17,7 @@
 
 namespace App\Controller;
 
+use App\Model\Table\EventsTable;
 use Cake\Core\Configure;
 use Cake\Network\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
@@ -27,6 +28,8 @@ use Cake\View\Exception\MissingTemplateException;
  * This controller will render views from Template/Pages/
  *
  * @link http://book.cakephp.org/3.0/en/controllers/pages-controller.html
+ *
+ * @property EventsTable $Events Events table
  */
 class PagesController extends AppController
 {
@@ -64,5 +67,11 @@ class PagesController extends AppController
             }
             throw new NotFoundException();
         }
+    }
+
+    public function home()
+    {
+        $this->loadModel('Events');
+        $this->set('promoted', $this->Events->getPromoted());
     }
 }

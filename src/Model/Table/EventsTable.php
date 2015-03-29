@@ -73,6 +73,13 @@ class EventsTable extends Table
         return $this->get($eventId, $options);
     }
 
+    /**
+     * Sets the deleted flag of events and its activities to true to simulate deleting.
+     * Such events will not be displayed anymore.
+     *
+     * @param $eventId Event to be deleted
+     * @return bool|\Cake\Datasource\EntityInterface|mixed
+     */
     public function customDelete($eventId)
     {
         $event = $this->getSingle($eventId, ['contain' => ['Activities']]);
@@ -83,5 +90,14 @@ class EventsTable extends Table
         $event->dirty('activities', true);
 
         return $this->save($event);
+    }
+
+    public function  getPromoted()
+    {
+        $promoted = $this->find('all')
+            ->where(["{$this->alias()}.promoted" => 1])
+            ->contain(['Activities'])
+            ->first();
+        return $promoted;
     }
 }
