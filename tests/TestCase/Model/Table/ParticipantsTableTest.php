@@ -87,7 +87,7 @@ class ParticipantsTableTest extends TestCase
 
     public function testValidationSucceedsWithPersonType()
     {
-        $this->data['type'] = Participant::TYPE_PERSON;
+        $this->data['type'] = 'person';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
         $this->assertTrue(empty($errors), 'Errors were triggered with a valid type "person"!');
@@ -96,7 +96,7 @@ class ParticipantsTableTest extends TestCase
 
     public function testValidationSucceedsWithOrganizationType()
     {
-        $this->data['type'] = Participant::TYPE_ORGANIZATION;
+        $this->data['type'] = 'organization';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
         $this->assertTrue(empty($errors), 'Errors were triggered with a valid type "organization"!');
@@ -138,7 +138,7 @@ class ParticipantsTableTest extends TestCase
 
     public function testValidationSucceedsWithTeamRole()
     {
-        $this->data['role'] = Participant::ROLE_TEAM;
+        $this->data['role'] = 'Team';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
         $this->assertTrue(empty($errors), 'Errors were triggered with a valid role "team"!');
@@ -147,7 +147,7 @@ class ParticipantsTableTest extends TestCase
 
     public function testValidationSucceedsWithPanelistRole()
     {
-        $this->data['role'] = Participant::ROLE_PANELIST;
+        $this->data['role'] = 'Panelist';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
         $this->assertTrue(empty($errors), 'Errors were triggered with a valid role "speaker"!');
@@ -156,7 +156,7 @@ class ParticipantsTableTest extends TestCase
 
     public function testValidationSucceedsWithModeratorRole()
     {
-        $this->data['role'] = Participant::ROLE_MODERATOR;
+        $this->data['role'] = 'Moderator';
         $participant = $this->Participants->newEntity($this->data);
         $errors = $participant->errors();
         $this->assertTrue(empty($errors), 'Errors were triggered with a valid role "speaker"!');

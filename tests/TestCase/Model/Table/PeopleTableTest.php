@@ -27,7 +27,7 @@ class PeopleTableTest extends TestCase
      * @var array Test data
      */
     public $data = [
-        'surname' => Person::TITLE_DR,
+        'title' => 'Dr.',
         'surname' => 'Doe',
         'name' => 'John',
         'participant_id' => 1,
