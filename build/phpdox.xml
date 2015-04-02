@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpdox xmlns="http://phpdox.net/config">
-    <project name="Jumph" source="src" workdir="${basedir}/phpdox">
+    <project name="SHESA Germany e.V." source="${basedir}/../src" workdir="${basedir}/phpdox">
         <collector publiconly="false">
             <include mask="*.php" />
         </collector>
