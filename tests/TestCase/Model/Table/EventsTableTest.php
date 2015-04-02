@@ -259,7 +259,8 @@ class EventsTableTest extends TestCase
         $this->assertFalse((bool) $activeActivities, "$activeActivities activities out of $totalActivities were not deleted.");
     }
 
-    public function testCorrectPromotedEventIsReturned() {
+    public function testCorrectPromotedEventIsReturned()
+    {
         $promoted = $this->Events->getPromoted();
         $expected = 8;
         $actual = $promoted->id;

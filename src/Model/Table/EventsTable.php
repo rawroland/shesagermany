@@ -78,6 +78,7 @@ class EventsTable extends Table
      * Such events will not be displayed anymore.
      *
      * @param $eventId Event to be deleted
+     *
      * @return bool|\Cake\Datasource\EntityInterface|mixed
      */
     public function customDelete($eventId)
@@ -92,12 +93,13 @@ class EventsTable extends Table
         return $this->save($event);
     }
 
-    public function  getPromoted()
+    public function getPromoted()
     {
         $promoted = $this->find('all')
             ->where(["{$this->alias()}.promoted" => 1])
             ->contain(['Activities'])
             ->first();
+
         return $promoted;
     }
 }

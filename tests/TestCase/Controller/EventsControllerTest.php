@@ -1,8 +1,8 @@
 <?php
+
 namespace App\Test\TestCase\Controller;
 
 use App\Controller\EventsController;
-use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Network\Session;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\IntegrationTestCase;
@@ -83,7 +83,7 @@ class EventsControllerTest extends IntegrationTestCase
         $data = ['title' => ''];
         $this->post('/events/edit/1', $data);
         $expected = [
-            'message' => "The Event could not be saved. Please check the submitted data and try again.",
+            'message' => 'The Event could not be saved. Please check the submitted data and try again.',
             'key' => 'flash',
             'element' => 'Flash/error',
             'params' => [],
@@ -103,7 +103,7 @@ class EventsControllerTest extends IntegrationTestCase
         $this->data['id'] = 1;
         $this->post('/events/edit/1', $this->data);
         $expected = [
-            'message' => "The Event was successfully saved.",
+            'message' => 'The Event was successfully saved.',
             'key' => 'flash',
             'element' => 'Flash/success',
             'params' => [],
@@ -124,7 +124,7 @@ class EventsControllerTest extends IntegrationTestCase
         $this->data = ['title' => ''];
         $this->post('/events/edit/1', $this->data);
         $expected = [
-            'message' => "The Event could not be saved. Please check the submitted data and try again.",
+            'message' => 'The Event could not be saved. Please check the submitted data and try again.',
             'key' => 'flash',
             'element' => 'Flash/error',
             'params' => [],
@@ -146,7 +146,7 @@ class EventsControllerTest extends IntegrationTestCase
     {
         $this->post('/events/delete/15');
         $expected = [
-            'message' => "The event with id 15 was not found!",
+            'message' => 'The event with id 15 was not found!',
             'key' => 'flash',
             'element' => 'Flash/error',
             'params' => [],
@@ -158,7 +158,7 @@ class EventsControllerTest extends IntegrationTestCase
     {
         $this->post('/events/delete/1');
         $expected = [
-            'message' => "The event with id 1 was successfully deleted!",
+            'message' => 'The event with id 1 was successfully deleted!',
             'key' => 'flash',
             'element' => 'Flash/success',
             'params' => [],
@@ -194,7 +194,7 @@ class EventsControllerTest extends IntegrationTestCase
     {
         $this->get('events/view/11');
         $expected = [
-            'message' => "The resource you are looking for could not be found. Please try again later.",
+            'message' => 'The resource you are looking for could not be found. Please try again later.',
             'key' => 'flash',
             'element' => 'Flash/error',
             'params' => [],
