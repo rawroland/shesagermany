@@ -41,55 +41,63 @@
             </div>
             <div class="row">
                 <p class="col-md-12 top-md-offset blog-main">
-                    <?= $this->Html->image($event->getCoverImage(), ['class' => 'img-responsive pull-left', 'url' => $eventUrl]);?>
+                    <?= $this->Html->image($event->getCoverImage(),
+                        ['class' => 'img-responsive pull-left', 'url' => $eventUrl]); ?>
                     <?= $event->description ?>
                 </p>
                 <?php if (!empty($event->activities)): ?>
                     <div class="col-md-12">
-                        <?php foreach ($event->activities as $activity):?>
-                            <h3><?= $activity->title?></h3>
-                            <div class="row">
-                                <div class="col-md-12 text-muted">
-                                    <i class="fa fa-clock-o"></i>&nbsp;
-                                    <?= $this->Time->format($activity->start_time, __('dd.MM.Y H:mm')) ?>
-                                    <i class="fa fa-arrow-right"></i>
-                                    <?= $this->Time->format($activity->end_time, __('dd.MM.Y H:mm')) ?>
+                        <?php foreach ($event->activities as $activity): ?>
+                            <div class="panel panel-default">
+                                <div class="panel-heading"><h4><?= $activity->title ?></h4></div>
+
+                                <div class="panel-body">
+                                    <div class="row">
+                                        <div class="col-md-12 text-muted">
+                                            <i class="fa fa-clock-o"></i>&nbsp;
+                                            <?= $this->Time->format($activity->start_time, __('dd.MM.Y H:mm')) ?>
+                                            <i class="fa fa-arrow-right"></i>
+                                            <?= $this->Time->format($activity->end_time, __('dd.MM.Y H:mm')) ?>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="row">
+                                        <address class="col-md-3 col-sm-3">
+                                            <?= $activity->address->street ?><br>
+                                            <?= sprintf('%s, %s', $activity->address->postal_code,
+                                                $activity->address->town) ?>
+                                            <br>
+                                            <?= sprintf('%s, %s', $activity->address->state,
+                                                $activity->address->country) ?>
+                                            <br>
+                                        </address>
+                                        <p class="col-md-9 col-sm-9 top-xs-offset">
+                                            <?= $activity->description ?>
+                                        </p>
+                                    </div>
                                 </div>
+                                <?php if (!empty($activity->participants)): ?>
+                                    <div class="col-md-12"><h3><?= __('Participants') ?></h3></div>
+                                    <table class="table table-responsive table-striped table-hover">
+                                                <thead>
+                                                <tr>
+                                                    <th width="30%"><?= __('Name') ?></th>
+                                                    <th width="10%"><?= __('Role') ?></th>
+                                                    <th width="60%"><?= __('Description') ?></th>
+                                                </tr>
+                                                </thead>
+                                                <?php foreach ($activity->participants as $participant): ?>
+                                                    <tr>
+                                                        <td><?= $participant->getName() ?></td>
+                                                        <td><?= $participant->role ?></td>
+                                                        <td><?= $participant->description ?></td>
+                                                    </tr>
+                                                <?php endforeach; ?>
+                                            </table>
+                                <?php endif; ?>
                             </div>
-                            <br>
-                            <div class="row">
-                                <address class="col-md-3 col-sm-3">
-                                    <?= $activity->address->street?><br>
-                                    <?= sprintf('%s, %s', $activity->address->postal_code, $activity->address->town)?><br>
-                                    <?= sprintf('%s, %s', $activity->address->state, $activity->address->country)?><br>
-                                </address>
-                                <p class="col-md-9 col-sm-9 top-xs-offset">
-                                    <?= $activity->description?>
-                                </p>
-                            </div>
-                            <br>
-                            <?php if(!empty($activity->participants)):?>
-                                <div class="row">
-                                    <h3><?= __('Participants')?></h3>
-                                    <table class="table table-responsive">
-                                        <thead>
-                                            <tr>
-                                                <th><?= __('Name')?></th>
-                                                <th><?= __('Role')?></th>
-                                                <th><?= __('Description')?></th>
-                                            </tr>
-                                        </thead>
-                                        <?php foreach($activity->participants as $participant):?>
-                                            <tr>
-                                                <td><?= $participant->name?></td>
-                                                <td><?= $participant->role?></td>
-                                                <td><?= $participant->description?></td>
-                                            </tr>
-                                        <?php endforeach;?>
-                                    </table>
-                                </div>
-                            <?php endif;?>
-                        <?php endforeach;?>
+                        <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
             </div>

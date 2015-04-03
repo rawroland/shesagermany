@@ -370,3 +370,8 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus {
 .blog-main img {
     padding: 0 30px 10px 0;
 }
+
+/* Responsive table fix */
+@-moz-document url-prefix() {
+    fieldset { display: table-cell; }
+}

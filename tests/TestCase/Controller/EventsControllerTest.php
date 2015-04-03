@@ -24,6 +24,7 @@ class EventsControllerTest extends IntegrationTestCase
       'activities_participants' => 'app.activities_participants',
       'people' => 'app.people',
       'organization' => 'app.organizations',
+      'addresses' => 'app.addresses',
     ];
 
     /**

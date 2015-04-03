@@ -3,103 +3,57 @@
  * @var $this \Cake\View\View
  */
 ?>
-<div class="actions columns large-2 medium-3">
-    <h3><?= __('Actions') ?></h3>
-    <ul class="side-nav">
-        <li><?= $this->Html->link(__('List Users'), ['action' => 'index']) ?></li>
-    </ul>
-</div>
-<div class="users form large-10 medium-9 columns">
-    <?= $this->Form->create($event); ?>
-    <fieldset>
-        <legend><?= __('Event') ?></legend>
-        <?php
-        echo $this->Form->input('id');
-        echo $this->Form->input('title');
-        echo $this->Form->input('description');
-        echo $this->Form->input('location');
-        echo $this->Form->input('date');
-        ?>
+<div class="row">
+    <div class="col-md-12">
+        <?= $this->Form->create($event); ?>
         <fieldset>
-            <legend><?= __('Add Activity 1') ?></legend>
+            <legend><?= __("Event") ?></legend>
             <?php
-            echo $this->Form->input('activities.0.id');
-            echo $this->Form->input('activities.0.title');
-            echo $this->Form->input('activities.0.description');
-            echo $this->Form->input('activities.0.date_time');
+            echo $this->Form->input("id");
+            echo $this->Form->input("title");
+            echo $this->Form->input("description");
+            echo $this->Form->input("location");
+            echo $this->Form->input("date");
             ?>
         </fieldset>
-        <fieldset>
-            <legend><?= __('Add Address') ?></legend>
-            <?php
-            echo $this->Form->input('activities.0.address');
-            echo $this->Form->input('activities.0.address');
-            echo $this->Form->input('activities.0.address');
-            echo $this->Form->input('activities.0.address');
-            ?>
-        </fieldset>
-        <fieldset>
-            <legend><?= __('Add Participant 1') ?></legend>
-            <?php
-            echo $this->Form->input('activities.0.participants.0.id');
-            echo $this->Form->input('activities.0.participants.0.type');
-            echo $this->Form->input('activities.0.participants.0.role');
-            echo $this->Form->input('activities.0.participants.0.description');
-            echo $this->Form->input('activities.0.participants.0.person.id');
-            echo $this->Form->input('activities.0.participants.0.person.title');
-            echo $this->Form->input('activities.0.participants.0.person.surname');
-            echo $this->Form->input('activities.0.participants.0.person.name');
-            ?>
-        </fieldset>
-        <fieldset>
-            <legend><?= __('Add Participant 2') ?></legend>
-            <?php
-            echo $this->Form->input('activities.0.participants.1.id', ['type' => 'hidden']);
-            echo $this->Form->input('activities.0.participants.1.type');
-            echo $this->Form->input('activities.0.participants.1.role');
-            echo $this->Form->input('activities.0.participants.1.description');
-            echo $this->Form->input('activities.0.participants.1.person.id');
-            echo $this->Form->input('activities.0.participants.1.person.title');
-            echo $this->Form->input('activities.0.participants.1.person.surname');
-            echo $this->Form->input('activities.0.participants.1.person.name');
-            ?>
-        </fieldset>
-        <fieldset>
-            <legend><?= __('Add Activity 2') ?></legend>
-            <?php
-            echo $this->Form->input('activities.1.id');
-            echo $this->Form->input('activities.1.title');
-            echo $this->Form->input('activities.1.description');
-            echo $this->Form->input('activities.1.date_time');
-            ?>
-        </fieldset>
-        <fieldset>
-            <legend><?= __('Add Participant 1') ?></legend>
-            <?php
-            echo $this->Form->input('activities.1.participants.0.id');
-            echo $this->Form->input('activities.1.participants.0.type');
-            echo $this->Form->input('activities.1.participants.0.role');
-            echo $this->Form->input('activities.1.participants.0.description');
-            echo $this->Form->input('activities.1.participants.0.person.id');
-            echo $this->Form->input('activities.1.participants.0.person.title');
-            echo $this->Form->input('activities.1.participants.0.person.surname');
-            echo $this->Form->input('activities.1.participants.0.person.name');
-            ?>
-        </fieldset>
-        <fieldset>
-            <legend><?= __('Add Participant 2') ?></legend>
-            <?php
-            echo $this->Form->input('activities.1.participants.1.id', ['type' => 'hidden']);
-            echo $this->Form->input('activities.1.participants.1.type');
-            echo $this->Form->input('activities.1.participants.1.role');
-            echo $this->Form->input('activities.1.participants.1.description');
-            echo $this->Form->input('activities.1.participants.1.person.id');
-            echo $this->Form->input('activities.1.participants.1.person.title');
-            echo $this->Form->input('activities.1.participants.1.person.surname');
-            echo $this->Form->input('activities.1.participants.1.person.name');
-            ?>
-        </fieldset>
-    </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+        <?php foreach ($event->activities as $activitiesIndex => $activity): ?>
+            <fieldset>
+                <legend><?= __("Activity") ?></legend>
+                <?php
+                echo $this->Form->input("activities.{$activitiesIndex}.id");
+                echo $this->Form->input("activities.{$activitiesIndex}.title");
+                echo $this->Form->input("activities.{$activitiesIndex}.description");
+                echo $this->Form->input("activities.{$activitiesIndex}.date_time");
+                ?>
+            </fieldset>
+            <fieldset>
+                <legend><?= __("Address") ?></legend>
+                <?php
+                echo $this->Form->input("activities.{$activitiesIndex}.address.id");
+                echo $this->Form->input("activities.{$activitiesIndex}.address.street");
+                echo $this->Form->input("activities.{$activitiesIndex}.address.postal_code");
+                echo $this->Form->input("activities.{$activitiesIndex}.address.town");
+                echo $this->Form->input("activities.{$activitiesIndex}.address.state");
+                echo $this->Form->input("activities.{$activitiesIndex}.address.country");
+                ?>
+            </fieldset>
+            <?php foreach ($activity->participants as $participantIndex => $participant): ?>
+                <fieldset>
+                    <legend><?= __("Add Participant 1") ?></legend>
+                    <?php
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.id");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.type");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.role");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.description");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.{$participant->type}.id");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.{$participant->type}.title");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.{$participant->type}.surname");
+                    echo $this->Form->input("activities.{$activitiesIndex}.participants.{$participantIndex}.{$participant->type}.name");
+                    ?>
+                </fieldset>
+            <?php endforeach; ?>
+        <?php endforeach; ?>
+        <?= $this->Form->button(__("Submit"), ['class' => 'btn btn-default pull-right']) ?>
+        <?= $this->Form->end() ?>
+    </div>
 </div>

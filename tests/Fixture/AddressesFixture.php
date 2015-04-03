@@ -1,19 +1,20 @@
 <?php
-
 namespace App\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * AddressesFixture.
+ * AddressesFixture
+ *
  */
 class AddressesFixture extends TestFixture
 {
-/**
- * Fields.
- *
- * @var array
- */
+
+    /**
+     * Fields
+     *
+     * @var array
+     */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -28,13 +29,13 @@ class AddressesFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
         ],
     ];
     // @codingStandardsIgnoreEnd
 
     /**
-     * Records.
+     * Records
      *
      * @var array
      */
@@ -46,8 +47,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 2,
@@ -56,8 +57,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 3,
@@ -66,8 +67,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 4,
@@ -76,8 +77,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 5,
@@ -86,8 +87,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 6,
@@ -96,8 +97,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 7,
@@ -106,8 +107,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 8,
@@ -116,8 +117,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 9,
@@ -126,8 +127,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
         [
             'id' => 10,
@@ -136,8 +137,8 @@ class AddressesFixture extends TestFixture
             'town' => 'Lorem ipsum dolor sit amet',
             'state' => 'Lorem ipsum dolor sit amet',
             'country' => 'Lorem ipsum dolor sit amet',
-            'created' => '2015-03-07 15:54:35',
-            'modified' => '2015-03-07 15:54:35',
+            'created' => '2015-04-03 13:17:55',
+            'modified' => '2015-04-03 13:17:55'
         ],
     ];
 }

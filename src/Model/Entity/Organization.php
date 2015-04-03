@@ -9,4 +9,8 @@ use Cake\ORM\Entity;
  */
 class Organization extends Entity
 {
+    public function getName()
+    {
+        return $this->name;
+    }
 }

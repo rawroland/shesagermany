@@ -31,7 +31,7 @@ class EventsController extends AppController
     public function edit($eventId = null)
     {
         $options = [
-            'associated' => ['Activities' => ['associated' => ['Participants' => ['associated' => ['People']]]]],
+            'associated' => ['Activities' => ['associated' => ['Addresses', 'Participants' => ['associated' => ['People']]]]],
         ];
         $event = $this->Events->newEntity();
         if (!empty($eventId)) {

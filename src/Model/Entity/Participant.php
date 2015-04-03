@@ -21,4 +21,17 @@ class Participant extends Entity
     const ROLE_MODERATOR = 'Moderator';
     const ROLE_PANELIST = 'Panelist';
     const ROLE_TEAM = 'Team';
+
+    protected $participantObjects = [self::TYPE_PERSON, self::TYPE_ORGANIZATION];
+
+    public function getName()
+    {
+        foreach ($this->participantObjects as $participantObject) {
+            if ($this->{$participantObject}) {
+                return $this->{$participantObject}->getName();
+            }
+        }
+
+        return __('Unknown');
+    }
 }

@@ -18,4 +18,9 @@ class Person extends Entity
     const TITLE_MR = 'Mr.';
     const TITLE_MRS = 'Mrs';
     const TITLE_MS = 'Ms';
+
+    public function getName()
+    {
+        return trim(__('{0} {1} {2}', $this->title, $this->name, $this->surname));
+    }
 }
