@@ -17,6 +17,7 @@
                     <coverage path="../coverage/xml" />
                 </source>
             </enrich>
+
             <build engine="html" enabled="true" output="api">
                 <file extension="html" />
             </build>

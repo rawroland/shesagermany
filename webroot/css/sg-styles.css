@@ -317,6 +317,10 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus {
         margin-left: 0;
         margin-right: 0;
     }
+
+    .top-xs-offset {
+        margin-top: 10px;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
