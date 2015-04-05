@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 29. Mrz 2015 um 21:37
+-- Erstellungszeit: 05. Apr 2015 um 19:34
 -- Server Version: 5.5.41-0ubuntu0.14.04.1
 -- PHP-Version: 5.5.9-1ubuntu4.7
 
@@ -49,11 +49,11 @@ CREATE TABLE IF NOT EXISTS `activities` (
 --
 
 INSERT INTO `activities` (`id`, `event_id`, `title`, `description`, `start_time`, `end_time`, `address_id`, `deleted`, `created`, `modified`) VALUES
-  (1, 8, 'Seminar: "Be your own boss"', 'Selfemployment and Starting up a Business An Option as a Professional in Germany ', '2013-05-09 13:30:00', '0000-00-00 00:00:00', 1, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (2, 8, 'Familien Grill', 'Familien Grill with Shesans, their families and friends', '2013-05-10 15:00:00', '0000-00-00 00:00:00', 2, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (3, 8, 'Football Tournament (OSSUCS)', 'Football Tournament (OSSUCS) involving other ex-student associations', '2013-05-11 10:00:00', '0000-00-00 00:00:00', 3, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (4, 8, 'Gala Night', 'Gala Night', '2013-05-11 21:00:00', '0000-00-00 00:00:00', 4, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (5, 8, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', '0000-00-00 00:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (1, 8, 'Seminar: "Be your own boss"', 'Selfemployment and Starting up a Business An Option as a Professional in Germany ', '2013-05-09 13:30:00', '2013-05-09 19:00:00', 1, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (2, 8, 'Familien Grill', 'Familien Grill with Shesans, their families and friends', '2013-05-10 15:00:00', '2013-05-10 21:00:00', 2, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (3, 8, 'Football Tournament (OSSUCS)', 'Football Tournament (OSSUCS) involving other ex-student associations', '2013-05-11 10:00:00', '2013-05-11 17:00:00', 3, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (4, 8, 'Gala Night', 'Gala Night', '2013-05-11 21:00:00', '2013-05-12 06:00:00', 4, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
+  (5, 8, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', '2013-05-12 16:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
   (6, 6, 'Seminar/Debate: Development Aid, Curse or Blessing for Sub-saharan Africa.', 'Leading experts in the field of development aid participate as panelists.', '2011-10-01 09:00:00', '0000-00-00 00:00:00', 6, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
   (7, 6, 'SHESA Gold Cup Football Tournament', '', '2011-10-01 12:00:00', '0000-00-00 00:00:00', 7, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
   (8, 6, 'Holy mass celebration', 'Holy mass celebration with Reverend Father Tatah Humphrey Mbuy', '2011-10-02 13:30:00', '0000-00-00 00:00:00', 5, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
@@ -365,14 +365,14 @@ CREATE TABLE IF NOT EXISTS `people` (
 --
 
 INSERT INTO `people` (`id`, `title`, `surname`, `name`, `participant_id`, `created`, `modified`) VALUES
-  (1, 'Dr. Med.', 'Sudan Enjema', 'Aweh', 1, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (2, 'Dr.', 'Friedrich', 'Schreiber', 2, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (3, 'Dr. Med.', 'Ivo', 'Azeh', 3, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (4, 'Dr.-Ing.', 'Fru', 'Ndenge', 4, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (5, 'Mrs', 'Enie Muyang', 'Tatah', 5, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (6, 'Mr.', 'Caleb', 'Tamfu', 5, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (7, 'Ms', 'Veye', 'Tatah', 7, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (8, 'Mr.', 'Keneth', 'Najeme', 8, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (1, 'Dr. Med.', 'Aweh', 'Susan Enjema', 1, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (2, 'Dr.', 'Schreiber', 'Friedrich', 2, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (3, 'Dr. Med.', 'Azeh', 'Ivo', 3, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (4, 'Dr.-Ing.', 'Ndenge', 'Fru', 4, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (5, 'Mrs', 'Tatah', 'Enie Muyang', 5, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (6, 'Mr.', 'Tamfu', 'Caleb', 5, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (7, 'Ms', 'Tatah', 'Veye', 7, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (8, 'Mr.', 'Najeme', 'Keneth', 8, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (9, NULL, 'Pokus', 'DJ', 18, '2015-03-08 23:00:00', '2015-03-08 23:00:00');
 
 -- --------------------------------------------------------

@@ -1,20 +1,19 @@
 <?php
+
 namespace App\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * ActivitiesFixture
- *
+ * ActivitiesFixture.
  */
 class ActivitiesFixture extends TestFixture
 {
-
-    /**
-     * Fields
-     *
-     * @var array
-     */
+/**
+ * Fields.
+ *
+ * @var array
+ */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -37,13 +36,13 @@ class ActivitiesFixture extends TestFixture
             'addresses_activities' => ['type' => 'foreign', 'columns' => ['address_id'], 'references' => ['addresses', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd
 
     /**
-     * Records
+     * Records.
      *
      * @var array
      */
@@ -58,7 +57,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 1,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 2,
@@ -70,7 +69,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 2,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 3,
@@ -82,7 +81,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 3,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 4,
@@ -94,7 +93,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 4,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 5,
@@ -106,7 +105,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 5,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 6,
@@ -118,7 +117,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 6,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 7,
@@ -130,7 +129,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 7,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 8,
@@ -142,7 +141,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 8,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 9,
@@ -154,7 +153,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 9,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
         [
             'id' => 10,
@@ -166,7 +165,7 @@ class ActivitiesFixture extends TestFixture
             'address_id' => 10,
             'deleted' => 0,
             'created' => 1428067502,
-            'modified' => 1428067502
+            'modified' => 1428067502,
         ],
     ];
 }
