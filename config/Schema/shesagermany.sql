@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 05. Apr 2015 um 19:34
--- Server Version: 5.5.41-0ubuntu0.14.04.1
--- PHP-Version: 5.5.9-1ubuntu4.7
+-- Erstellungszeit: 06. Apr 2015 um 17:18
+-- Server Version: 5.5.32-log
+-- PHP-Version: 5.4.17
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -54,10 +54,10 @@ INSERT INTO `activities` (`id`, `event_id`, `title`, `description`, `start_time`
   (3, 8, 'Football Tournament (OSSUCS)', 'Football Tournament (OSSUCS) involving other ex-student associations', '2013-05-11 10:00:00', '2013-05-11 17:00:00', 3, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
   (4, 8, 'Gala Night', 'Gala Night', '2013-05-11 21:00:00', '2013-05-12 06:00:00', 4, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
   (5, 8, 'Holy mass', 'Holy mass with the Cameroon Catholic Community', '2013-05-12 14:00:00', '2013-05-12 16:00:00', 5, 0, '2015-03-06 23:00:00', '2015-03-06 23:00:00'),
-  (6, 6, 'Seminar/Debate: Development Aid, Curse or Blessing for Sub-saharan Africa.', 'Leading experts in the field of development aid participate as panelists.', '2011-10-01 09:00:00', '0000-00-00 00:00:00', 6, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (7, 6, 'SHESA Gold Cup Football Tournament', '', '2011-10-01 12:00:00', '0000-00-00 00:00:00', 7, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (8, 6, 'Holy mass celebration', 'Holy mass celebration with Reverend Father Tatah Humphrey Mbuy', '2011-10-02 13:30:00', '0000-00-00 00:00:00', 5, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (9, 6, 'Gala Night Sunday', 'Gala Night Sunday with the acclaimed Cameroonian soul singer Myra Maimoh, Germany''s best DJ Pokus Nr.1 and DJ Noufi Depago bringing you the best of Makossa, Coupé Decalé, Hip Hop, Ndombolo and more.', '2011-10-02 21:00:00', '0000-00-00 00:00:00', 4, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (6, 6, 'Seminar/Debate: Development Aid, Curse or Blessing for Sub-saharan Africa.', 'Leading experts in the field of development aid participate as panelists.', '2011-10-01 09:00:00', '2011-10-01 12:00:00', 6, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (7, 6, 'SHESA Gold Cup Football Tournament', '', '2011-10-01 12:00:00', '2011-10-01 19:00:00', 7, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (8, 6, 'Holy mass celebration', 'Holy mass celebration with Reverend Father Tatah Humphrey Mbuy', '2011-10-02 13:30:00', '2011-10-02 16:00:00', 5, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (9, 6, 'Gala Night Sunday', 'Gala Night Sunday with the acclaimed Cameroonian soul singer Myra Maimoh, Germany''s best DJ Pokus Nr.1 and DJ Noufi Depago bringing you the best of Makossa, Coupé Decalé, Hip Hop, Ndombolo and more.', '2011-10-02 21:00:00', '2011-10-03 05:00:00', 4, 0, '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
   (10, 9, 'General assembly meeting', 'General assembly meeting', '2014-07-12 10:00:00', '2014-07-11 16:00:00', 8, 0, '2015-03-20 23:00:00', '2015-03-20 23:00:00'),
   (11, 9, 'Inter-house football tournament with Grill event', 'Inter-house football tournament with Grill event', '2014-07-12 10:00:00', '2015-03-21 19:00:00', 8, 0, '2015-03-20 23:00:00', '2015-03-20 23:00:00'),
   (12, 9, 'Holy Mass', 'Holy Mass celebration.', '2014-07-13 10:00:00', '2014-07-13 12:00:00', 9, 0, '2015-03-20 23:00:00', '2015-03-20 23:00:00'),
@@ -291,43 +291,51 @@ INSERT INTO `organizations` (`id`, `name`, `participant_id`, `created`, `modifie
 
 CREATE TABLE IF NOT EXISTS `participants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
+  `person_id` int(11) DEFAULT NULL,
+  `organization_id` int(11) DEFAULT NULL,
   `type` enum('person','organization') DEFAULT 'person',
   `role` enum('Moderator','Panelist','Team','DJ','MC','Other') NOT NULL,
   `description` text NOT NULL,
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
+  PRIMARY KEY (`id`),
+  KEY `participants_people` (`person_id`),
+  KEY `fk_organizations` (`organization_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
 
 --
 -- Daten für Tabelle `participants`
 --
 
-INSERT INTO `participants` (`id`, `type`, `role`, `description`, `created`, `modified`) VALUES
-  (1, 'person', 'Moderator', 'Moderator for the seminar "Be your own boss".', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (2, 'person', 'Panelist', 'Chamber of Commerce in Essen. Presented on the topic "Von der Idee zum Konzept sorgfältige Vorbereitung als Basis für eine erfolgreiche Gründung."', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (3, 'person', 'Panelist', 'Co-owner of private clinic for oncology.', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (4, 'person', 'Panelist', 'CEO Professional Business Solutions, PBS', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (5, 'person', 'Panelist', 'Founder and CEO of AfrikAktiv.', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (6, 'person', 'Panelist', 'Co-founder of horizon (www.horizononline.org)', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (7, 'person', 'Panelist', 'Founder and Editor-in-Chief of AFRICA POSITIVE magazine', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (8, 'person', 'Panelist', 'CEO Worldconcect Reisebüro', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (9, 'organization', 'Team', 'Sacred Heart College Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (10, 'organization', 'Team', 'P.H.S Batibo', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (11, 'organization', 'Team', 'St. Bedes College Ashing-Kom', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (12, 'organization', 'Team', 'SASSE College Buea', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (13, 'organization', 'Team', 'Starlight College Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (14, 'organization', 'Team', 'Lycée de Dschang', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (15, 'organization', 'Team', 'B.H.S Buea', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (16, 'organization', 'Team', 'C.P.C Bali', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (17, 'organization', 'Team', 'P.S.S Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (18, 'person', 'DJ', 'DJ for the gala night.', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
-  (19, 'organization', 'Other', 'CCC Mülheim', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
-  (20, 'organization', 'Team', 'CCAST Bambili Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (21, 'organization', 'Team', 'Longla Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (22, 'organization', 'Team', 'GBHS Bamenda', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (23, 'organization', 'Team', 'P.H.S Buea', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (24, 'organization', 'Team', 'BIROCOL', '2015-03-10 23:00:00', '2015-03-10 23:00:00');
+INSERT INTO `participants` (`id`, `person_id`, `organization_id`, `type`, `role`, `description`, `created`, `modified`) VALUES
+  (1, 1, NULL, 'person', 'Moderator', 'Moderator for the seminar "Be your own boss".', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (2, 2, NULL, 'person', 'Panelist', 'Chamber of Commerce in Essen. Presented on the topic "Von der Idee zum Konzept sorgfältige Vorbereitung als Basis für eine erfolgreiche Gründung."', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (3, 3, NULL, 'person', 'Panelist', 'Co-owner of private clinic for oncology.', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (4, 4, NULL, 'person', 'Panelist', 'CEO Professional Business Solutions, PBS', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (5, 5, NULL, 'person', 'Panelist', 'Founder and CEO of AfrikAktiv.', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (6, 6, NULL, 'person', 'Panelist', 'Co-founder of horizon (www.horizononline.org)', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (7, 7, NULL, 'person', 'Panelist', 'Founder and Editor-in-Chief of AFRICA POSITIVE magazine', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (8, 8, NULL, 'person', 'Panelist', 'CEO Worldconcect Reisebüro', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (9, NULL, 1, 'organization', 'Team', 'Sacred Heart College Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (10, NULL, 2, 'organization', 'Team', 'P.H.S Batibo', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (11, NULL, 3, 'organization', 'Team', 'St. Bedes College Ashing-Kom', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (12, NULL, 4, 'organization', 'Team', 'SASSE College Buea', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (13, NULL, 5, 'organization', 'Team', 'Starlight College Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (14, NULL, 6, 'organization', 'Team', 'Lycée de Dschang', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (15, NULL, 7, 'organization', 'Team', 'B.H.S Buea', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (16, NULL, 8, 'organization', 'Team', 'C.P.C Bali', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (17, NULL, 9, 'organization', 'Team', 'P.S.S Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (18, 9, NULL, 'person', 'DJ', 'DJ for the gala night.', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (19, NULL, 10, 'organization', 'Other', 'CCC Mülheim', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (20, NULL, 11, 'organization', 'Team', 'CCAST Bambili Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (21, NULL, 12, 'organization', 'Team', 'Longla Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (22, NULL, 13, 'organization', 'Team', 'GBHS Bamenda', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (23, NULL, 14, 'organization', 'Team', 'P.H.S Buea', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (24, NULL, 15, 'organization', 'Team', 'BIROCOL', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (25, 5, NULL, 'person', 'Moderator', 'Moderator for the seminar "Development Aid: Curse or blessing for Sub-saharan Africa?"', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (26, NULL, NULL, 'person', 'Panelist', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (27, NULL, NULL, 'person', 'Panelist', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (28, NULL, NULL, 'person', 'Panelist', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -353,27 +361,25 @@ CREATE TABLE IF NOT EXISTS `people` (
   `title` enum('Dr.','Dr. Med.','Dr.-Ing.','Mr.','Mrs','Ms') DEFAULT NULL,
   `surname` varchar(128) NOT NULL,
   `name` varchar(128) NOT NULL,
-  `participant_id` int(11) NOT NULL,
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `participant_id` (`participant_id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Daten für Tabelle `people`
 --
 
-INSERT INTO `people` (`id`, `title`, `surname`, `name`, `participant_id`, `created`, `modified`) VALUES
-  (1, 'Dr. Med.', 'Aweh', 'Susan Enjema', 1, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (2, 'Dr.', 'Schreiber', 'Friedrich', 2, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (3, 'Dr. Med.', 'Azeh', 'Ivo', 3, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (4, 'Dr.-Ing.', 'Ndenge', 'Fru', 4, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (5, 'Mrs', 'Tatah', 'Enie Muyang', 5, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (6, 'Mr.', 'Tamfu', 'Caleb', 5, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (7, 'Ms', 'Tatah', 'Veye', 7, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (8, 'Mr.', 'Najeme', 'Keneth', 8, '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (9, NULL, 'Pokus', 'DJ', 18, '2015-03-08 23:00:00', '2015-03-08 23:00:00');
+INSERT INTO `people` (`id`, `title`, `surname`, `name`, `created`, `modified`) VALUES
+  (1, 'Dr. Med.', 'Aweh', 'Susan Enjema', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (2, 'Dr.', 'Schreiber', 'Friedrich', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (3, 'Dr. Med.', 'Azeh', 'Ivo', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (4, 'Dr.-Ing.', 'Ndenge', 'Fru', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (5, 'Mrs', 'Tatah', 'Enie Muyang', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (6, 'Mr.', 'Tamfu', 'Caleb', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (7, 'Ms', 'Tatah', 'Veye', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (8, 'Mr.', 'Najeme', 'Keneth', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (9, NULL, 'Pokus', 'DJ', '2015-03-08 23:00:00', '2015-03-08 23:00:00');
 
 -- --------------------------------------------------------
 
@@ -447,10 +453,11 @@ ALTER TABLE `organizations`
 ADD CONSTRAINT `organizations_participants` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints der Tabelle `people`
+-- Constraints der Tabelle `participants`
 --
-ALTER TABLE `people`
-ADD CONSTRAINT `participants_people` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+ALTER TABLE `participants`
+ADD CONSTRAINT `fk_organizations` FOREIGN KEY (`organization_id`) REFERENCES `organizations` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `fk_people` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

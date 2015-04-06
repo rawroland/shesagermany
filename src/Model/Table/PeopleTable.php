@@ -21,7 +21,7 @@ class PeopleTable extends Table
         $this->displayField('title');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->belongsTo('Participant', []);
+        $this->hasMany('Participants', []);
     }
 
     public function validationDefault(Validator $validator)

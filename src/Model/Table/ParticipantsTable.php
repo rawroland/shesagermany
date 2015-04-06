@@ -21,8 +21,8 @@ class ParticipantsTable extends Table
         $this->displayField('title');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->hasOne('People', []);
-        $this->hasOne('Organizations', []);
+        $this->belongsTo('People', []);
+        $this->belongsTo('Organizations', []);
         $this->belongsToMany('Activities', []);
     }
 
