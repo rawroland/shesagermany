@@ -2,7 +2,6 @@
 
 namespace App\Test\TestCase\Controller;
 
-use App\Controller\EventsController;
 use Cake\Network\Session;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\IntegrationTestCase;

@@ -1,20 +1,19 @@
 <?php
+
 namespace App\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * ProjectsFixture
- *
+ * ProjectsFixture.
  */
 class ProjectsFixture extends TestFixture
 {
-
-    /**
-     * Fields
-     *
-     * @var array
-     */
+/**
+ * Fields.
+ *
+ * @var array
+ */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -29,13 +28,13 @@ class ProjectsFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd
 
     /**
-     * Records
+     * Records.
      *
      * @var array
      */
@@ -48,7 +47,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 2,
@@ -58,7 +57,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 3,
@@ -68,7 +67,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 4,
@@ -78,7 +77,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 5,
@@ -88,7 +87,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 6,
@@ -98,7 +97,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 7,
@@ -108,7 +107,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 8,
@@ -118,7 +117,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 9,
@@ -128,7 +127,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
         [
             'id' => 10,
@@ -138,7 +137,7 @@ class ProjectsFixture extends TestFixture
             'end' => '2015-04-13',
             'deleted' => 0,
             'created' => 1428957051,
-            'modified' => 1428957051
+            'modified' => 1428957051,
         ],
     ];
 }

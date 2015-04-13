@@ -86,5 +86,4 @@ class ProjectsTable extends Table
 
         return $this->save($project);
     }
-
 }
