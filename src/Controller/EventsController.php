@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Cake\Datasource\Exception\RecordNotFoundException;
+use Cake\I18n\Time;
 
 /**
  * Class EventsController.
@@ -57,7 +58,25 @@ class EventsController extends AppController
     public function index()
     {
         $events = $this->paginate($this->Events);
-        $this->pageTitle = __('Events');
+        $this->pageTitle = __('All').' '.__('Events');
+        $this->set(compact('events'));
+    }
+
+    public function upcoming()
+    {
+        $this->paginate['conditions'] = ["{$this->Events->alias()}.end >" => new Time()];
+        $events = $this->paginate($this->Events);
+        $this->pageTitle = __('Upcoming').' '.__('Events');
+        $this->view = 'index';
+        $this->set(compact('events'));
+    }
+
+    public function past()
+    {
+        $this->paginate['conditions'] = ["{$this->Events->alias()}.end <" => new Time()];
+        $events = $this->paginate($this->Events);
+        $this->pageTitle = __('Past').' '.__('Events');
+        $this->view = 'index';
         $this->set(compact('events'));
     }
 

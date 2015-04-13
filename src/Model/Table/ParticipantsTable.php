@@ -24,6 +24,7 @@ class ParticipantsTable extends Table
         $this->belongsTo('People', []);
         $this->belongsTo('Organizations', []);
         $this->belongsToMany('Activities', []);
+        $this->belongsToMany('Projects', []);
     }
 
     public function validationDefault(Validator $validator)

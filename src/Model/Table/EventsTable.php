@@ -77,7 +77,7 @@ class EventsTable extends Table
      * Sets the deleted flag of events and its activities to true to simulate deleting.
      * Such events will not be displayed anymore.
      *
-     * @param $eventId Event to be deleted
+     * @param int $eventId Event to be deleted
      *
      * @return bool|\Cake\Datasource\EntityInterface|mixed
      */
