@@ -131,12 +131,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "1014b096670bdec86b70231fa3c0c808ed195a57"
+                "reference": "d58cfbb22111566dae947170dd7c5169b86da9a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/1014b096670bdec86b70231fa3c0c808ed195a57",
-                "reference": "1014b096670bdec86b70231fa3c0c808ed195a57",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/d58cfbb22111566dae947170dd7c5169b86da9a8",
+                "reference": "d58cfbb22111566dae947170dd7c5169b86da9a8",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-12 00:23:29"
+            "time": "2015-04-16 21:49:20"
         },
         {
             "name": "friendsofcake/bootstrap-ui",
@@ -205,12 +205,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfCake/bootstrap-ui.git",
-                "reference": "7cc51423bfd5794248897d20b9853b63cb800847"
+                "reference": "eb0a72042cb4979e2a03d994d69859573979c885"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/7cc51423bfd5794248897d20b9853b63cb800847",
-                "reference": "7cc51423bfd5794248897d20b9853b63cb800847",
+                "url": "https://api.github.com/repos/FriendsOfCake/bootstrap-ui/zipball/eb0a72042cb4979e2a03d994d69859573979c885",
+                "reference": "eb0a72042cb4979e2a03d994d69859573979c885",
                 "shasum": ""
             },
             "require-dev": {
@@ -246,7 +246,7 @@
                 "cakephp",
                 "twitter"
             ],
-            "time": "2015-04-08 12:20:12"
+            "time": "2015-04-17 20:37:43"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -436,12 +436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/bake.git",
-                "reference": "6419602284bdf91e6788015f1e39fb8ebffdfb24"
+                "reference": "c42027952b9cc8f7f516c7616af80b469141b836"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/bake/zipball/6419602284bdf91e6788015f1e39fb8ebffdfb24",
-                "reference": "6419602284bdf91e6788015f1e39fb8ebffdfb24",
+                "url": "https://api.github.com/repos/cakephp/bake/zipball/c42027952b9cc8f7f516c7616af80b469141b836",
+                "reference": "c42027952b9cc8f7f516c7616af80b469141b836",
                 "shasum": ""
             },
             "require": {
@@ -474,24 +474,24 @@
                 "bake",
                 "cakephp"
             ],
-            "time": "2015-04-11 13:48:21"
+            "time": "2015-04-17 11:46:23"
         },
         {
             "name": "cakephp/debug_kit",
-            "version": "3.0.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "fd474ed54cb7873d690a5aa00dbafe47e25937b6"
+                "reference": "487abd702365c085e9f910e5ed8e028489f2712e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/fd474ed54cb7873d690a5aa00dbafe47e25937b6",
-                "reference": "fd474ed54cb7873d690a5aa00dbafe47e25937b6",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/487abd702365c085e9f910e5ed8e028489f2712e",
+                "reference": "487abd702365c085e9f910e5ed8e028489f2712e",
                 "shasum": ""
             },
             "require": {
-                "cakephp/cakephp": "3.0.*-dev"
+                "cakephp/cakephp": "~3.0"
             },
             "require-dev": {
                 "cakephp/cakephp-codesniffer": "dev-master",
@@ -503,7 +503,7 @@
             "type": "cakephp-plugin",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.2.x-dev"
+                    "dev-master": "3.0.x-dev"
                 }
             },
             "autoload": {
@@ -534,7 +534,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-03-13 04:54:40"
+            "time": "2015-04-17 09:35:46"
         },
         {
             "name": "cakephp/migrations",
@@ -718,19 +718,20 @@
         },
         {
             "name": "fabpot/php-cs-fixer",
-            "version": "v1.6.1",
+            "version": "v1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfPHP/PHP-CS-Fixer.git",
-                "reference": "14f802b2c00b672676d55612e3c0d03465b69bf6"
+                "reference": "6425aeb97ab921371182712a18c280d546e7769b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/14f802b2c00b672676d55612e3c0d03465b69bf6",
-                "reference": "14f802b2c00b672676d55612e3c0d03465b69bf6",
+                "url": "https://api.github.com/repos/FriendsOfPHP/PHP-CS-Fixer/zipball/6425aeb97ab921371182712a18c280d546e7769b",
+                "reference": "6425aeb97ab921371182712a18c280d546e7769b",
                 "shasum": ""
             },
             "require": {
+                "ext-tokenizer": "*",
                 "php": ">=5.3.6",
                 "sebastian/diff": "~1.1",
                 "symfony/console": "~2.3",
@@ -767,7 +768,7 @@
                 }
             ],
             "description": "A script to automatically fix Symfony Coding Standard",
-            "time": "2015-04-09 19:10:26"
+            "time": "2015-04-16 07:21:30"
         },
         {
             "name": "nikic/php-parser",
