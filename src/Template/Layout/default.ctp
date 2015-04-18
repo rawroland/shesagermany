@@ -15,14 +15,10 @@
 
     <?= $this->Html->meta('icon') ?>
     <?= $this->fetch('meta') ?>
-    <!-- Bootstrap core CSS -->
-    <?php
-    $wwwRoot = \Cake\Core\Configure::read('App.wwwRoot');
-    ?>
     <link type="text/css" rel="stylesheet"
-          href="<?= $this->request->webroot ?>plugins/bootstrap-3.3.1/dist/css/bootstrap.css">
+          href="<?= $this->request->webroot ?>plugins/bootstrap/dist/css/bootstrap.css">
     <link type="text/css" rel="stylesheet"
-          href="<?= $this->request->webroot ?>plugins/font-awesome-4.2.0/font-awesome-4.2.0/css/font-awesome.css">
+          href="<?= $this->request->webroot ?>plugins/fontawesome/css/font-awesome.css">
     <!-- SG styles-->
     <?= $this->Html->css('sg-styles.css') ?>
     <?= $this->fetch('css') ?>
@@ -48,8 +44,8 @@
 <?= $this->element('footer'); ?>
 
 <?= $this->Html->script('jquery-1.11.2') ?>
-<script type="text/javascript"
-        src="<?= $this->request->webroot ?>plugins/bootstrap-3.3.1/dist/js/bootstrap.js"></script>
+<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/jquery/dist/jquery.js"></script>
 <?= $this->Html->script('sg'); ?>
 <?= $this->fetch('script') ?>
 </body>
