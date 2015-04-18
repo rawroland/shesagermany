@@ -16,7 +16,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" href="<?= $this->Url->build('/')?>">
         <?= $this->Html->image('logo-xl.png', array('alt' => "SHESA Germany", 'height' => '140px')); ?>
       </a>
     </div>
@@ -87,11 +87,15 @@
           ?>
           <ul class="dropdown-menu" role="menu">
             <li>
+              <?= $this->Html->link('All Projects', array('controller' => 'projects', 'action' => 'index')) ?>
+            </li>
+            <li class="divider"></li>
+            <li>
               <?= $this->Html->link('Running Projects', array('controller' => 'projects', 'action' => 'running')) ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Past Projects', array('controller' => 'projects', 'action' =>
+              <?= $this->Html->link('Completed Projects', array('controller' => 'projects', 'action' =>
                 'past')) ?>
             </li>
           </ul>
