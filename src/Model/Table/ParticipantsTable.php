@@ -23,8 +23,8 @@ class ParticipantsTable extends Table
         $this->addBehavior('Timestamp');
         $this->belongsTo('People', []);
         $this->belongsTo('Organizations', []);
-        $this->belongsToMany('Activities', []);
-        $this->belongsToMany('Projects', []);
+        $this->belongsToMany('Activities', ['through' => 'ActivitiesParticipants']);
+        $this->belongsToMany('Projects', ['through' => 'ParticipantsProjects']);
     }
 
     public function validationDefault(Validator $validator)

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 18. Apr 2015 um 01:55
+-- Erstellungszeit: 21. Apr 2015 um 00:42
 -- Server Version: 5.5.41-0ubuntu0.14.04.1
 -- PHP-Version: 5.5.9-1ubuntu4.7
 
@@ -80,6 +80,7 @@ CREATE TABLE IF NOT EXISTS `activities_participants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `activity_id` int(11) NOT NULL,
   `participant_id` int(11) NOT NULL,
+  `description` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `activity_id` (`activity_id`),
   KEY `participant_id` (`participant_id`),
@@ -90,37 +91,37 @@ CREATE TABLE IF NOT EXISTS `activities_participants` (
 -- Daten für Tabelle `activities_participants`
 --
 
-INSERT INTO `activities_participants` (`id`, `activity_id`, `participant_id`) VALUES
-  (1, 1, 1),
-  (2, 1, 2),
-  (3, 1, 3),
-  (4, 1, 4),
-  (5, 1, 5),
-  (6, 1, 6),
-  (7, 1, 7),
-  (8, 1, 8),
-  (9, 3, 9),
-  (10, 3, 10),
-  (11, 3, 11),
-  (12, 3, 12),
-  (13, 3, 13),
-  (14, 3, 14),
-  (15, 3, 15),
-  (16, 3, 16),
-  (17, 3, 17),
-  (18, 4, 18),
-  (19, 5, 19),
-  (20, 7, 9),
-  (21, 7, 12),
-  (22, 7, 16),
-  (23, 7, 11),
-  (24, 7, 11),
-  (25, 7, 20),
-  (26, 7, 13),
-  (27, 7, 21),
-  (28, 7, 22),
-  (29, 7, 23),
-  (30, 7, 24);
+INSERT INTO `activities_participants` (`id`, `activity_id`, `participant_id`, `description`) VALUES
+  (1, 1, 1, 'Moderator for the seminar "Be your own boss".'),
+  (2, 1, 2, 'Chamber of Commerce in Essen. Presented on the topic "Von der Idee zum Konzept sorgfältige Vorbereitung als Basis für eine erfolgreiche Gründung."'),
+  (3, 1, 3, 'Co-owner of private clinic for oncology.'),
+  (4, 1, 4, 'CEO Professional Business Solutions, PBS'),
+  (5, 1, 5, 'Founder and CEO of AfrikAktiv.'),
+  (6, 1, 6, 'Co-founder of horizon (www.horizononline.org)'),
+  (7, 1, 7, 'Founder and Editor-in-Chief of AFRICA POSITIVE magazine'),
+  (8, 1, 8, 'CEO Worldconcect Reisebüro'),
+  (9, 3, 9, 'Sacred Heart College Mankon, Cameroon'),
+  (10, 3, 10, 'P.H.S Batibo'),
+  (11, 3, 11, 'St. Bedes College Ashing-Kom'),
+  (12, 3, 12, 'SASSE College Buea'),
+  (13, 3, 13, 'Starlight College Mankon'),
+  (14, 3, 14, 'Lycée de Dschang'),
+  (15, 3, 15, 'B.H.S Buea'),
+  (16, 3, 16, 'C.P.C Bali'),
+  (17, 3, 17, 'P.S.S Mankon'),
+  (18, 4, 18, 'DJ for the gala night.'),
+  (19, 5, 19, 'CCC Mülheim'),
+  (20, 7, 9, 'Sacred Heart College Mankon'),
+  (21, 7, 12, 'SASSE College Buea'),
+  (22, 7, 16, 'C.P.C Bali'),
+  (23, 7, 11, 'St. Bedes College Ashing-Kom'),
+  (24, 7, 11, 'St. Bedes College Ashing-Kom'),
+  (25, 7, 20, 'CCAST Bambili Ex-Students Association'),
+  (26, 7, 13, 'Starlight College Mankon'),
+  (27, 7, 21, 'Longla Ex-Students Association'),
+  (28, 7, 22, 'GBHS Bamenda'),
+  (29, 7, 23, 'P.H.S Buea'),
+  (30, 7, 24, 'BIROCOL');
 
 -- --------------------------------------------------------
 
@@ -347,8 +348,25 @@ CREATE TABLE IF NOT EXISTS `participants_projects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `participant_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
+  `description` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+
+--
+-- Daten für Tabelle `participants_projects`
+--
+
+INSERT INTO `participants_projects` (`id`, `participant_id`, `project_id`, `description`) VALUES
+  (1, 9, 1, 'Sacred Heart College Mankon, Cameroon'),
+  (2, 9, 2, 'Sacred Heart College Mankon, Cameroon'),
+  (3, 9, 3, 'Sacred Heart College Mankon, Cameroon'),
+  (4, 9, 4, 'Sacred Heart College Mankon, Cameroon'),
+  (5, 9, 5, 'Sacred Heart College Mankon, Cameroon'),
+  (6, 9, 6, 'Sacred Heart College Mankon, Cameroon'),
+  (7, 9, 7, 'Sacred Heart College Mankon, Cameroon'),
+  (8, 9, 8, 'Sacred Heart College Mankon, Cameroon'),
+  (9, 9, 9, 'Sacred Heart College Mankon, Cameroon'),
+  (10, 9, 10, 'Sacred Heart College Mankon, Cameroon');
 
 -- --------------------------------------------------------
 

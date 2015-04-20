@@ -41,61 +41,39 @@
                         ['class' => 'img-responsive pull-left', 'url' => $projectUrl]); ?>
                     <?= $project->description ?>
                 </p>
-                <?php if (!empty($project->activities)): ?>
-                    <div class="col-md-12">
-                        <?php foreach ($project->activities as $activity): ?>
-                            <div class="panel panel-default">
-                                <div class="panel-heading"><h4><?= $activity->title ?></h4></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4>
+                                <i class="fa fa-users"></i>
+                                <?= __('Participants') ?>
+                            </h4>
+                        </div>
 
-                                <div class="panel-body">
-                                    <div class="row">
-                                        <div class="col-md-12 text-muted">
-                                            <i class="fa fa-clock-o"></i>&nbsp;
-                                            <?= $this->Time->format($activity->start_time, __('dd.MM.Y H:mm')) ?>
-                                            <i class="fa fa-arrow-right"></i>
-                                            <?= $this->Time->format($activity->end_time, __('dd.MM.Y H:mm')) ?>
-                                        </div>
-                                    </div>
-                                    <br>
-
-                                    <div class="row">
-                                        <address class="col-md-3 col-sm-3">
-                                            <?= $activity->address->street ?><br>
-                                            <?= sprintf('%s, %s', $activity->address->postal_code,
-                                                $activity->address->town) ?>
-                                            <br>
-                                            <?= sprintf('%s, %s', $activity->address->state,
-                                                $activity->address->country) ?>
-                                            <br>
-                                        </address>
-                                        <p class="col-md-9 col-sm-9 top-xs-offset">
-                                            <?= $activity->description ?>
-                                        </p>
-                                    </div>
-                                </div>
-                                <?php if (!empty($activity->participants)): ?>
-                                    <div class="col-md-12"><h3><?= __('Participants') ?></h3></div>
-                                    <table class="table table-responsive table-striped table-hover">
-                                                <thead>
-                                                <tr>
-                                                    <th width="30%"><?= __('Name') ?></th>
-                                                    <th width="10%"><?= __('Role') ?></th>
-                                                    <th width="60%"><?= __('Description') ?></th>
-                                                </tr>
-                                                </thead>
-                                                <?php foreach ($activity->participants as $participant): ?>
-                                                    <tr>
-                                                        <td><?= $participant->getName() ?></td>
-                                                        <td><?= $participant->role ?></td>
-                                                        <td><?= $participant->description ?></td>
-                                                    </tr>
-                                                <?php endforeach; ?>
-                                            </table>
-                                <?php endif; ?>
-                            </div>
-                        <?php endforeach; ?>
+                        <div class="panel-body">
+                            <?php if (!empty($project->participants)): ?>
+                                <table class="table table-responsive table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th width="30%"><?= __('Name') ?></th>
+                                        <th width="10%"><?= __('Role') ?></th>
+                                        <th width="60%"><?= __('Description') ?></th>
+                                    </tr>
+                                    </thead>
+                                    <?php foreach ($project->participants as $participant): ?>
+                                        <tr>
+                                            <td><?= $participant->getName() ?></td>
+                                            <td><?= $participant->role ?></td>
+                                            <td><?= $participant->description ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </table>
+                            <?php endif; ?>
+                        </div>
                     </div>
-                <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>

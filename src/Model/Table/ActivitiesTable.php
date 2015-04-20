@@ -20,7 +20,7 @@ class ActivitiesTable extends Table
         $this->displayField('title');
         $this->primaryKey('id');
         $this->addBehavior('Timestamp');
-        $this->belongsToMany('Participants', []);
+        $this->belongsToMany('Participants', ['through' => 'ActivitiesParticipants']);
         $this->belongsTo('Addresses', []);
     }
 
