@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b0d6f41918a2ae0d9b45e510e98cfa7",
+    "hash": "b15cb5cd4659ae5f7917f65b63718f00",
     "packages": [
         {
             "name": "aura/installer-default",
@@ -108,7 +108,7 @@
                     "email": "mapthegod@gmail.com"
                 },
                 {
-                    "name": "Jose Lorenzo Rodriguez",
+                    "name": "José Lorenzo Rodríguez",
                     "email": "jose.zap@gmail.com"
                 }
             ],
@@ -127,16 +127,16 @@
         },
         {
             "name": "cakephp/cakephp",
-            "version": "dev-master",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/cakephp.git",
-                "reference": "f36cfc351e3f8bffb4877206773da9360a59682c"
+                "reference": "40c10c6a1ea0cd1fa34227aeb294b95e44c0ab7a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/f36cfc351e3f8bffb4877206773da9360a59682c",
-                "reference": "f36cfc351e3f8bffb4877206773da9360a59682c",
+                "url": "https://api.github.com/repos/cakephp/cakephp/zipball/40c10c6a1ea0cd1fa34227aeb294b95e44c0ab7a",
+                "reference": "40c10c6a1ea0cd1fa34227aeb294b95e44c0ab7a",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-04-22 13:49:03"
+            "time": "2015-04-20 01:29:22"
         },
         {
             "name": "friendsofcake/bootstrap-ui",
@@ -482,12 +482,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/debug_kit.git",
-                "reference": "51d8f0e0f9d88888b7e341206415322500b4af1e"
+                "reference": "377ee6730a16f62ec08a4e9264cc608287e23d89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/51d8f0e0f9d88888b7e341206415322500b4af1e",
-                "reference": "51d8f0e0f9d88888b7e341206415322500b4af1e",
+                "url": "https://api.github.com/repos/cakephp/debug_kit/zipball/377ee6730a16f62ec08a4e9264cc608287e23d89",
+                "reference": "377ee6730a16f62ec08a4e9264cc608287e23d89",
                 "shasum": ""
             },
             "require": {
@@ -534,7 +534,7 @@
                 "debug",
                 "kit"
             ],
-            "time": "2015-04-19 19:07:17"
+            "time": "2015-04-23 00:51:49"
         },
         {
             "name": "cakephp/migrations",
@@ -628,25 +628,23 @@
         },
         {
             "name": "d11wtq/boris",
-            "version": "v1.0.8",
+            "version": "v1.0.10",
             "source": {
                 "type": "git",
-                "url": "https://github.com/borisrepl/boris.git",
-                "reference": "125dd4e5752639af7678a22ea597115646d89c6e"
+                "url": "https://github.com/d11wtq/boris.git",
+                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/borisrepl/boris/zipball/125dd4e5752639af7678a22ea597115646d89c6e",
-                "reference": "125dd4e5752639af7678a22ea597115646d89c6e",
+                "url": "https://api.github.com/repos/d11wtq/boris/zipball/31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
+                "reference": "31055b15e2d3fe47f31f6aa8e277f8f3fc7eb483",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.0"
-            },
-            "suggest": {
                 "ext-pcntl": "*",
                 "ext-posix": "*",
-                "ext-readline": "*"
+                "ext-readline": "*",
+                "php": ">=5.3.0"
             },
             "bin": [
                 "bin/boris"
@@ -658,7 +656,11 @@
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
-            "time": "2014-01-17 12:21:18"
+            "license": [
+                "MIT"
+            ],
+            "description": "A tiny, but robust REPL (Read-Evaluate-Print-Loop) for PHP.",
+            "time": "2015-03-01 08:05:19"
         },
         {
             "name": "doctrine/instantiator",
@@ -2019,16 +2021,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "2.3.0",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "5046b0e01c416fc2b06df961d0673c85bcdc896c"
+                "reference": "f3100143e94bbeeaa4f1cd7c6389c3733d3d1ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5046b0e01c416fc2b06df961d0673c85bcdc896c",
-                "reference": "5046b0e01c416fc2b06df961d0673c85bcdc896c",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f3100143e94bbeeaa4f1cd7c6389c3733d3d1ce1",
+                "reference": "f3100143e94bbeeaa4f1cd7c6389c3733d3d1ce1",
                 "shasum": ""
             },
             "require": {
@@ -2089,7 +2091,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2015-03-04 02:07:03"
+            "time": "2015-04-23 03:40:59"
         },
         {
             "name": "symfony/config",
@@ -2757,7 +2759,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "cakephp/cakephp": 20,
         "friendsofcake/bootstrap-ui": 20,
         "cakephp/bake": 20,
         "cakephp/debug_kit": 20,

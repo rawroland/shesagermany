@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
 class EventsTable extends Table
 {
     public $defaultContain = ['Activities' => ['Addresses', 'Participants' => ['People', 'Organizations']]];
+    public $defaultConditions = ['Events.deleted' => false];
     public $defaultLimit = 5;
     public $defaultSort = ['Events.start' => 'desc'];
     /**

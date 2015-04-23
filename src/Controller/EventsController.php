@@ -19,7 +19,7 @@ class EventsController extends AppController
     {
         $this->paginate = [
             'contain' => $this->Events->defaultContain, 'limit' => $this->Events->defaultLimit,
-            'order' => $this->Events->defaultSort,
+            'order' => $this->Events->defaultSort, 'conditions' => $this->Events->defaultConditions
         ];
         parent::initialize();
     }
@@ -64,7 +64,7 @@ class EventsController extends AppController
 
     public function upcoming()
     {
-        $this->paginate['conditions'] = ["{$this->Events->alias()}.end >" => new Time()];
+        $this->paginate['conditions'] = array_merge($this->paginate['conditions'], ["{$this->Events->alias()}.end >" => new Time()]);
         $events = $this->paginate($this->Events);
         $this->pageTitle = __('Upcoming').' '.__('Events');
         $this->view = 'index';
@@ -73,7 +73,7 @@ class EventsController extends AppController
 
     public function past()
     {
-        $this->paginate['conditions'] = ["{$this->Events->alias()}.end <" => new Time()];
+        $this->paginate['conditions'] = array_merge($this->paginate['conditions'], ["{$this->Events->alias()}.end <" => new Time()]);
         $events = $this->paginate($this->Events);
         $this->pageTitle = __('Past').' '.__('Events');
         $this->view = 'index';
