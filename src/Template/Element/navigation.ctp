@@ -43,12 +43,11 @@
           ?>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <?= $this->Html->link('SHESA Germany e.V', array('controller' => 'pages', 'action' => 'about_sg')) ?>
+              <?= $this->Html->link(__('SHESA Germany e.V'), array('controller' => 'pages', 'action' => 'about_sg')) ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Sacred Heart College Mankon', array('controller' => 'pages', 'action' =>
-                'about_saheco')) ?>
+              <?= $this->Html->link(__('Sacred Heart College Mankon'), array('controller' => 'pages', 'action' => 'about_saheco')) ?>
             </li>
           </ul>
         </li>
@@ -63,16 +62,15 @@
           ?>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <?= $this->Html->link('All Events', array('controller' => 'events', 'action' => 'index')) ?>
+              <?= $this->Html->link(__('Events'), array('controller' => 'events')) ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Upcoming Events', array('controller' => 'events', 'action' => 'upcoming')) ?>
+              <?= $this->Html->link(__('Upcoming Events'), array('controller' => 'events', 'action' => 'upcoming')) ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Past Events', array('controller' => 'events', 'action' =>
-                'past')) ?>
+              <?= $this->Html->link(__('Past Events'), array('controller' => 'events', 'action' => 'past')) ?>
             </li>
           </ul>
         </li>
@@ -87,16 +85,15 @@
           ?>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <?= $this->Html->link('All Projects', array('controller' => 'projects', 'action' => 'index')) ?>
+              <?= $this->Html->link(__('Projects'), array('controller' => 'projects')) ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Running Projects', array('controller' => 'projects', 'action' => 'running')) ?>
+              <?= $this->Html->link(__('Running Projects'), array('controller' => 'projects', 'action' => 'running')) ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Completed Projects', array('controller' => 'projects', 'action' =>
-                'past')) ?>
+              <?= $this->Html->link(__('Completed Projects'), array('controller' => 'projects', 'action' => 'past')) ?>
             </li>
           </ul>
         </li>
@@ -111,12 +108,11 @@
           ?>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <?= $this->Html->link('Current Executive', array('controller' => 'executive', 'action' => 'current')) ?>
+              <?= $this->Html->link(__('Current Executive'), /*array('controller' => 'executive', 'action' => 'current')*/'#') ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Past Executive', array('controller' => 'executive', 'action' =>
-                'past')) ?>
+              <?= $this->Html->link(__('Past Executive'), /*array('controller' => 'executive', 'action' => 'past')*/'#') ?>
             </li>
           </ul>
         </li>
@@ -124,19 +120,18 @@
           <?php
           $icon = $this->Html->tag('i', '', array('class' => 'fa fa-camera-retro fa-2x'));
           $br = $this->Html->tag('br');
-          $text = $this->Html->tag('strong', 'media', array('class' => 'text-uppercase'));
+          $text = $this->Html->tag('strong', __('media'), array('class' => 'text-uppercase'));
           $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
           echo $this->Html->link($icon . $br . $text . $br . $caret, '#', array('escape' => false, 'class' =>
             'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-expanded' => 'false'));
           ?>
           <ul class="dropdown-menu" role="menu">
             <li>
-              <?= $this->Html->link('Photos', array('controller' => 'media', 'action' => 'photos')) ?>
+              <?= $this->Html->link(__('Photos'), /*array('controller' => 'media', 'action' => 'photos')*/'#') ?>
             </li>
             <li class="divider"></li>
             <li>
-              <?= $this->Html->link('Videos', array('controller' => 'media', 'action' =>
-                'videos')) ?>
+              <?= $this->Html->link(__('Videos'), '#'/* array('controller' => 'media', 'action' => 'videos')*/) ?>
             </li>
           </ul>
         </li>
@@ -144,16 +139,16 @@
           <?php
           $icon = $this->Html->tag('i', '', array('class' => 'fa fa-exchange fa-2x'));
           $br = $this->Html->tag('br');
-          $text = $this->Html->tag('strong', 'partners', array('class' => 'text-uppercase'));
-          echo $this->Html->link($icon . $br . $text . $br, array('controller' => 'partners'), array('escape' => false));
+          $text = $this->Html->tag('strong', __('partners'), array('class' => 'text-uppercase'));
+          echo $this->Html->link($icon . $br . $text . $br, '#'/*array('controller' => 'partners')*/, array('escape' => false));
           ?>
         </li>
         <li class="hidden-sm">
           <?php
           $icon = $this->Html->tag('i', '', array('class' => 'fa fa-envelope-o fa-2x'));
           $br = $this->Html->tag('br');
-          $text = $this->Html->tag('strong', 'contact', array('class' => 'text-uppercase'));
-          echo $this->Html->link($icon . $br . $text . $br, array('controller' => 'contacts'), array('escape' =>
+          $text = $this->Html->tag('strong', __('contact'), array('class' => 'text-uppercase'));
+          echo $this->Html->link($icon . $br . $text . $br, /*array('controller' => 'contacts')*/'#', array('escape' =>
             false));
           ?>
         </li>

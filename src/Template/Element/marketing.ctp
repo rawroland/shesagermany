@@ -25,7 +25,7 @@ $this->start('marketing');
               <p class="hidden-xs">
                 SHESA Germany e.V is continuing lessons learnt from SAHECO by contributing to the African committee
                 in Germany while advocating for growth.<br>
-                <a class="btn btn-md btn-primary hidden-sm" href="#" role="button">SHESA Germany e.V</a>
+                <div class="text-center hidden-xs"><a class="btn btn-md btn-primary hidden-sm" href="#" role="button">SHESA Germany e.V</a></div>
               </p>
             </div>
           </div>
@@ -40,7 +40,7 @@ $this->start('marketing');
               <p class="hidden-xs">
                 SHESA Germany e.V is continuing lessons learnt from SAHECO by contributing to the African committee
                 in Germany while advocating for growth.<br>
-                <a class="btn btn-md btn-primary hidden-sm" href="#" role="button">SHESA Germany e.V</a>
+                  <div class="text-center hidden-xs"><a class="btn btn-md btn-primary hidden-sm" href="#" role="button">SHESA Germany e.V</a></div>
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@ $this->start('marketing');
               <p class="hidden-xs">
                 SHESA Germany e.V is continuing lessons learnt from SAHECO by contributing to the African committee
                 in Germany while advocating for growth.<br>
-                <a class="btn btn-md btn-primary hidden-sm" href="#" role="button">SHESA Germany e.V</a>
+                <div class="text-center hidden-xs"><a class="btn btn-md btn-primary hidden-sm" href="#" role="button">SHESA Germany e.V</a></div>
               </p>
             </div>
           </div>

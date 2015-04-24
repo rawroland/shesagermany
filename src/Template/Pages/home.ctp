@@ -79,7 +79,7 @@ echo $this->element('marketing');
                     <div class="col-md-12">
                         <?php
                         $promotedUrlArray = [
-                            'controller' => 'promoteds',
+                            'controller' => 'events',
                             'action' => 'view',
                             $promoted->id,
                         ];
@@ -127,7 +127,7 @@ echo $this->element('marketing');
         </div>
         <div class="row">
             <div class="col-md-12 text-center top-md-offset">
-                <?= $this->Html->link(__('More details'), $promotedUrl, ['class' => 'btn btn-primary btn-lg top-sm-offset']) ?>
+                <?= $this->Html->link(__('More Event details'), $promotedUrl, ['class' => 'btn btn-primary btn-lg top-sm-offset']) ?>
             </div>
         </div>
     </div>
