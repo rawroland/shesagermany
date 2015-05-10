@@ -130,7 +130,7 @@
                         <li class="divider"></li>
                         <li>
                             <?= $this->Html->link(__('Completed Projects'),
-                                array('controller' => 'projects', 'action' => 'past')) ?>
+                                array('controller' => 'projects', 'action' => 'completed')) ?>
                         </li>
                     </ul>
                 </li>

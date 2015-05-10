@@ -66,7 +66,7 @@
                                         <tr>
                                             <td><?= $participant->getName() ?></td>
                                             <td><?= $participant->role ?></td>
-                                            <td><?= $participant->description ?></td>
+                                            <td><?= $participant->_joinData['description'] ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </table>

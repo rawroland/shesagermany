@@ -19,7 +19,7 @@ class ProjectsController extends AppController
     {
         $this->paginate = [
             'contain' => $this->Projects->defaultContain, 'limit' => $this->Projects->defaultLimit,
-            'order' => $this->Projects->defaultSort,
+            'order' => $this->Projects->defaultSort, 'conditions' => $this->Projects->defaultConditions,
         ];
         parent::initialize();
     }
@@ -62,20 +62,20 @@ class ProjectsController extends AppController
         $this->set(compact('projects'));
     }
 
-    public function upcoming()
+    public function running()
     {
-        $this->paginate['conditions'] = ["{$this->Projects->alias()}.end >" => new Time()];
+        $this->paginate['conditions'] = array_merge($this->paginate['conditions'], ["{$this->Projects->alias()}.end >" => new Time()]);
         $projects = $this->paginate($this->Projects);
-        $this->pageTitle = __('Upcoming').' '.__('Projects');
+        $this->pageTitle = __('Running Projects');
         $this->view = 'index';
         $this->set(compact('projects'));
     }
 
-    public function past()
+    public function completed()
     {
-        $this->paginate['conditions'] = ["{$this->Projects->alias()}.end <" => new Time()];
+        $this->paginate['conditions'] = array_merge($this->paginate['conditions'], ["{$this->Projects->alias()}.end <" => new Time()]);
         $projects = $this->paginate($this->Projects);
-        $this->pageTitle = __('Past').' '.__('Projects');
+        $this->pageTitle = __('Completed Projects');
         $this->view = 'index';
         $this->set(compact('projects'));
     }

@@ -3,8 +3,8 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 23. Apr 2015 um 21:58
--- Server Version: 5.5.41-0ubuntu0.14.04.1
+-- Erstellungszeit: 10. Mai 2015 um 16:49
+-- Server Version: 5.5.43-0ubuntu0.14.04.1
 -- PHP-Version: 5.5.9-1ubuntu4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -296,47 +296,47 @@ CREATE TABLE IF NOT EXISTS `participants` (
   `organization_id` int(11) DEFAULT NULL,
   `type` enum('person','organization') DEFAULT 'person',
   `role` enum('Moderator','Panelist','Team','DJ','MC','Other') NOT NULL,
-  `description` text NOT NULL,
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `participants_people` (`person_id`),
   KEY `fk_organizations` (`organization_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=30 ;
 
 --
 -- Daten für Tabelle `participants`
 --
 
-INSERT INTO `participants` (`id`, `person_id`, `organization_id`, `type`, `role`, `description`, `created`, `modified`) VALUES
-  (1, 1, NULL, 'person', 'Moderator', 'Moderator for the seminar "Be your own boss".', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (2, 2, NULL, 'person', 'Panelist', 'Chamber of Commerce in Essen. Presented on the topic "Von der Idee zum Konzept sorgfältige Vorbereitung als Basis für eine erfolgreiche Gründung."', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (3, 3, NULL, 'person', 'Panelist', 'Co-owner of private clinic for oncology.', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (4, 4, NULL, 'person', 'Panelist', 'CEO Professional Business Solutions, PBS', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (5, 5, NULL, 'person', 'Panelist', 'Founder and CEO of AfrikAktiv.', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (6, 6, NULL, 'person', 'Panelist', 'Co-founder of horizon (www.horizononline.org)', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (7, 7, NULL, 'person', 'Panelist', 'Founder and Editor-in-Chief of AFRICA POSITIVE magazine', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (8, 8, NULL, 'person', 'Panelist', 'CEO Worldconcect Reisebüro', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (9, NULL, 1, 'organization', 'Team', 'Sacred Heart College Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (10, NULL, 2, 'organization', 'Team', 'P.H.S Batibo', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (11, NULL, 3, 'organization', 'Team', 'St. Bedes College Ashing-Kom', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (12, NULL, 4, 'organization', 'Team', 'SASSE College Buea', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (13, NULL, 5, 'organization', 'Team', 'Starlight College Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (14, NULL, 6, 'organization', 'Team', 'Lycée de Dschang', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (15, NULL, 7, 'organization', 'Team', 'B.H.S Buea', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (16, NULL, 8, 'organization', 'Team', 'C.P.C Bali', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (17, NULL, 9, 'organization', 'Team', 'P.S.S Mankon', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (18, 9, NULL, 'person', 'DJ', 'DJ for the gala night.', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
-  (19, NULL, 10, 'organization', 'Other', 'CCC Mülheim', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
-  (20, NULL, 11, 'organization', 'Team', 'CCAST Bambili Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (21, NULL, 12, 'organization', 'Team', 'Longla Ex-Students Association', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (22, NULL, 13, 'organization', 'Team', 'GBHS Bamenda', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (23, NULL, 14, 'organization', 'Team', 'P.H.S Buea', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (24, NULL, 15, 'organization', 'Team', 'BIROCOL', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
-  (25, 5, NULL, 'person', 'Moderator', 'Moderator for the seminar "Development Aid: Curse or blessing for Sub-saharan Africa?"', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
-  (26, NULL, NULL, 'person', 'Panelist', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
-  (27, NULL, NULL, 'person', 'Panelist', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
-  (28, NULL, NULL, 'person', 'Panelist', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00');
+INSERT INTO `participants` (`id`, `person_id`, `organization_id`, `type`, `role`, `created`, `modified`) VALUES
+  (1, 1, NULL, 'person', 'Moderator', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (2, 2, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (3, 3, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (4, 4, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (5, 5, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (6, 6, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (7, 7, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (8, 8, NULL, 'person', 'Panelist', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (9, NULL, 1, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (10, NULL, 2, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (11, NULL, 3, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (12, NULL, 4, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (13, NULL, 5, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (14, NULL, 6, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (15, NULL, 7, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (16, NULL, 8, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (17, NULL, 9, 'organization', 'Team', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
+  (18, 9, NULL, 'person', 'DJ', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (19, NULL, 10, 'organization', 'Other', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (20, NULL, 11, 'organization', 'Team', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (21, NULL, 12, 'organization', 'Team', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (22, NULL, 13, 'organization', 'Team', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (23, NULL, 14, 'organization', 'Team', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (24, NULL, 15, 'organization', 'Team', '2015-03-10 23:00:00', '2015-03-10 23:00:00'),
+  (25, 5, NULL, 'person', 'Moderator', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (26, NULL, NULL, 'person', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (27, NULL, NULL, 'person', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (28, NULL, NULL, 'person', 'Panelist', '2015-04-05 22:00:00', '2015-04-05 22:00:00'),
+  (29, 10, NULL, 'person', 'Other', '2015-03-07 23:00:00', '2015-03-07 23:00:00');
 
 -- --------------------------------------------------------
 
@@ -349,8 +349,10 @@ CREATE TABLE IF NOT EXISTS `participants_projects` (
   `participant_id` int(11) NOT NULL,
   `project_id` int(11) NOT NULL,
   `description` varchar(256) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
+  PRIMARY KEY (`id`),
+  KEY `participant_id` (`participant_id`),
+  KEY `project_id` (`project_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=12 ;
 
 --
 -- Daten für Tabelle `participants_projects`
@@ -366,7 +368,8 @@ INSERT INTO `participants_projects` (`id`, `participant_id`, `project_id`, `desc
   (7, 9, 7, 'Sacred Heart College Mankon, Cameroon'),
   (8, 9, 8, 'Sacred Heart College Mankon, Cameroon'),
   (9, 9, 9, 'Sacred Heart College Mankon, Cameroon'),
-  (10, 9, 10, 'Sacred Heart College Mankon, Cameroon');
+  (10, 9, 10, 'Sacred Heart College Mankon, Cameroon'),
+  (11, 29, 2, 'Ask Docta!');
 
 -- --------------------------------------------------------
 
@@ -382,7 +385,7 @@ CREATE TABLE IF NOT EXISTS `people` (
   `created` timestamp NULL DEFAULT NULL,
   `modified` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=11 ;
 
 --
 -- Daten für Tabelle `people`
@@ -397,7 +400,8 @@ INSERT INTO `people` (`id`, `title`, `surname`, `name`, `created`, `modified`) V
   (6, 'Mr.', 'Tamfu', 'Caleb', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (7, 'Ms', 'Tatah', 'Veye', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
   (8, 'Mr.', 'Najeme', 'Keneth', '2015-03-07 23:00:00', '2015-03-07 23:00:00'),
-  (9, NULL, 'Pokus', 'DJ', '2015-03-08 23:00:00', '2015-03-08 23:00:00');
+  (9, NULL, 'Pokus', 'DJ', '2015-03-08 23:00:00', '2015-03-08 23:00:00'),
+  (10, 'Dr. Med.', 'Ngassa', 'Emmanuel Anyangwe', '2015-05-09 22:00:00', '2015-05-09 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -434,16 +438,16 @@ CREATE TABLE IF NOT EXISTS `projects` (
 --
 
 INSERT INTO `projects` (`id`, `title`, `description`, `start`, `end`, `deleted`, `created`, `modified`) VALUES
-  (1, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (2, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (3, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (4, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (5, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (6, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (7, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (8, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (9, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
-  (10, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00');
+  (1, 'Mentorship Program', 'Personal developmental relationship\r\nMore experienced or knowledgeable person\r\nLess experienced or knowledgeable person\r\nRelationship Dialogue\r\nExperience and knowledge tranfer\r\nResults  Widening a first-timer`s knowledge\r\nMaximising his potentials\r\nMinimising mistakes\r\nEducational and professional development\r\nPsychosocial and Financial Advisory Support\r\n\r\nCategories\r\nMedical and Pharmaceutical Sciences\r\nEngineering Sciences\r\nBusiness and Finance\r\n\r\nMENTOR – The Mentor accompanies his protégée on a continual base, supporting him with answers to his problems and challenges based on experience. He catalyzes the efforts and successes of his mentee. A physical meeting of Mentor and Mentee would be of much advantage. So doing, both partners get to know each other better\r\n\r\nMENTEE – The Mentee should be open to advice and not reluctant to share the problems they encounter. Readiness to take to challenge would be of much advantage', '2014-01-01', '2015-12-31', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (2, 'Yearly Award For A Project By A Registered SG Member', 'SHESA Germany shall be awarding a total of 500 Euros for the design and implementation of a project\r\n\r\nTarget are registered SG members\r\n\r\nProposals can be from any field as long as they pertain in one way or the other to the development of fellow Cameroonians or Cameroon both back home and/or in Germany Members can build up a team for a single project\r\n\r\n1: Submitting your Projects. Dateline Sun JUNE 15, 2014 at 23:59 hrs\r\n\r\n2: Short presentation on at least 3 projects at the GA in Berlin\r\n\r\n3: Voting of the Best Project by the GA and award of first 250 Euros\r\n\r\n4: The Award of the next 250 Euros is done on or before Dec. 31, 2014 after a clear proof that a greater part of the project has been implemented\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2014-01-01', '2014-11-24', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (3, 'Yearly SG Scholarship To SAHECO Students', 'Project Description\r\nWe intend to give yearly prizes to the brightest and best–improved students in every class in SAHECO based on yearly academic results. \r\nThese prizes should be tailored to the yearly income of SG.\r\nThe awarding ceremony could be accompanied by talks from SHESANS from Germany on diverse orientational themes.\r\n\r\nWhy Is It Important?\r\nSG is a daughter of SAHECO and it’s only natural for us to take care of our mother. \r\nFuture SG members can only come from SAHECO. So the sustainability of AG is directly dependent on the sustainability of SAHECO.\r\nSAHECO is known for its academic excellence which we intend to honour and promote\r\n\r\nWhat are its benefits?\r\nThe immediate financial benefit for the designated students themselves is obvious.\r\nSG would always be in very close ties with, and would indirectly have constant knowledge about the academic progress of SAHECO. \r\nWith a properly chosen strategy the program would help the awareness of the young students to what awaits them after college.\r\nSG would feel good about itself being a good daughter of SAHECO\r\nTimeline\r\nOur man in Bamenda will inform the school authorities about the prize, inquire what other prizes are being awarded already , and give feedback to the team.\r\nIf approved by SG and the school authorities, the project could start late this year.\r\nTeam to decide allocation of the money ( ca. 750€) shortly.', '2014-01-01', '2015-05-21', 0, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (4, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (5, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (6, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (7, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (8, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (9, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00'),
+  (10, 'Hold on to your butts', 'You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don''t know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I''m breaking now. We said we''d say it was the snow that killed the other two, but it wasn''t. Nature is lethal but it doesn''t hold a candle to man.\r\n\r\n\r\nThe path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother''s keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee.', '2015-04-01', '2015-04-01', 1, '2015-04-17 22:00:00', '2015-04-17 22:00:00');
 
 -- --------------------------------------------------------
 
@@ -493,6 +497,13 @@ ADD CONSTRAINT `organizations_participants` FOREIGN KEY (`participant_id`) REFER
 ALTER TABLE `participants`
 ADD CONSTRAINT `fk_organizations` FOREIGN KEY (`organization_id`) REFERENCES `organizations` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 ADD CONSTRAINT `fk_people` FOREIGN KEY (`person_id`) REFERENCES `people` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Constraints der Tabelle `participants_projects`
+--
+ALTER TABLE `participants_projects`
+ADD CONSTRAINT `project_project` FOREIGN KEY (`project_id`) REFERENCES `projects` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+ADD CONSTRAINT `project_participant` FOREIGN KEY (`participant_id`) REFERENCES `participants` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

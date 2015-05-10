@@ -10,8 +10,8 @@
             'header' => __('Projects'),
             'links' => [
                 __('All Projects') => ['controller' => 'projects', 'action' => 'index'],
-                __('Upcoming Projects') => ['controller' => 'projects', 'action' => 'upcoming'],
-                __('Past Projects') => ['controller' => 'projects', 'action' => 'past'],
+                __('Running Projects') => ['controller' => 'projects', 'action' => 'running'],
+                __('Completed Projects') => ['controller' => 'projects', 'action' => 'completed'],
             ]
         ];
         echo $this->element('sidebar', $data);

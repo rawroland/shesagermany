@@ -12,6 +12,7 @@ use Cake\Validation\Validator;
 class ProjectsTable extends Table
 {
     public $defaultContain = ['Participants' => ['People', 'Organizations']];
+    public $defaultConditions = ['Projects.deleted' => false];
     public $defaultLimit = 5;
     public $defaultSort = ['Projects.start' => 'desc'];
     /**
