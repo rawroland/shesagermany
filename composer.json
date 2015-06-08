@@ -6,7 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=5.4.16",
-        "cakephp/cakephp": "~3",
+        "cakephp/cakephp": "~3.0",
         "mobiledetect/mobiledetectlib": "2.*",
         "friendsofcake/bootstrap-ui":"dev-master"
     },
@@ -20,9 +20,9 @@
         "phpunit/phpunit": "*",
         "theseer/phpdox": "*",
         "cakephp/plugin-installer": "*",
-        "cakephp/bake": "dev-master",
-        "cakephp/debug_kit": "3.0.*-dev",
-        "cakephp/migrations": "dev-master",
+        "cakephp/bake": "~1.0",
+        "cakephp/debug_kit": "~3.0",
+        "cakephp/migrations": "~1.0",
         "fabpot/php-cs-fixer": "*"
     },
     "suggest": {

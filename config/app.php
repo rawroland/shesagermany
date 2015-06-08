@@ -247,7 +247,7 @@ $config = [
 		 * The test connection is used during the test suite.
 		 */
 		'test' => [
-			'className' => 'Cake\QDatabase\Connection',
+			'className' => 'Cake\Database\Connection',
 			'driver' => 'Cake\Database\Driver\Mysql',
 			'persistent' => false,
 			'host' => 'localhost',
