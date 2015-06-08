@@ -134,9 +134,9 @@
                         </li>
                     </ul>
                 </li>
-                <li class="<?= $ExecutiveActive ?>">
+                <!--<li class="<?/*= $ExecutiveActive */?>">
                     <?php
-                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-users fa-2x'));
+/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-users fa-2x'));
                     $br = $this->Html->tag('br');
                     $text = $this->Html->tag('strong', 'executive', array('class' => 'text-uppercase'));
                     $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
@@ -148,24 +148,20 @@
                         'role' => 'button',
                         'aria-expanded' => 'false'
                     ));
-                    ?>
+                    */?>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <?= $this->Html->link(__('Current Executive'),
-                                /*array('controller' => 'executive', 'action' => 'current')*/
-                                '#') ?>
+                            <?/*= $this->Html->link(__('Current Executive'), array('controller' => 'executive', 'action' => 'current'))*/?>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <?= $this->Html->link(__('Past Executive'),
-                                /*array('controller' => 'executive', 'action' => 'past')*/
-                                '#') ?>
+                            <?/*= $this->Html->link(__('Past Executive'), array('controller' => 'executive', 'action' => 'past'))*/?>
                         </li>
                     </ul>
-                </li>
-                <li class="<?= $MediaActive ?>">
+                </li>-->
+                <!--<li class="<?/*= $MediaActive */?>">
                     <?php
-                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-camera-retro fa-2x'));
+/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-camera-retro fa-2x'));
                     $br = $this->Html->tag('br');
                     $text = $this->Html->tag('strong', __('media'), array('class' => 'text-uppercase'));
                     $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
@@ -177,29 +173,26 @@
                         'role' => 'button',
                         'aria-expanded' => 'false'
                     ));
-                    ?>
+                    */?>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <?= $this->Html->link(__('Photos'), /*array('controller' => 'media', 'action' => 'photos')*/
-                                '#') ?>
+                            <?/*= $this->Html->link(__('Photos'), array('controller' => 'media', 'action' => 'photos')) */?>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <?= $this->Html->link(__('Videos'),
-                                '#'/* array('controller' => 'media', 'action' => 'videos')*/) ?>
+                            <?/*= $this->Html->link(__('Videos'), array('controller' => 'media', 'action' => 'videos')) */?>
                         </li>
                     </ul>
-                </li>
-                <li class="<?= $PartnersActive ?> hidden-sm">
+                </li>-->
+                <!--<li class="<?/*= $PartnersActive */?> hidden-sm">
                     <?php
-                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-exchange fa-2x'));
+/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-exchange fa-2x'));
                     $br = $this->Html->tag('br');
                     $text = $this->Html->tag('strong', __('partners'), array('class' => 'text-uppercase'));
-                    echo $this->Html->link($icon . $br . $text . $br, '#'/*array('controller' => 'partners')*/,
-                        array('escape' => false));
-                    ?>
-                </li>
-                <li class="<?= $ContactsActive ?> hidden-sm">
+                    echo $this->Html->link($icon . $br . $text . $br, array('controller' => 'partners'), array('escape' => false));
+                    */?>
+                </li>-->
+                <li class="<?= $ContactsActive ?>">
                     <?php
                     $icon = $this->Html->tag('i', '', array('class' => 'fa fa-envelope-o fa-2x'));
                     $br = $this->Html->tag('br');

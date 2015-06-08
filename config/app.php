@@ -217,7 +217,7 @@ $config = [
 			*/
 			//'port' => 'nonstandard_port_number',
 			'username' => 'root',
-			'password' => 'rawroro',
+			'password' => '',
 			'database' => 'shesagermany',
 			'encoding' => 'utf8',
 			'timezone' => 'UTC',
@@ -247,13 +247,13 @@ $config = [
 		 * The test connection is used during the test suite.
 		 */
 		'test' => [
-			'className' => 'Cake\Database\Connection',
+			'className' => 'Cake\QDatabase\Connection',
 			'driver' => 'Cake\Database\Driver\Mysql',
 			'persistent' => false,
 			'host' => 'localhost',
 			//'port' => 'nonstandard_port_number',
             'username' => 'root',
-            'password' => 'rawroro',
+            'password' => '',
             'database' => 'shesagermany_test',
 			'encoding' => 'utf8',
 			'timezone' => 'UTC',
