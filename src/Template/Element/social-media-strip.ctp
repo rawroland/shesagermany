@@ -39,7 +39,7 @@
                 <div class="btn-group">
                     <?php
                     $contactLink = $this->Html->tag('i', '', array('class' => 'fa fa-envelope fa-2x'));
-                    echo $this->Html->link($contactLink . ' ' . __('Contact Us'), '#', array('escape' => false, 'class' => ''));
+                    echo $this->Html->link($contactLink . ' ' . __('Contact Us'), array('controller' => 'contacts'), array('escape' => false, 'class' => ''));
                     ?>
                 </div>
                 <div class="btn-group">

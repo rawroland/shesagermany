@@ -21,7 +21,7 @@ echo $this->element('marketing');
                     invidunt ut labore
                 </p>
 
-                <p><a class="" href="#" role="button">View details »</a></p>
+                <p><?= $this->Html->link(__('View details{0}', ' »'), array('controller' => 'pages', 'action' => 'about_saheco'), array('roles' => 'button'));?></p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <h3>Promoting brotherhood</h3>
@@ -31,7 +31,7 @@ echo $this->element('marketing');
                     invidunt ut labore
                 </p>
 
-                <p><a class="" href="#" role="button">View details »</a></p>
+                <p><?= $this->Html->link(__('View details{0}', ' »'), array('controller' => 'pages', 'action' => 'about_sg'), array('roles' => 'button'));?></p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <h3>Initiating innovation</h3>
@@ -41,7 +41,7 @@ echo $this->element('marketing');
                     invidunt ut labore
                 </p>
 
-                <p><a class="" href="#" role="button">View details »</a></p>
+                <p><?= $this->Html->link(__('View details{0}', ' »'), array('controller' => 'events'), array('roles' => 'button'));?></p>
             </div>
             <div class="col-md-3 col-sm-6">
                 <h3>Initiating innovation</h3>
@@ -51,11 +51,11 @@ echo $this->element('marketing');
                     invidunt ut labore
                 </p>
 
-                <p><a class="" href="#" role="button">View details »</a></p>
+                <p><?= $this->Html->link(__('View details{0}', ' »'), array('controller' => 'projects'), array('roles' => 'button'));?></p>
             </div>
 
             <div class="col-md-12 text-center top-md-offset">
-                <a class="btn btn-primary btn-lg" href="#">More About SG e.V</a>
+                <?= $this->Html->link(__('More About SG e.V'), array('controller' => 'pages', 'action' => 'about_sg'), array('roles' => 'button', 'class' => 'btn btn-primary btn-lg'));?>
             </div>
         </div>
     </div>
