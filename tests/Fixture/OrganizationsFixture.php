@@ -9,7 +9,7 @@ use Cake\TestSuite\Fixture\TestFixture;
  */
 class OrganizationsFixture extends TestFixture
 {
-/**
+    /**
  * Fields.
  *
  * @var array

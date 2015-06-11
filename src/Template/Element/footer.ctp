@@ -35,15 +35,15 @@
                 </dl>
             </div>
             <div class="col-sm-6 col-md-3">
-                <dl>
-                    <dt class="text-uppercase heading"><?= __('Other Links'); ?></dt>
+                <!--<dl>
+                    <dt class="text-uppercase heading"><?/*= __('Other Links'); */?></dt>
                     <dt class="">
-                        <?= $this->Html->link(__('Media'), '/'); ?>
+                        <?/*= $this->Html->link(__('Media'), '/'); */?>
                     </dt>
                     <dt class="">
-                        <?= $this->Html->link(__('Executive'), '/'); ?>
+                        <?/*= $this->Html->link(__('Executive'), '/'); */?>
                     </dt>
-                </dl>
+                </dl>-->
             </div>
             <div class="col-sm-6 col-md-3">
                 <address>
@@ -52,7 +52,7 @@
                     47011 Duisburg <br>
                     <?php
                     $contactLink = $this->Html->tag('i', '', array('class' => 'fa fa-envelope'));
-                    echo $this->Html->link($contactLink . ' ' . __('Contact Us'), '#', array('escape' => false));
+                    echo $this->Html->link($contactLink . ' ' . __('Contact Us'), ['controller' => 'contacts'], array('escape' => false));
                     ?>
                     <br>
                     <?php
@@ -66,6 +66,9 @@
                     ?>
                 </address>
             </div>
+        </div>
+        <div class="row">
+            <p class="col-md-12">&copy; SHESA Germany e.V. <?= '2011 - '.date('Y')?></p>
         </div>
     </div>
 </footer>

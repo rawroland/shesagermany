@@ -1,20 +1,19 @@
 <?php
+
 namespace App\Test\Fixture;
 
 use Cake\TestSuite\Fixture\TestFixture;
 
 /**
- * ExecutiveFixture
- *
+ * ExecutiveFixture.
  */
 class ExecutiveFixture extends TestFixture
 {
-
     /**
-     * Fields
-     *
-     * @var array
-     */
+ * Fields.
+ *
+ * @var array
+ */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -32,13 +31,13 @@ class ExecutiveFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci'
+'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd
 
     /**
-     * Records
+     * Records.
      *
      * @var array
      */
@@ -51,7 +50,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 1,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 2,
@@ -61,7 +60,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 2,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 3,
@@ -71,7 +70,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 3,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 4,
@@ -81,7 +80,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 4,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 5,
@@ -91,7 +90,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 5,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 6,
@@ -101,7 +100,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 6,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 7,
@@ -111,7 +110,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 7,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 8,
@@ -121,7 +120,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 8,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 9,
@@ -131,7 +130,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 9,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
         [
             'id' => 10,
@@ -141,7 +140,7 @@ class ExecutiveFixture extends TestFixture
             'batch' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
             'person_id' => 10,
             'created' => 1432399730,
-            'modified' => 1432399730
+            'modified' => 1432399730,
         ],
     ];
 }

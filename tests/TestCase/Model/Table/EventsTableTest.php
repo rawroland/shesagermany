@@ -9,7 +9,7 @@ use Cake\TestSuite\TestCase;
 
 class EventsTableTest extends TestCase
 {
-  public $fixtures = [
+    public $fixtures = [
     'Events' => 'app.Events',
     'Activities' => 'app.Activities',
   ];

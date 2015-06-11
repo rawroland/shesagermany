@@ -9,7 +9,7 @@ use Cake\TestSuite\TestCase;
 
 class ParticipantsTableTest extends TestCase
 {
-  public $fixtures = [
+    public $fixtures = [
     'Participants' => 'app.Participants',
   ];
 
