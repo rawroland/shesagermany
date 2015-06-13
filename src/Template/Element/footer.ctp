@@ -3,7 +3,7 @@
  * @var $this Cake\View\View
  */
 ?>
-<footer class="footer row row-black">
+<footer class="footer row-black">
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-3">
