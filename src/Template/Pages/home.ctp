@@ -10,7 +10,7 @@ echo $this->element('marketing');
             <div class="col-md-12 text-center">
                 <h2>Assisting in the pursuit of Excellence</h2>
 
-                <p>We were thought to strive for the best. This means impacting the world in positive ways. We do this
+                <p>We were taught to strive for the best. This means impacting the world in positive ways. We do this
                     by:</p>
             </div>
             <div class="col-md-3 col-sm-6">
