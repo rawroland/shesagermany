@@ -29,25 +29,26 @@
             ?>
             <div class="row">
                 <div class="col-md-4 col-sm-4 text-muted">
-                    <i class="fa fa-calendar-o fa-2x"></i>&nbsp;
+                    <i class="fa fa-calendar-o fa-2x text-primary"></i>&nbsp;
                     <?= $this->Time->format($event->start, __('dd.MM.Y')) ?>
-                    <i class="fa fa-arrow-right"></i>
+                    <i class="fa fa-arrow-right text-primary"></i>
                     <?= $this->Time->format($event->end, __('dd.MM.Y')) ?>
                 </div>
                 <div class="col-md-8 col-sm-8 text-muted">
-                    <i class="fa fa-map-marker fa-2x"></i>&nbsp;
+                    <i class="fa fa-map-marker fa-2x text-primary"></i>&nbsp;
                     <?= $event->location ?>
                 </div>
             </div>
             <div class="row">
                 <p class="col-md-12 top-md-offset blog-main">
-                    <?= $this->Html->image($event->getCoverImage(),
+                    <?= $this->Html->image($event->getImage("thumb"),
                         ['class' => 'img-responsive pull-left', 'url' => $eventUrl]); ?>
                     <?= $event->description ?>
                 </p>
             </div>
             <div class="row">
                 <?php if (!empty($event->activities)): ?>
+                    <div class="col-md-12"> <h2><?= __('Program')?></h2></div>
                     <div class="col-md-12">
                         <?php foreach ($event->activities as $activity): ?>
                             <div class="panel panel-default">
@@ -56,9 +57,9 @@
                                 <div class="panel-body">
                                     <div class="row">
                                         <div class="col-md-12 text-muted">
-                                            <i class="fa fa-clock-o"></i>&nbsp;
+                                            <i class="fa fa-clock-o text-primary"></i>&nbsp;
                                             <?= $this->Time->format($activity->start_time, __('dd.MM.Y H:mm')) ?>
-                                            <i class="fa fa-arrow-right"></i>
+                                            <i class="fa fa-arrow-right text-primary"></i>
                                             <?= $this->Time->format($activity->end_time, __('dd.MM.Y H:mm')) ?>
                                         </div>
                                     </div>

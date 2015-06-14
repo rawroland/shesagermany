@@ -49,7 +49,7 @@ foreach ($events as $event):
         </div>
         <div class="col-md-4 col-sm-4 col-md-pull-8 col-sm-pull-8">
             <?=
-            $this->Html->image($event->getCoverImage(),
+            $this->Html->image($event->getImage('thumb'),
                 ['class' => 'img-responsive img-thumbnail', 'url' => $eventUrl]
             );
             ?>

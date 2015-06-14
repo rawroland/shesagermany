@@ -3,6 +3,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\Core\Configure;
 
 /**
  * Class Event.
@@ -10,18 +11,18 @@ use Cake\ORM\Entity;
 class Event extends Entity
 {
     /**
-     * @todo Functionality for getting cover photo and return default thumb if not found
+     * Retrieve the relevant image for an event.
+     *
+     * @param string $type The type of the image to be retrieved.
+     * @return string The cake relevant image location.
      */
-    public function getCoverImage()
+    public function getImage($type = "thumb")
     {
-        return 'default-thumb.png';
-    }
+        $location = "events".DS.$this->id.DS."$type.jpg";
+        if(!is_file(Configure::read('App.imageBaseUrl').$location)) {
+            return "default-$type.png";
+        }
 
-    /**
-     * @todo Functionality for getting cover photo and return default thumb if not found
-     */
-    public function getFeatureImage()
-    {
-        return 'default-feature.png';
+        return $location;
     }
 }

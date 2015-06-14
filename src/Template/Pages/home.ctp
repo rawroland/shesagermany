@@ -109,7 +109,7 @@ echo $this->element('marketing');
                         <?= $promoted->location ?>
                     </div>
                     <p class="col-md-12 text-justify top-md-offset">
-                        <?= $this->Text->truncate($promoted->description, 400) ?>
+                        <?= $this->Text->truncate($promoted->description, 500, array('exact' =>false)) ?>
                     </p>
                     <?php if (!empty($promoted->activities)): ?>
                         <div class="col-md-12">
@@ -131,7 +131,7 @@ echo $this->element('marketing');
             </div>
             <div class="col-md-4 col-sm-4 col-xs-12 col-md-pull-8 col-sm-pull-8">
                 <?=
-                $this->Html->image($promoted->getFeatureImage(), ['class' => 'img-responsive', 'url' => $promotedUrl]);
+                $this->Html->image($promoted->getImage("feature"), ['class' => 'img-responsive', 'url' => $promotedUrl]);
                 ?>
             </div>
         </div>
