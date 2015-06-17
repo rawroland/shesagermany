@@ -24,13 +24,13 @@
                 SHESA Germany e.V. is a non-profit organization of the alumni of Sacred Heart College (SaHeCo), Mankon,
                 Bamenda,
                 Cameroon based in Germany. It is a registered association (eingetragene Verein) in Germany, with about
-                25
+                50
                 regular members.
             </p>
 
             <p>
-                <?= $this->Html->image('blog_image.png', array('class' => 'img-responsive')); ?>
-                <span class="text-muted text-center">Launching of SHESA Germany e.V in Erlangen Germany</span>
+                <?= $this->Html->image('about/launching_toast.png', array('class' => 'img-responsive')); ?>
+                <span class="text-muted text-center">Inaugural general assembly meeting of SHESA Germany e.V. in Erlangen Germany</span>
             </p>
 
             <p>
@@ -44,8 +44,8 @@
             </p>
 
             <p>
-                <?= $this->Html->image('blog_image.png', array('class' => 'img-responsive')); ?>
-                <span class="text-muted text-center">Launching of SHESA Germany e.V in Erlangen Germany</span>
+                <?= $this->Html->image('about/launching_bishop.png', array('class' => 'img-responsive')); ?>
+                <span class="text-muted text-center">Launching of SHESA Germany e.V., with His Grace Bishop Nkuo in Essen, Germany</span>
             </p>
 
             <p>
@@ -63,8 +63,8 @@
             </p>
 
             <p>
-                <?= $this->Html->image('blog_image.png', array('class' => 'img-responsive')); ?>
-                <span class="text-muted text-center">Launching of SHESA Germany e.V in Erlangen Germany</span>
+                <?= $this->Html->image('about/launching_panelists.png', array('class' => 'img-responsive')); ?>
+                <span class="text-muted text-center">Experts panelists during SHESA Germany's inaugural business empowerment seminar, "Be your own Boss"</span>
             </p>
 
             <p>

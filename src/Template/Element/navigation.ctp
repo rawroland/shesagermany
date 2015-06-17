@@ -197,11 +197,7 @@
                     $icon = $this->Html->tag('i', '', array('class' => 'fa fa-envelope-o fa-2x'));
                     $br = $this->Html->tag('br');
                     $text = $this->Html->tag('strong', __('contact'), array('class' => 'text-uppercase'));
-                    echo $this->Html->link($icon . $br . $text . $br, /*array('controller' => 'contacts')*/
-                    '#', array(
-                        'escape' =>
-                            false
-                    ));
+                    echo $this->Html->link($icon . $br . $text . $br, array('controller' => 'contacts'), array('escape' => false));
                     ?>
                 </li>
             </ul>

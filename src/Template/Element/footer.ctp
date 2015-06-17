@@ -62,7 +62,7 @@
                     <br>
                     <?php
                     $websiteLink = $this->Html->tag('i', '', array('class' => 'fa fa-globe'));
-                    echo $this->Html->link($emailLink . ' www.shesagermany.org', '/', array('escape' => false));
+                    echo $this->Html->link($websiteLink . ' www.shesagermany.org', '/', array('escape' => false));
                     ?>
                 </address>
             </div>

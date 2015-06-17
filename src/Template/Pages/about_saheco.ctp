@@ -33,8 +33,8 @@
             </p>
 
             <p>
-                <?= $this->Html->image('blog_image.png', array('class' => 'img-responsive')); ?>
-                <span class="text-muted text-center">Launching of SHESA Germany e.V in Erlangen Germany</span>
+                <?= $this->Html->image('about/saheco_entrance.png', array('class' => 'img-responsive')); ?>
+                <span class="text-muted text-center">Sacred Heart College Mankon Bamenda, Cameroon</span>
             </p>
 
             <p>
@@ -47,8 +47,8 @@
             </p>
 
             <p>
-                <?= $this->Html->image('blog_image.png', array('class' => 'img-responsive')); ?>
-                <span class="text-muted text-center">Launching of SHESA Germany e.V in Erlangen Germany</span>
+                <?= $this->Html->image('about/saheco_first_batch.png', array('class' => 'img-responsive')); ?>
+                <span class="text-muted text-center">Inaugural batch during the Golden Jubilee of Sacred Heart College Mankon Bamenda, Cameroon</span>
             </p>
 
             <p>
@@ -69,8 +69,8 @@
             </p>
 
             <p>
-                <?= $this->Html->image('blog_image.png', array('class' => 'img-responsive')); ?>
-                <span class="text-muted text-center">Launching of SHESA Germany e.V in Erlangen Germany</span>
+                <?= $this->Html->image('about/saheco_mass.png', array('class' => 'img-responsive')); ?>
+                <span class="text-muted text-center">Students during celebration of holy mass</span>
             </p>
 
             <p>

@@ -11,5 +11,6 @@ class ContactsController extends AppController
 
     public function index()
     {
+        $this->pageTitle = __('Contact Us');
     }
 }
