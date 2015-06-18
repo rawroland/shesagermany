@@ -26,12 +26,12 @@
                     <dt class="">
                         <?= $this->Html->link(__('Events'), array('controller' => 'events')); ?>
                     </dt>
-                    <dt class="">
-                        <?= $this->Html->link(__('Projects'), array('controller' => 'projects')); ?>
+                    <!--<dt class="">
+                        <?/*= $this->Html->link(__('Projects'), array('controller' => 'projects')); */?>
                     </dt>
                     <dt class="">
-                        <?= $this->Html->link(__('Partners'), '/'); ?>
-                    </dt>
+                        <?/*= $this->Html->link(__('Partners'), '/'); */?>
+                    </dt>-->
                 </dl>
             </div>
             <div class="col-sm-6 col-md-3">

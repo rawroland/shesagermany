@@ -19,7 +19,7 @@
                             <div class="col-md-2"><i class="fa fa-mobile text-primary"></i> 015218129920</div>
                             <div class="col-md-2"><i class="fa fa-mobile text-primary"></i> 015216995224</div>
                             <div class="col-md-2"><i class="fa fa-mobile text-primary"></i> 01799469539</div>
-                            <div class="col-md-3"><i class="fa fa-at text-primary"></i> tickets@shesagermany.org</div>
+                            <div class="col-md-3"><i class="fa fa-at text-primary"></i> <?= $this->Html->link('info@shesagermany.org', 'mailto:info@shesagermany.org', array('escape' => false))?></div>
                         </strong>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="text-primary"><i class="fa fa-envelope"></i><strong> Contact</strong></h4>
+                            <h4><i class="fa fa-envelope text-primary"></i><strong> Contact</strong></h4>
                         </div>
                         <div class="panel-body">
                             <address>
@@ -55,7 +55,7 @@
                 <div class="col-md-4 col-sm-6">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="text-primary"><i class="fa fa-map-marker"></i><strong> Social</strong></h4>
+                            <h4><i class="fa fa-map-marker text-primary"></i><strong> Social</strong></h4>
                         </div>
                         <div class="panel-body">
                             <address>
@@ -90,7 +90,7 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <h4 class="text-primary"><i class="fa fa-map-marker"></i><strong> Location</strong></h4>
+                            <h4><i class="fa fa-map-marker text-primary"></i><strong> Location</strong></h4>
                         </div>
                         <div class="panel-body">
                             <address>
