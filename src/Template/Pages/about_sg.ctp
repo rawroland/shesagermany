@@ -2,6 +2,7 @@
 /**
  * @var $this \Cake\View\View
  */
+$this->assign('title', __('About SHESA Germany e.V.'));
 ?>
 <div class="wrap row">
     <div class="container">

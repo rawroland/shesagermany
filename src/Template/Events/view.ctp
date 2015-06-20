@@ -2,6 +2,7 @@
 /**
  * @var $this \Cake\View\View
  */
+$this->assign('title', $event->title);
 ?>
 <div class="wrap row">
     <div class="container">

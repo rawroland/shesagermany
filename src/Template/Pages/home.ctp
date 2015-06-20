@@ -3,6 +3,7 @@
  * @var $this \Cake\View\View
  */
 echo $this->element('marketing');
+$this->assign('title', __('SHESA Germany e.V.'));
 ?>
 <div class="">
     <div class="container">

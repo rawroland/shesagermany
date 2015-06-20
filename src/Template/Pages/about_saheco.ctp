@@ -2,6 +2,7 @@
 /**
  * @var $this \Cake\View\View
  */
+$this->assign('title', __('About Sacred Heart College Mankon Bamenda, Cameroon'));
 ?>
 <div class="wrap row">
     <div class="container">

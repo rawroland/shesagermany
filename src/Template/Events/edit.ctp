@@ -2,6 +2,7 @@
 /**
  * @var $this \Cake\View\View
  */
+$this->assign('title', __('Edit Event'));
 ?>
 <div class="row">
     <div class="col-md-12">
