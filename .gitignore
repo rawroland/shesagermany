@@ -11,7 +11,10 @@ models/.metadata
 cache.properties
 
 #Build
-/build/*
+!build/phpmd.xml
+!build/phpunit.xml
+!build/phpdox.xml
+build/*
 
 #Grunt
 webroot/plugins/bootstrap/grunt/
