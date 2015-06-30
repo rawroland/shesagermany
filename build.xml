@@ -39,7 +39,7 @@
         <property name="prepare.done" value="true"/>
     </target>
 
-    <target name="composer" description="Installing composer dependencies">
+    <target name="composer" description="Installing or updating composer dependencies">
         <exec executable="composer" failonerror="true">
             <arg value="update"/>
         </exec>

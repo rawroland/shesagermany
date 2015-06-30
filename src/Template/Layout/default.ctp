@@ -16,11 +16,11 @@
     <?= $this->Html->meta('icon') ?>
     <?= $this->fetch('meta') ?>
     <link type="text/css" rel="stylesheet"
-          href="<?= $this->request->webroot ?>plugins/bootstrap/dist/css/bootstrap.css">
+          href="<?= $this->request->webroot ?>plugins/bootstrap/dist/css/bootstrap.min.css">
     <link type="text/css" rel="stylesheet"
-          href="<?= $this->request->webroot ?>plugins/fontawesome/css/font-awesome.css">
-    <link type="text/css" rel="stylesheet"
-          href="<?= $this->request->webroot ?>plugins/ekko-lightbox/dist/ekko-lightbox.css">
+          href="<?= $this->request->webroot ?>plugins/fontawesome/css/font-awesome.min.css">
+    <!--<link type="text/css" rel="stylesheet"
+          href="<?/*= $this->request->webroot */?>plugins/ekko-lightbox/dist/ekko-lightbox.css">-->
     <!-- SG styles-->
     <?= $this->Html->css('sg-styles.css') ?>
     <?= $this->fetch('css') ?>
@@ -45,9 +45,9 @@
 </div>
 <?= $this->element('footer'); ?>
 
-<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/jquery/dist/jquery.js"></script>
-<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/bootstrap/dist/js/bootstrap.js"></script>
-<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/ekko-lightbox/dist/ekko-lightbox.js"></script>
+<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script type="text/javascript"  src="--><?//= $this->request->webroot ?><!--plugins/ekko-lightbox/dist/ekko-lightbox.js"></script>-->
 <?= $this->Html->script('sg'); ?>
 <?= $this->fetch('script') ?>
 </body>

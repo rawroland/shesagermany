@@ -28,6 +28,6 @@
         "jquery": "1.x.x",
         "bootstrap": "3.x.x",
         "fontawesome": "4.x.x",
-	"ekko-lightbox": "3.x.x"
+	    "ekko-lightbox": "3.x.x"
     }
 }
