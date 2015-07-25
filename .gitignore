@@ -9,3 +9,13 @@ models/.metadata
 #Files
 .editorconfig
 cache.properties
+
+#Build
+!build/phpmd.xml
+!build/phpunit.xml
+!build/phpdox.xml
+build/*
+
+#Grunt
+webroot/plugins/bootstrap/grunt/
+webroot/plugins/bootstrap/node_modules/

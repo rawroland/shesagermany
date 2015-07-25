@@ -5,7 +5,7 @@
 ?>
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,10 +15,12 @@
 
     <?= $this->Html->meta('icon') ?>
     <?= $this->fetch('meta') ?>
-    <!-- Bootstrap core CSS -->
-    <?= $this->Html->css('bootstrap-3.3.1/dist/css/bootstrap.css') ?>
-    <!-- Font awesome core CSS -->
-    <?= $this->Html->css('font-awesome-4.2.0/font-awesome-4.2.0/css/font-awesome.css') ?>
+    <link type="text/css" rel="stylesheet"
+          href="<?= $this->request->webroot ?>plugins/bootstrap/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="<?= $this->request->webroot ?>plugins/fontawesome/css/font-awesome.min.css">
+    <!--<link type="text/css" rel="stylesheet"
+          href="<?/*= $this->request->webroot */?>plugins/ekko-lightbox/dist/ekko-lightbox.css">-->
     <!-- SG styles-->
     <?= $this->Html->css('sg-styles.css') ?>
     <?= $this->fetch('css') ?>
@@ -30,18 +32,24 @@
     <![endif]-->
 
     <title>
-      SHESA Germany e.V. |
-      <?= $this->fetch('title'); ?>
+        SHESA Germany e.V. |
+        <?= $this->fetch('title'); ?>
     </title>
-  </head>
-  <body>
-    <?= $this->element('social-media-strip'); ?>
-    <?= $this->element('header'); ?>
-
+</head>
+<body>
+<?= $this->element('social-media-strip'); ?>
+<?= $this->element('header'); ?>
+<div id="content">
     <?= $this->fetch('content'); ?>
-    <?= $this->element('footer'); ?>
+    <div class="push"></div>
+</div>
+<?= $this->element('footer'); ?>
 
-    <?= $this->fetch('script') ?>
-  </body>
+<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script type="text/javascript"  src="--><?//= $this->request->webroot ?><!--plugins/ekko-lightbox/dist/ekko-lightbox.js"></script>-->
+<?= $this->Html->script('sg'); ?>
+<?= $this->fetch('script') ?>
+</body>
 </html>
 

@@ -43,11 +43,16 @@ Router::defaultRouteClass('Route');
 
 Router::scope('/', function ($routes) {
 /**
+ * * Connect the base home path to a specific action in the pages controller since special data will have to be retrieved there.
+ */
+	$routes->connect('/', ['controller' => 'Pages', 'action' => 'home']);
+
+/**
  * Here, we are connecting '/' (base path) to a controller called 'Pages',
  * its action called 'display', and we pass a param to select the view file
  * to use (in this case, src/Template/Pages/home.ctp)...
  */
-	$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+	//$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
 /**
  * ...and connect the rest of 'Pages' controller's URLs.
