@@ -1,0 +1,33 @@
+{
+    "name": "SHESA Germany e.V.",
+    "version": "0.1",
+    "homepage": "https://github.com/rawroland/shesagermany",
+    "authors": [
+        "Roland Awemo <rawroro@googlemail.com>"
+    ],
+    "description": "SHESA Germany e.V. Site relaunch",
+    "main": "webroot/index.php",
+    "moduleType": [
+        "globals"
+    ],
+    "keywords": [
+        "SHESA",
+        "Germany",
+        "eingetragene",
+        "Verein"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "1.x.x",
+        "bootstrap": "3.x.x",
+        "fontawesome": "4.x.x",
+	    "ekko-lightbox": "3.x.x"
+    }
+}
