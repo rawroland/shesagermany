@@ -103,9 +103,9 @@
                         </li>
                     </ul>
                 </li>
-                <!--<li class="<?/*= $ProjectsActive */?>">
+                <li class="<?= $ProjectsActive ?>">
                     <?php
-/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-lightbulb-o fa-2x'));
+                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-lightbulb-o fa-2x'));
                     $br = $this->Html->tag('br');
                     $text = $this->Html->tag('strong', 'projects', array('class' => 'text-uppercase'));
                     $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
@@ -117,20 +117,20 @@
                         'role' => 'button',
                         'aria-expanded' => 'false'
                     ));
-                    */?>
+                    ?>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <?/*= $this->Html->link(__('Projects'), array('controller' => 'projects')) */?>
+                            <?= $this->Html->link(__('Projects'), array('controller' => 'projects'))?>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <?/*= $this->Html->link(__('Running Projects'),
-                                array('controller' => 'projects', 'action' => 'running')) */?>
+                            <?= $this->Html->link(__('Running Projects'),
+                                array('controller' => 'projects', 'action' => 'running')) ?>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <?/*= $this->Html->link(__('Completed Projects'),
-                                array('controller' => 'projects', 'action' => 'completed')) */?>
+                            <?= $this->Html->link(__('Completed Projects'),
+                                array('controller' => 'projects', 'action' => 'completed'))?>
                         </li>
                     </ul>
                 </li>-->
