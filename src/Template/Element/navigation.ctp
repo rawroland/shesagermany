@@ -133,7 +133,7 @@
                                 array('controller' => 'projects', 'action' => 'completed'))?>
                         </li>
                     </ul>
-                </li>-->
+                </li>
                 <!--<li class="<?/*= $ExecutiveActive */?>">
                     <?php
 /*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-users fa-2x'));
