@@ -240,7 +240,7 @@ class EventsTableTest extends TestCase
         $deletedActivities = 0;
         foreach ($event->activities as $activity) {
             if ($activity->deleted) {
-                $deletedActivities++;
+                ++$deletedActivities;
             }
         }
         $totalActivities = count($event->activities);
@@ -252,7 +252,7 @@ class EventsTableTest extends TestCase
         $activeActivities = 0;
         foreach ($event->activities as $activity) {
             if (!$activity->deleted) {
-                $activeActivities++;
+                ++$activeActivities;
             }
         }
         $totalActivities = count($event->activities);
