@@ -47,7 +47,6 @@
 
 <script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript"  src="<?= $this->request->webroot ?>plugins/bootstrap/dist/js/bootstrap.min.js"></script>
-<!--<script type="text/javascript"  src="--><?//= $this->request->webroot ?><!--plugins/ekko-lightbox/dist/ekko-lightbox.js"></script>-->
 <?= $this->Html->script('sg'); ?>
 <?= $this->fetch('script') ?>
 </body>

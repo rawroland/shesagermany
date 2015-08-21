@@ -28,6 +28,7 @@ class ProjectsController extends AppController
      * Add or edit an project depending on the presence of an id.
      *
      * @param int $projectId Project id to be edited
+     * @return void
      */
     public function edit($projectId = null)
     {
@@ -58,7 +59,7 @@ class ProjectsController extends AppController
     public function index()
     {
         $projects = $this->paginate($this->Projects);
-        $this->pageTitle = __('All').' '.__('Projects');
+        $this->pageTitle = __('All Projects');
         $this->set(compact('projects'));
     }
 
