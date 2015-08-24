@@ -20,7 +20,9 @@ $this->assign('title', __('Contact Us'));
                             <div class="col-md-2"><i class="fa fa-mobile text-primary"></i> 015218129920</div>
                             <div class="col-md-2"><i class="fa fa-mobile text-primary"></i> 015216995224</div>
                             <div class="col-md-2"><i class="fa fa-mobile text-primary"></i> 01799469539</div>
-                            <div class="col-md-3"><i class="fa fa-at text-primary"></i> <?= $this->Html->link('info@shesagermany.org', 'mailto:info@shesagermany.org', array('escape' => false))?></div>
+                            <div class="col-md-3"><i
+                                    class="fa fa-at text-primary"></i> <?= $this->Html->link('info@shesagermany.org', 'mailto:info@shesagermany.org', array('escape' => false)) ?>
+                            </div>
                         </strong>
                     </div>
                 </div>
@@ -28,8 +30,10 @@ $this->assign('title', __('Contact Us'));
             <div class="row">
                 <div class="col-md-12">
                     <p class="fa-2x">
-                        Would you like to find out more about <span class="text-primary">SHESA Germany e.V.</span> or join us in being a positive influence on society?
+                        Would you like to find out more about <span class="text-primary">SHESA Germany e.V.</span> or
+                        join us in being a positive influence on society?
                     </p>
+
                     <p class="fa-2x">Contact us:</p>
                 </div>
                 <div class="col-md-4 col-sm-6">
@@ -98,7 +102,7 @@ $this->assign('title', __('Contact Us'));
                                 <strong>SHESA GERMANY e.V</strong> <br>
                                 Postfach 10 11 10 <br>
                                 47011 Duisburg <br>
-                                </address>
+                            </address>
                             </p>
                         </div>
                     </div>

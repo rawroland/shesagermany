@@ -17,13 +17,13 @@ class EventsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-      'events' => 'app.events',
-      'activities' => 'app.activities',
-      'participants' => 'app.participants',
-      'activities_participants' => 'app.activities_participants',
-      'people' => 'app.people',
-      'organization' => 'app.organizations',
-      'addresses' => 'app.addresses',
+        'events' => 'app.events',
+        'activities' => 'app.activities',
+        'participants' => 'app.participants',
+        'activities_participants' => 'app.activities_participants',
+        'people' => 'app.people',
+        'organization' => 'app.organizations',
+        'addresses' => 'app.addresses',
     ];
 
     /**

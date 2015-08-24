@@ -15,6 +15,7 @@ class EventsTable extends Table
     public $defaultConditions = ['Events.deleted' => false];
     public $defaultLimit = 5;
     public $defaultSort = ['Events.start' => 'desc'];
+
     /**
      * @param array $config
      */
@@ -61,7 +62,7 @@ class EventsTable extends Table
     /**
      * Retrieve a single event record.
      *
-     * @param int   $eventId
+     * @param int $eventId
      * @param array $parameters Additional parameters for searching.
      *
      * @return \Cake\Datasource\EntityInterface|mixed

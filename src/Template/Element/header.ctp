@@ -4,6 +4,6 @@
  */
 ?>
 <header class="row header">
-  <?= $this->element('navigation'); ?>
-  <?= $this->fetch('marketing'); ?>
+    <?= $this->element('navigation'); ?>
+    <?= $this->fetch('marketing'); ?>
 </header>

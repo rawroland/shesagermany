@@ -45,7 +45,7 @@ $this->assign('title', __('SHESA Germany e.V.'));
                         <?= $promoted->location ?>
                     </div>
                     <p class="col-md-12 text-justify top-md-offset">
-                        <?= $this->Text->truncate($promoted->description, 500, array('exact' =>false)) ?>
+                        <?= $this->Text->truncate($promoted->description, 500, array('exact' => false)) ?>
                     </p>
                     <?php if (!empty($promoted->activities)): ?>
                         <div class="col-md-12">

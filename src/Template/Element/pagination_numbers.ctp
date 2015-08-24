@@ -3,7 +3,7 @@
  * @var $this \Cake\View\View
  */
 ?>
-<?php if($this->Paginator->hasPage(2)):?>
+<?php if ($this->Paginator->hasPage(2)): ?>
     <div class="row paginator">
         <ul class="pagination pagination-lg pull-right">
             <?php
@@ -17,4 +17,4 @@
             <?= $this->Paginator->next(__('next{0}', ' <i class="fa fa-angle-right"></i>'), $options) ?>
         </ul>
     </div>
-<?php endif;?>
+<?php endif; ?>

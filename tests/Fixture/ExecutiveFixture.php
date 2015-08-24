@@ -10,10 +10,10 @@ use Cake\TestSuite\Fixture\TestFixture;
 class ExecutiveFixture extends TestFixture
 {
     /**
- * Fields.
- *
- * @var array
- */
+     * Fields.
+     *
+     * @var array
+     */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -31,7 +31,7 @@ class ExecutiveFixture extends TestFixture
             'primary' => ['type' => 'primary', 'columns' => ['id'], 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
+            'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd

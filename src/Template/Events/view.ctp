@@ -49,7 +49,7 @@ $this->assign('title', $event->title);
             </div>
             <div class="row">
                 <?php if (!empty($event->activities)): ?>
-                    <div class="col-md-12"> <h2><?= __('Program')?></h2></div>
+                    <div class="col-md-12"><h2><?= __('Program') ?></h2></div>
                     <div class="col-md-12">
                         <?php foreach ($event->activities as $activity): ?>
                             <div class="panel panel-default">
@@ -83,21 +83,21 @@ $this->assign('title', $event->title);
                                     <?php if (!empty($activity->participants)): ?>
                                         <div class="col-md-12"><h3><?= __('Participants') ?></h3></div>
                                         <table class="table table-condensed table-responsive table-striped table-hover">
-                                                    <thead>
-                                                    <tr>
-                                                        <th width="30%"><?= __('Name') ?></th>
-                                                        <th width="10%"><?= __('Role') ?></th>
-                                                        <th width="60%"><?= __('Description') ?></th>
-                                                    </tr>
-                                                    </thead>
-                                                    <?php foreach ($activity->participants as $participant): ?>
-                                                        <tr>
-                                                            <td><?= $participant->getName() ?></td>
-                                                            <td><?= $participant->role ?></td>
-                                                            <td><?= $participant->_joinData['description'] ?></td>
-                                                        </tr>
-                                                    <?php endforeach; ?>
-                                                </table>
+                                            <thead>
+                                            <tr>
+                                                <th width="30%"><?= __('Name') ?></th>
+                                                <th width="10%"><?= __('Role') ?></th>
+                                                <th width="60%"><?= __('Description') ?></th>
+                                            </tr>
+                                            </thead>
+                                            <?php foreach ($activity->participants as $participant): ?>
+                                                <tr>
+                                                    <td><?= $participant->getName() ?></td>
+                                                    <td><?= $participant->role ?></td>
+                                                    <td><?= $participant->_joinData['description'] ?></td>
+                                                </tr>
+                                            <?php endforeach; ?>
+                                        </table>
                                     <?php endif; ?>
                                 </div>
                             </div>

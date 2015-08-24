@@ -92,7 +92,7 @@ class ProjectsController extends AppController
     {
         $this->autoRender = false;
         $this->request->allowMethod(['post', 'delete']);
-        if (!$this->Projects->exists([$this->Projects->alias().'.'.$this->Projects->primaryKey() => $projectId])) {
+        if (!$this->Projects->exists([$this->Projects->alias() . '.' . $this->Projects->primaryKey() => $projectId])) {
             $this->Flash->error("The project with id $projectId was not found!");
 
             return $this->redirect($this->referer());

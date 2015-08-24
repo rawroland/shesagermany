@@ -373,5 +373,7 @@ ul.navbar-nav a:hover, ul.navbar-nav a:focus, ul.navbar-nav a:focus {
 
 /* Responsive table fix */
 @-moz-document url-prefix() {
-    fieldset { display: table-cell; }
+    fieldset {
+        display: table-cell;
+    }
 }

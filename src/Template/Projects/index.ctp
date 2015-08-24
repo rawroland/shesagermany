@@ -19,7 +19,7 @@
 
         <div class="col-md-9">
             <?= $this->element('page_title') ?>
-            <?= $this->element('Projects/list', compact('projects'));?>
+            <?= $this->element('Projects/list', compact('projects')); ?>
         </div>
     </div>
 </div>

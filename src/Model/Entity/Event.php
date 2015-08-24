@@ -19,8 +19,8 @@ class Event extends Entity
      */
     public function getImage($type = 'thumb')
     {
-        $location = 'events'.DS.$this->id.DS."$type.jpg";
-        if (!is_file(Configure::read('App.imageBaseUrl').$location)) {
+        $location = 'events' . DS . $this->id . DS . "$type.jpg";
+        if (!is_file(Configure::read('App.imageBaseUrl') . $location)) {
             return "default-$type.png";
         }
 

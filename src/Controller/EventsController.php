@@ -58,7 +58,7 @@ class EventsController extends AppController
     public function index()
     {
         $events = $this->paginate($this->Events);
-        $this->pageTitle = __('All').' '.__('Events');
+        $this->pageTitle = __('All') . ' ' . __('Events');
         $this->set(compact('events'));
     }
 
@@ -66,7 +66,7 @@ class EventsController extends AppController
     {
         $this->paginate['conditions'] = array_merge($this->paginate['conditions'], ["{$this->Events->alias()}.end >" => new Time()]);
         $events = $this->paginate($this->Events);
-        $this->pageTitle = __('Upcoming').' '.__('Events');
+        $this->pageTitle = __('Upcoming') . ' ' . __('Events');
         $this->view = 'index';
         $this->set(compact('events'));
     }
@@ -75,7 +75,7 @@ class EventsController extends AppController
     {
         $this->paginate['conditions'] = array_merge($this->paginate['conditions'], ["{$this->Events->alias()}.end <" => new Time()]);
         $events = $this->paginate($this->Events);
-        $this->pageTitle = __('Past').' '.__('Events');
+        $this->pageTitle = __('Past') . ' ' . __('Events');
         $this->view = 'index';
         $this->set(compact('events'));
     }
@@ -91,7 +91,7 @@ class EventsController extends AppController
     {
         $this->autoRender = false;
         $this->request->allowMethod(['post', 'delete']);
-        if (!$this->Events->exists([$this->Events->alias().'.'.$this->Events->primaryKey() => $eventId])) {
+        if (!$this->Events->exists([$this->Events->alias() . '.' . $this->Events->primaryKey() => $eventId])) {
             $this->Flash->error("The event with id $eventId was not found!");
 
             return $this->redirect($this->referer());

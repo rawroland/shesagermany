@@ -15,6 +15,7 @@ class ProjectsTable extends Table
     public $defaultConditions = ['Projects.deleted' => false];
     public $defaultLimit = 5;
     public $defaultSort = ['Projects.start' => 'desc'];
+
     /**
      * @param array $config
      */
@@ -59,7 +60,7 @@ class ProjectsTable extends Table
     /**
      * Retrieve a single project record.
      *
-     * @param int   $projectId
+     * @param int $projectId
      * @param array $parameters Additional parameters for searching.
      *
      * @return \Cake\Datasource\EntityInterface|mixed

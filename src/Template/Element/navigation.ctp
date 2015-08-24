@@ -27,12 +27,12 @@
             $homeActive = 'active';
             $aboutActive = $EventsActive = $ProjectsActive = $ExecutiveActive = $MediaActive = $PartnersActive = $ContactsActive = '';
             $controller = $this->request->param('controller');
-            if('Pages' == $controller && in_array($this->request->param('pass.0'), ['about_sg', 'about_saheco'])) {
+            if ('Pages' == $controller && in_array($this->request->param('pass.0'), ['about_sg', 'about_saheco'])) {
                 $aboutActive = 'active';
             }
             $activeVariable = "{$controller}Active";
             $$activeVariable = 'active';
-            if($aboutActive || $EventsActive || $ProjectsActive || $ExecutiveActive || $MediaActive || $PartnersActive || $ContactsActive) {
+            if ($aboutActive || $EventsActive || $ProjectsActive || $ExecutiveActive || $MediaActive || $PartnersActive || $ContactsActive) {
                 $homeActive = '';
             }
             ?>
@@ -120,7 +120,7 @@
                     ?>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <?= $this->Html->link(__('Projects'), array('controller' => 'projects'))?>
+                            <?= $this->Html->link(__('Projects'), array('controller' => 'projects')) ?>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -130,67 +130,67 @@
                         <li class="divider"></li>
                         <li>
                             <?= $this->Html->link(__('Completed Projects'),
-                                array('controller' => 'projects', 'action' => 'completed'))?>
+                                array('controller' => 'projects', 'action' => 'completed')) ?>
                         </li>
                     </ul>
                 </li>
-                <!--<li class="<?/*= $ExecutiveActive */?>">
+                <!--<li class="<? /*= $ExecutiveActive */ ?>">
                     <?php
-/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-users fa-2x'));
-                    $br = $this->Html->tag('br');
-                    $text = $this->Html->tag('strong', 'executive', array('class' => 'text-uppercase'));
-                    $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
-                    echo $this->Html->link($icon . $br . $text . $br . $caret, '#', array(
-                        'escape' => false,
-                        'class' =>
-                            'dropdown-toggle',
-                        'data-toggle' => 'dropdown',
-                        'role' => 'button',
-                        'aria-expanded' => 'false'
-                    ));
-                    */?>
+                /*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-users fa-2x'));
+                                    $br = $this->Html->tag('br');
+                                    $text = $this->Html->tag('strong', 'executive', array('class' => 'text-uppercase'));
+                                    $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
+                                    echo $this->Html->link($icon . $br . $text . $br . $caret, '#', array(
+                                        'escape' => false,
+                                        'class' =>
+                                            'dropdown-toggle',
+                                        'data-toggle' => 'dropdown',
+                                        'role' => 'button',
+                                        'aria-expanded' => 'false'
+                                    ));
+                                    */ ?>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <?/*= $this->Html->link(__('Current Executive'), array('controller' => 'executive', 'action' => 'current'))*/?>
+                            <? /*= $this->Html->link(__('Current Executive'), array('controller' => 'executive', 'action' => 'current'))*/ ?>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <?/*= $this->Html->link(__('Past Executive'), array('controller' => 'executive', 'action' => 'past'))*/?>
+                            <? /*= $this->Html->link(__('Past Executive'), array('controller' => 'executive', 'action' => 'past'))*/ ?>
                         </li>
                     </ul>
                 </li>-->
-                <!--<li class="<?/*= $MediaActive */?>">
+                <!--<li class="<? /*= $MediaActive */ ?>">
                     <?php
-/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-camera-retro fa-2x'));
-                    $br = $this->Html->tag('br');
-                    $text = $this->Html->tag('strong', __('media'), array('class' => 'text-uppercase'));
-                    $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
-                    echo $this->Html->link($icon . $br . $text . $br . $caret, '#', array(
-                        'escape' => false,
-                        'class' =>
-                            'dropdown-toggle',
-                        'data-toggle' => 'dropdown',
-                        'role' => 'button',
-                        'aria-expanded' => 'false'
-                    ));
-                    */?>
+                /*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-camera-retro fa-2x'));
+                                    $br = $this->Html->tag('br');
+                                    $text = $this->Html->tag('strong', __('media'), array('class' => 'text-uppercase'));
+                                    $caret = $this->Html->tag('i', '', array('class' => 'fa fa-caret-down'));
+                                    echo $this->Html->link($icon . $br . $text . $br . $caret, '#', array(
+                                        'escape' => false,
+                                        'class' =>
+                                            'dropdown-toggle',
+                                        'data-toggle' => 'dropdown',
+                                        'role' => 'button',
+                                        'aria-expanded' => 'false'
+                                    ));
+                                    */ ?>
                     <ul class="dropdown-menu" role="menu">
                         <li>
-                            <?/*= $this->Html->link(__('Photos'), array('controller' => 'media', 'action' => 'photos')) */?>
+                            <? /*= $this->Html->link(__('Photos'), array('controller' => 'media', 'action' => 'photos')) */ ?>
                         </li>
                         <li class="divider"></li>
                         <li>
-                            <?/*= $this->Html->link(__('Videos'), array('controller' => 'media', 'action' => 'videos')) */?>
+                            <? /*= $this->Html->link(__('Videos'), array('controller' => 'media', 'action' => 'videos')) */ ?>
                         </li>
                     </ul>
                 </li>-->
-                <!--<li class="<?/*= $PartnersActive */?> hidden-sm">
+                <!--<li class="<? /*= $PartnersActive */ ?> hidden-sm">
                     <?php
-/*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-exchange fa-2x'));
-                    $br = $this->Html->tag('br');
-                    $text = $this->Html->tag('strong', __('partners'), array('class' => 'text-uppercase'));
-                    echo $this->Html->link($icon . $br . $text . $br, array('controller' => 'partners'), array('escape' => false));
-                    */?>
+                /*                    $icon = $this->Html->tag('i', '', array('class' => 'fa fa-exchange fa-2x'));
+                                    $br = $this->Html->tag('br');
+                                    $text = $this->Html->tag('strong', __('partners'), array('class' => 'text-uppercase'));
+                                    echo $this->Html->link($icon . $br . $text . $br, array('controller' => 'partners'), array('escape' => false));
+                                    */ ?>
                 </li>-->
                 <li class="<?= $ContactsActive ?>">
                     <?php

@@ -10,10 +10,10 @@ use Cake\TestSuite\Fixture\TestFixture;
 class ParticipantsFixture extends TestFixture
 {
     /**
- * Fields.
- *
- * @var array
- */
+     * Fields.
+     *
+     * @var array
+     */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -34,7 +34,7 @@ class ParticipantsFixture extends TestFixture
             'fk_people' => ['type' => 'foreign', 'columns' => ['person_id'], 'references' => ['people', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
+            'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd

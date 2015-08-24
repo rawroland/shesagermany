@@ -20,7 +20,7 @@ $this->assign('title', __('Events'));
 
         <div class="col-md-9">
             <?= $this->element('page_title') ?>
-            <?= $this->element('Events/list', compact('events'));?>
+            <?= $this->element('Events/list', compact('events')); ?>
         </div>
     </div>
 </div>

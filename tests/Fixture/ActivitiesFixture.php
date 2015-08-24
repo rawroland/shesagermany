@@ -10,10 +10,10 @@ use Cake\TestSuite\Fixture\TestFixture;
 class ActivitiesFixture extends TestFixture
 {
     /**
- * Fields.
- *
- * @var array
- */
+     * Fields.
+     *
+     * @var array
+     */
     // @codingStandardsIgnoreStart
     public $fields = [
         'id' => ['type' => 'integer', 'length' => 11, 'unsigned' => false, 'null' => false, 'default' => null, 'comment' => '', 'autoIncrement' => true, 'precision' => null],
@@ -36,7 +36,7 @@ class ActivitiesFixture extends TestFixture
             'addresses_activities' => ['type' => 'foreign', 'columns' => ['address_id'], 'references' => ['addresses', 'id'], 'update' => 'noAction', 'delete' => 'noAction', 'length' => []],
         ],
         '_options' => [
-'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
+            'engine' => 'InnoDB', 'collation' => 'utf8_general_ci',
         ],
     ];
     // @codingStandardsIgnoreEnd

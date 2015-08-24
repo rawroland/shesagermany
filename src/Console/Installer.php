@@ -65,13 +65,13 @@ class Installer
     /**
      * Create the config/app.php file if it does not exist.
      *
-     * @param string                   $dir The application's root directory.
-     * @param \Composer\IO\IOInterface $io  IO interface to write to console.
+     * @param string $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
      */
     public static function createAppConfig($dir, $io)
     {
-        $appConfig = $dir.'/config/app.php';
-        $defaultConfig = $dir.'/config/app.default.php';
+        $appConfig = $dir . '/config/app.php';
+        $defaultConfig = $dir . '/config/app.default.php';
         if (!file_exists($appConfig)) {
             copy($defaultConfig, $appConfig);
             $io->write('Created `config/app.php` file');
@@ -83,8 +83,8 @@ class Installer
      *
      * This is not the most secure default, but it gets people up and running quickly.
      *
-     * @param string                   $dir The application's root directory.
-     * @param \Composer\IO\IOInterface $io  IO interface to write to console.
+     * @param string $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
      */
     public static function setFolderPermissions($dir, $io)
     {
@@ -98,16 +98,16 @@ class Installer
 
             $res = chmod($path, $currentPerms | $perms);
             if ($res) {
-                $io->write('Permissions set on '.$path);
+                $io->write('Permissions set on ' . $path);
             } else {
-                $io->write('Failed to set permissions on '.$path);
+                $io->write('Failed to set permissions on ' . $path);
             }
         };
 
         $walker = function ($dir, $perms, $io) use (&$walker, $changePerms) {
             $files = array_diff(scandir($dir), ['.', '..']);
             foreach ($files as $file) {
-                $path = $dir.'/'.$file;
+                $path = $dir . '/' . $file;
 
                 if (!is_dir($path)) {
                     continue;
@@ -119,23 +119,23 @@ class Installer
         };
 
         $worldWritable = bindec('0000000111');
-        $walker($dir.'/tmp', $worldWritable, $io);
-        $changePerms($dir.'/tmp', $worldWritable, $io);
-        $changePerms($dir.'/logs', $worldWritable, $io);
+        $walker($dir . '/tmp', $worldWritable, $io);
+        $changePerms($dir . '/tmp', $worldWritable, $io);
+        $changePerms($dir . '/logs', $worldWritable, $io);
     }
 
     /**
      * Set the security.salt value in the application's config file.
      *
-     * @param string                   $dir The application's root directory.
-     * @param \Composer\IO\IOInterface $io  IO interface to write to console.
+     * @param string $dir The application's root directory.
+     * @param \Composer\IO\IOInterface $io IO interface to write to console.
      */
     public static function setSecuritySalt($dir, $io)
     {
-        $config = $dir.'/config/app.php';
+        $config = $dir . '/config/app.php';
         $content = file_get_contents($config);
 
-        $newKey = hash('sha256', $dir.php_uname().microtime(true));
+        $newKey = hash('sha256', $dir . php_uname() . microtime(true));
         $content = str_replace('__SALT__', $newKey, $content, $count);
 
         if ($count == 0) {

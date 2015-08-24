@@ -27,21 +27,21 @@
                         <?= $this->Html->link(__('Events'), array('controller' => 'events')); ?>
                     </dt>
                     <!--<dt class="">
-                        <?/*= $this->Html->link(__('Projects'), array('controller' => 'projects')); */?>
+                        <? /*= $this->Html->link(__('Projects'), array('controller' => 'projects')); */ ?>
                     </dt>
                     <dt class="">
-                        <?/*= $this->Html->link(__('Partners'), '/'); */?>
+                        <? /*= $this->Html->link(__('Partners'), '/'); */ ?>
                     </dt>-->
                 </dl>
             </div>
             <div class="col-sm-6 col-md-3">
                 <!--<dl>
-                    <dt class="text-uppercase heading"><?/*= __('Other Links'); */?></dt>
+                    <dt class="text-uppercase heading"><? /*= __('Other Links'); */ ?></dt>
                     <dt class="">
-                        <?/*= $this->Html->link(__('Media'), '/'); */?>
+                        <? /*= $this->Html->link(__('Media'), '/'); */ ?>
                     </dt>
                     <dt class="">
-                        <?/*= $this->Html->link(__('Executive'), '/'); */?>
+                        <? /*= $this->Html->link(__('Executive'), '/'); */ ?>
                     </dt>
                 </dl>-->
             </div>
@@ -68,7 +68,7 @@
             </div>
         </div>
         <div class="row">
-            <p class="col-md-12">&copy; SHESA Germany e.V. <?= '2011 - '.date('Y')?></p>
+            <p class="col-md-12">&copy; SHESA Germany e.V. <?= '2011 - ' . date('Y') ?></p>
         </div>
     </div>
 </footer>

@@ -29,9 +29,9 @@
             ?>
             <div class="row">
                 <div class="col-md-4 col-sm-4 text-muted">
-                    <i class="fa fa-calendar-o fa-2x"></i>&nbsp;
+                    <i class="fa fa-calendar-o fa-2x text-primary"></i>&nbsp;
                     <?= $this->Time->format($project->start, __('dd.MM.Y')) ?>
-                    <i class="fa fa-arrow-right"></i>
+                    <i class="fa fa-arrow-right text-primary"></i>
                     <?= $this->Time->format($project->end, __('dd.MM.Y')) ?>
                 </div>
             </div>
@@ -47,7 +47,7 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4>
-                                <i class="fa fa-users"></i>
+                                <i class="fa fa-users text-primary"></i>
                                 <?= __('Participants') ?>
                             </h4>
                         </div>
